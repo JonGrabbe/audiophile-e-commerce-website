@@ -1,3 +1,5 @@
-h1 {
-  color: red;
+$main-background-color: #F2F2F2;
+
+.App {
+  background-color: $main-background-color;
 }
