@@ -97,5 +97,66 @@
             opacity: 0.75;
 
         }
+        .see-product-link {
+            // display: block;
+            /* Group */
+
+            position: absolute;
+            left: 25.91%;
+            right: 25.3%;
+            top: 83.79%;
+            // bottom: -0.34%;
+
+
+
+            /* Rectangle */
+
+            // position: absolute;
+            // left: 0%;
+            // right: 0%;
+            // top: 0%;
+            // bottom: 0%;
+
+            background: #D87D4A;
+
+
+            /* See Product */
+
+            // position: absolute;
+            // height: 18px;
+            // left: 19.69%;
+            // right: 18.44%;
+            // top: calc(50% - 18px/2);
+
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 18px;
+            /* identical to box height */
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            // width: 160px;
+            height: 48px;
+            // text-decoration: none;
+            text-align: center;
+
+            // font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 18px;
+            /* identical to box height */
+            text-decoration: none;
+
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            box-sizing: border-box;
+
+            color: #FFFFFF;
+
+
+        }
     }
 }
