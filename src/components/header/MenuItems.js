@@ -6,7 +6,7 @@ export default function MenuItems(props) {
         cn = "menu-items"
     }
     return (
-        <nav className={cn}>
+        <nav className="menu-items">
             <ul>
                 <li className="item"><a href="">Home</a></li>
                 <li className="item"><a href="">Headphones</a></li>

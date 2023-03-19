@@ -10,6 +10,7 @@
         background: none;
         border: none;
     }
+    @import './header/mobile-dropdown/mobile-drowdown.scss';
     .menu {
         display: flex;
         justify-content: space-between;

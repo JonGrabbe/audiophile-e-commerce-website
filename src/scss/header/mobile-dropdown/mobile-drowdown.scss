@@ -1,0 +1,19 @@
+.mobile-dropdown-menu-container {
+    display: none;
+    &.open {
+        position: absolute;
+        top: 57px;
+        z-index: 1000;
+        display: block;
+        // width: 100%;
+        left: 0%;
+        right: 0%;
+        box-sizing: border-box;
+        
+        background-color: $white;
+        padding: 35px;
+    }
+    @include md {
+        display: none !important;       
+    }
+}
