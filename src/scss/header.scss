@@ -25,6 +25,16 @@
             width: 23px;
             height: 20px;
         }
+        // tablet
+        @include md {
+            .logo {
+                margin-right: auto;
+                margin-left: 42px;
+            }
+            .menu-icon {
+                
+            }
+        }
     }
     .content {
         .items-container {
@@ -133,5 +143,9 @@
             letter-spacing: 1px;
             color: #FFFFFF;
         }
+        // tablet
+        // @include md {
+
+        // }
     }
 }
