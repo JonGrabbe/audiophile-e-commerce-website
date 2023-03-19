@@ -13,14 +13,17 @@ export default function MobileDropdown(props) {
                 <a href="" className="item">
                     <img src={headphonesImage} alt="" />
                     <h3>Headphones</h3>
+                    <p>shop</p>
                 </a>
                 <a href="" className="item">
                     <img src="" alt="" />
                     <h3>Headphones</h3>
+                    <p>shop</p>
                 </a>
                 <a href="" className="item">
                     <img src="" alt="" />
                     <h3>Headphones</h3>
+                    <p>shop</p>
                 </a>
             </div>
         </div>

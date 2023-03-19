@@ -11,7 +11,24 @@
         box-sizing: border-box;
         
         background-color: $white;
-        padding: 35px;
+        padding: 85px 24px;
+
+        .wrapper {
+
+        }
+        a {
+            display: block;
+        }
+        .item {
+            background-color: $main-background;
+            position: relative;
+            img {
+                position: absolute;
+                left: 50%;
+                right: 50%;
+                top: -50px;
+            }
+        }
     }
     @include md {
         display: none !important;       
