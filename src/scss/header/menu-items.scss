@@ -1,0 +1,41 @@
+.menu-items {
+    display: none;
+}
+
+// desktop
+@include lg {
+    .menu-icon {
+        display: none;
+    }
+    .menu-items {
+        display: initial;
+        margin-right: auto;
+        margin-left: 197px;
+        li {
+            list-style-type: none;
+            display: inline-block;
+            margin-right: 34px;
+
+            font-family: 'Manrope';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 25px;
+            /* identical to box height, or 192% */
+
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            color: #FFFFFF;
+            &:hover {
+                // margin-left: 197px;
+                color: $button-color;
+                cursor: pointer;
+            }
+            a {
+                color: inherit;
+                text-decoration: none;
+            }
+        }
+    }
+}

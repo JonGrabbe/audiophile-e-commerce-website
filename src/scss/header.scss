@@ -25,6 +25,9 @@
             width: 23px;
             height: 20px;
         }
+        // menu navigation
+        @import './header/menu-items.scss';
+
         // tablet
         @include md {
             .logo {
@@ -33,6 +36,11 @@
             }
             .menu-icon {
                 
+            }
+        }
+        @include lg {
+            .logo {
+                margin-right: initial;
             }
         }
     }
