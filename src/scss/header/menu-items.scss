@@ -1,5 +1,20 @@
 .menu-items {
     display: none;
+    &.open {
+        display: inline;
+        position: absolute;
+        left: 30%;
+        right: 30%;
+        top: 25%;
+        z-index: 100;
+        ul {
+            background-color: $main-background;
+            padding: 35px;
+        }
+        li {
+            display: block;
+        }
+    }
 }
 
 // desktop
