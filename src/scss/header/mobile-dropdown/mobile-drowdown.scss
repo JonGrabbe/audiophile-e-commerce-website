@@ -22,6 +22,27 @@
         .item {
             background-color: $main-background;
             position: relative;
+            height: 168px;
+            margin-bottom: 69px;
+            border-radius: 8px;
+
+            font-style: normal;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 20px;
+            text-align: center;
+            letter-spacing: 1.07143px;
+            text-transform: uppercase;
+            .title, .shop-cta {
+                position: absolute;
+                width: 100%;
+            }
+            .title {
+                bottom: 68px;
+            }
+            .shop-cta {
+                bottom: 33px;
+            }
             img {
                 position: absolute;
                 left: 36%;
@@ -29,6 +50,7 @@
                 top: -70px;
                 width: 88px;
             }
+            color: $defualt-text;
         }
     }
     @include md {
