@@ -1,5 +1,12 @@
+import getImagePath from '../../../functions/getImagePath';
 import headphonesImage from '../../../assets/product-xx99-mark-one-headphones/mobile/image-product.png';
-import iconArrowRight from '../../../assets/shared/desktop/icon-arrow-right.svg';
+import speakerImg from '../../../assets/home/mobile/image-speaker-zx9.png';
+let path = getImagePath("yx1-earphones", 'mobile');
+import earphoneImg from path
+
+// import iconArrowRight from '../../../assets/shared/desktop/icon-arrow-right.svg';
+import Item from '../../../scss/header/mobile-dropdown/Item';
+// getImagePath("yx1-earphones", 'mobile')
 
 export default function MobileDropdown(props) {
     let cn = "mobile-dropdown-menu-container";
@@ -11,7 +18,7 @@ export default function MobileDropdown(props) {
     return (
         <div className={cn}>
             <div className="wrapper">
-                <a href="" className="item">
+                {/* <a href="" className="item">
                     <img className="thumbnail" src={headphonesImage} alt="" />
                     <h3 className="title">Headphones</h3>
                     <p className="shop-cta">
@@ -29,7 +36,13 @@ export default function MobileDropdown(props) {
                     <img src={headphonesImage} alt="" />
                     <h3 className="title">Headphones</h3>
                     <p className="shop-cta">shop</p>
-                </a>
+                </a> */}
+
+                <Item thumbnail={headphonesImage} title="Headphones" />
+                <Item thumbnail={speakerImg} title="Speakers" />
+                <Item thumbnail={earphoneImg} title="Headphones" />
+                
+                
                 
             </div>
         </div>
