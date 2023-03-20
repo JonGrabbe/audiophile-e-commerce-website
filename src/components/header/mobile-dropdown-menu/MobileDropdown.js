@@ -1,4 +1,4 @@
-import headphonesImage from '../../../assets/cart/image-xx99-mark-one-headphones.jpg';
+import headphonesImage from '../../../assets/product-xx99-mark-one-headphones/mobile/image-product.png';
 
 export default function MobileDropdown(props) {
     let cn = "mobile-dropdown-menu-container";
