@@ -42,8 +42,11 @@
             }
             .shop-cta {
                 bottom: 33px;
+                .arrow {
+                    margin-left: 14px;
+                }
             }
-            img {
+            .thumbnail {
                 position: absolute;
                 left: 36%;
                 // right: 50%;

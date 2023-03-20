@@ -16,7 +16,7 @@ export default function MobileDropdown(props) {
                     <h3 className="title">Headphones</h3>
                     <p className="shop-cta">
                         shop 
-                        <img src={iconArrowRight} alt="" />
+                        <img className="arrow" src={iconArrowRight} alt="" />
                     </p>
                     
                 </a>
