@@ -1,8 +1,6 @@
 import getImagePath from '../../../functions/getImagePath';
 import headphonesImage from '../../../assets/product-xx99-mark-one-headphones/mobile/image-product.png';
 import speakerImg from '../../../assets/home/mobile/image-speaker-zx9.png';
-let path = getImagePath("yx1-earphones", 'mobile');
-import earphoneImg from path
 
 // import iconArrowRight from '../../../assets/shared/desktop/icon-arrow-right.svg';
 import Item from '../../../scss/header/mobile-dropdown/Item';
@@ -40,7 +38,7 @@ export default function MobileDropdown(props) {
 
                 <Item thumbnail={headphonesImage} title="Headphones" />
                 <Item thumbnail={speakerImg} title="Speakers" />
-                <Item thumbnail={earphoneImg} title="Headphones" />
+                <Item thumbnail={speakerImg} title="Headphones" imgSrc={getImagePath("yx1-earphones", 'mobile')} />
                 
                 
                 
