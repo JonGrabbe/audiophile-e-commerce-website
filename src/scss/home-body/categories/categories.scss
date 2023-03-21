@@ -83,6 +83,15 @@
                 width: $width;
             }
         }
-           
+        // end of .item
+        
+        @include md {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .item {
+                width: 30%;
+            }
+        }
     }
 }
