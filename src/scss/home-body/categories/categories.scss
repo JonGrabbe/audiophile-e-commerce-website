@@ -1,0 +1,50 @@
+.categories-container {
+    .wrapper {
+        width: 87%;
+        margin: 0 auto;
+        .item {
+            display: block;
+            position: relative;
+            height: 165px;
+            margin-top: 68px;
+            background: #F1F1F1;
+            border-radius: 8px;
+            .thumbnail {
+                $width: 88px;
+                position: absolute;
+                left: calc((100% - $width) / 2);
+                // right: 50%;
+                top: -62px;
+                width: $width;
+            }
+            .title {
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 20px;
+                text-align: center;
+                letter-spacing: 1.07143px;
+                text-transform: uppercase;
+
+                color: #000000;
+            }
+            .shop-cta {
+                font-family: 'Manrope';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 13px;
+                line-height: 18px;
+                /* identical to box height */
+
+                letter-spacing: 1px;
+                text-transform: uppercase;
+
+                color: #000000;
+
+                mix-blend-mode: normal;
+                opacity: 0.5;
+            }
+        }
+    }
+}
