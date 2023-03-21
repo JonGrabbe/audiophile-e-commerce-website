@@ -63,7 +63,7 @@
             }
             .thumbnail {
                 position: absolute;
-                left: 32%;
+                left: calc((100% - 88px) / 2);
                 // right: 50%;
                 top: -62px;
                 width: 88px;
