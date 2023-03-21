@@ -1,11 +1,7 @@
 .top-header {
     // background image
     min-height: 600px;
-    background-image: url("/assets/home/mobile/image-header.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: $menu-element;
+   
     .menu-button {
         background: none;
         border: none;
@@ -50,6 +46,14 @@
         }
     }
     .content {
+        // height: 100%;
+        .wrapper {
+            background-image: url("/assets/home/mobile/image-header.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: $menu-element;
+        }
         .items-container {
             margin-top: 110px;
 
@@ -160,8 +164,11 @@
             display: block;
         }
         // tablet
-        // @include md {
-
-        // }
+        @include md {
+            .wrapper {
+                width: 69%;
+                margin: auto;
+            }
+        }
     }
 }
