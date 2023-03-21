@@ -33,6 +33,21 @@
             text-align: center;
             letter-spacing: 1.07143px;
             text-transform: uppercase;
+            &.headphones {
+                .thumbnail {
+                    top: -51px;
+                }
+            }
+            &.speaker {
+                .thumbnail {
+                    top: -55px;
+                }
+            }
+            &.earphones {
+                .thumbnail {
+                    top: -41px;
+                }
+            }
             .title, .shop-cta {
                 position: absolute;
                 width: 100%;
@@ -48,11 +63,12 @@
             }
             .thumbnail {
                 position: absolute;
-                left: 36%;
+                left: 32%;
                 // right: 50%;
-                top: -70px;
+                top: -62px;
                 width: 88px;
             }
+
             color: $defualt-text;
         }
     }
