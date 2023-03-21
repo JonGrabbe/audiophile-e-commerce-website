@@ -45,6 +45,44 @@
                 mix-blend-mode: normal;
                 opacity: 0.5;
             }
+            &.headphones {
+                .thumbnail {
+                    top: -51px;
+                }
+            }
+            &.speaker {
+                .thumbnail {
+                    top: -55px;
+                }
+            }
+            &.earphones {
+                .thumbnail {
+                    top: -41px;
+                }
+            }
+            .title, .shop-cta {
+                position: absolute;
+                width: 100%;
+            }
+            .title {
+                bottom: 68px;
+            }
+            .shop-cta {
+                bottom: 33px;
+                text-align: center;
+                .arrow {
+                    margin-left: 14px;
+                }
+            }
+            .thumbnail {
+                $width: 88px;
+                position: absolute;
+                left: calc((100% - $width) / 2);
+                // right: 50%;
+                top: -62px;
+                width: $width;
+            }
         }
+           
     }
 }
