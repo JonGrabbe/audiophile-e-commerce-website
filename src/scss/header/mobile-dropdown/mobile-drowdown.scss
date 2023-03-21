@@ -62,11 +62,12 @@
                 }
             }
             .thumbnail {
+                $width: 88px;
                 position: absolute;
-                left: calc((100% - 88px) / 2);
+                left: calc((100% - $width) / 2);
                 // right: 50%;
                 top: -62px;
-                width: 88px;
+                width: $width;
             }
 
             color: $defualt-text;
