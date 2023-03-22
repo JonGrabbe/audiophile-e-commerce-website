@@ -65,6 +65,11 @@
     .right-container {
         position: absolute;
         bottom: 55px;
+        width: 100%;
+        .wrapper {
+            width: 83%;
+            margin: 0 auto;
+        }
         .title {
             margin-bottom: 27px;
             font-style: normal;
