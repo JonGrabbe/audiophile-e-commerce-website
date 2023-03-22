@@ -1,15 +1,60 @@
 .oval-background {
     /* Oval */
+    box-sizing: border-box;
+
+    position: absolute;
+    left: 7.03%;
+    right: 7.65%;
+    top: 3.17%;
+    bottom: 44.33%;
+
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+}
+.oval-background-outside {
+    box-sizing: border-box;
+    position: absolute;
+    left: 0.92%;
+    right: 1.22%;
+    top: -0.33%;
+    bottom: 40%;
+
+    border: 1px solid #FFFFFF;
+    border-radius: 50%;
+
+}
+.oval {
+    opacity: 30%;
+}
+@media(min-width: 540px) {
+    .oval-background {
+        // width: 542px;
+        // height: 542px;
+        // left: 113px;
+        // top: 1051px;
+        // left: 15%;
+        // right: 15%;
         box-sizing: border-box;
-
         position: absolute;
-        left: 7.03%;
-        right: 7.65%;
-        top: 3.17%;
-        bottom: 50.33%;
-
+        left: 16.03%;
+        right: 16.65%;
+        top: -13.83%;
+        bottom: 11.33%;
         border: 1px solid #FFFFFF;
         border-radius: 50%;
+    }
+    .oval-background-outside {
+        // left: 20%;
+        // right: 20%;
+        box-sizing: border-box;
+        position: absolute;
+        left: 7.92%;
+        right: 6.22%;
+        top: -19.33%;
+        bottom: 5%;
+        border: 1px solid #FFFFFF;
+        border-radius: 50%;
+    }
 }
 .large-banner-container {
     position: relative;
