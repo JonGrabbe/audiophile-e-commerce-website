@@ -1,0 +1,15 @@
+.large-banner-container {
+    position: relative;
+    height: 600px;
+    // background-color: #fff;
+    background: #D87D4A;
+    border-radius: 8px;
+    .speaker-img {
+        position: absolute;
+        top: 63px;
+        // center
+        $width: 172px;
+        left: calc((100% - $width) / 2);
+        width: 172px;
+    }
+}

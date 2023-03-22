@@ -59,10 +59,13 @@ body {
     height: 100vh;
     background-color: white;
 }
-
+.main-wrapper {
+    padding: 0 25px;
+}
 
 // main
 @import 'home-body/home-body.scss';
+@import 'large-banner/large-banner.scss';
 
 
 
