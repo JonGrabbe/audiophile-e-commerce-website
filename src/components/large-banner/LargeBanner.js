@@ -8,6 +8,11 @@ export default function LargeBanner() {
             <div className="left-container">
                 <img className='speaker-img' src={speakerImg} alt="" />
             </div>
+            <div className="right-container">
+                <h1 className="title">ZX9 <br /> SPEAKER</h1>
+                <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
+                <a href="" className="main-button link">See Product</a>
+            </div>
         </div>
     )
 }
