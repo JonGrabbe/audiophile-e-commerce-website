@@ -2,11 +2,12 @@
     .wrapper {
         width: 87%;
         margin: 0 auto;
+        margin-top: 92px;
         .item {
             display: block;
             position: relative;
             height: 165px;
-            margin-top: 68px;
+            margin-bottom: 68px;
             background: #F1F1F1;
             border-radius: 8px;
             .thumbnail {
@@ -89,6 +90,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-top: 148px;
             .item {
                 width: 30%;
             }
@@ -96,7 +98,35 @@
 
         @include lg {
             // wrapper
+            margin-top: 200px;
             width: 77%;
+            .item {
+                height: 204px;
+                .thumbnail {
+                    $width: 122px;
+                    width: $width;
+                    left: calc((100% - $width) / 2);
+                }
+                &.headphones {
+                    .thumbnail {
+                        top: -68px;
+                    }
+                    
+                }
+                &.speaker {
+                    .thumbnail {
+                        top: -68px;
+                    }
+                    
+                }
+                &.earphones {
+                    .thumbnail {
+                        width: 143px;
+                        top: -68px;
+                    }
+                    
+                }
+            }
         }
     }
 }
