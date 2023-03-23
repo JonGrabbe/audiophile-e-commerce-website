@@ -104,6 +104,11 @@
     }
     @include lg {
         .layout-container {
+            .left-container {
+                .speaker-img {
+                    display: block;
+                }
+            }
             display: flex;
             justify-content: space-between;
             align-items: baseline;
