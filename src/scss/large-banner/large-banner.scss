@@ -66,9 +66,7 @@
         position: absolute;
         bottom: 55px;
         width: 100%;
-        // margin-top: ;
         .wrapper {
-            max-width: 349px;
             width: 83%;
             margin: 0 auto;
         }
@@ -102,25 +100,6 @@
             opacity: 0.75;
         }
     }
-    @include lg {
-        // desktop
-        .layout-container {
-            display: none;
-            // .left-container {
-            //     .speaker-img {
-            //         display: block;
-            //     }
-            // }
-            // display: flex;
-            // justify-content: space-between;
-            // align-items: baseline;
-        }
-        .layout-container-destop {
-            width: 75%;
-            margin: 0 auto;
-        }
-
-    }
     .link {
         background-color: $defualt-text;
     }
@@ -132,8 +111,19 @@
         left: calc((100% - $width) / 2);
         width: 172px;
     }
-    @include md {
-        height: 720px;
+    // desktop
+    @include lg {
+        .wrapper-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+        .speaker-img {
+            position: initial;
+        }
+        .right-container {
+            position: initial;
+        }
     }
-    
 }
