@@ -25,6 +25,9 @@
 }
 .oval {
     opacity: 30%;
+    @include lg2 {
+        display: none;
+    }
 }
 @media(min-width: 540px) {
     .oval-background {
