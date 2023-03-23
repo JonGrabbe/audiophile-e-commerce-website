@@ -103,16 +103,23 @@
         }
     }
     @include lg {
+        // desktop
         .layout-container {
-            .left-container {
-                .speaker-img {
-                    display: block;
-                }
-            }
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
+            display: none;
+            // .left-container {
+            //     .speaker-img {
+            //         display: block;
+            //     }
+            // }
+            // display: flex;
+            // justify-content: space-between;
+            // align-items: baseline;
         }
+        .layout-container-destop {
+            width: 75%;
+            margin: 0 auto;
+        }
+
     }
     .link {
         background-color: $defualt-text;
