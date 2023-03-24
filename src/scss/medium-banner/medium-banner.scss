@@ -1,12 +1,24 @@
-@mixin lg2 {
-    @media (min-width: 1252px) {
+@mixin tabletC {
+    @media (min-width: 379px) {
         @content;
     }
- }
+}
+@mixin tabletCLG {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktopC {
+    @media (min-width: 1316px) {
+        @content;
+    }
+}
 
 .banner-medium-container {
     width: 100%;
     height: 320px;
+    box-sizing: border-box;
     background-image: url('../../assets/home/mobile/image-speaker-zx7.jpg');
     background-size: contain;
     background-repeat: no-repeat;
@@ -33,5 +45,16 @@
         margin: initial;
         color: inherit;
     }
-    
+    @include tabletC {
+        background-size: cover;
+    }
+    @include tabletCLG() {
+        padding-left: 64px;
+
+        background-image: url('../../assets/home/tablet/image-speaker-zx7.jpg');
+    }
+    @include desktopC {
+        background-image: url('../../assets/home/desktop/image-speaker-zx7.jpg');
+        padding-left: 96px;
+    }
 }
