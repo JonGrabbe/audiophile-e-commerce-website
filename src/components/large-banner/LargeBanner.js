@@ -2,7 +2,7 @@ import speakerImg from '../../assets/home/mobile/image-speaker-zx9.png';
 
 export default function LargeBanner() {
     return (
-        <div className="large-banner-container">
+        <div className="large-banner-container banner">
             <div className="wrapper wrapper-container">
                 <div className="oval-background-outside oval"></div>
                 <div className="oval-background oval"></div>

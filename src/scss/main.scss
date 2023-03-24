@@ -92,10 +92,34 @@ body {
 
     color: #FFFFFF;
 }
+.see-through-button {
+    display: block;
+    width: 160px;
+    // height: 48px;
+    padding: 15px 0;
+    background: none;
+    border: solid 1px black;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+    margin: 0 auto;
+    /* identical to box height */
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+}
 
 // main
+.banner {
+    margin-bottom: 24px;
+}
 @import 'home-body/home-body.scss';
 @import 'large-banner/large-banner.scss';
+@import 'medium-banner/medium-banner.scss';
 
 
 
