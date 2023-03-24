@@ -1,0 +1,45 @@
+.two-col-banner {
+
+    * {
+        box-sizing: border-box;
+    }
+    color: black;
+    &>.item {
+        height: 200px;
+        width: 100%;
+        margin-bottom: 24px;
+        border-radius: 10px;
+    }
+    .left-container {
+        background-image: url('../../assets/home/mobile/image-earphones-yx1.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        @include tabletC {
+            background-size: cover;
+        }
+    }
+    .right-container {
+        padding-left: 24px;
+        padding-top: 48px;
+        background-color: #F1F1F1;
+        .title {
+            margin-bottom: 40px;
+            font-family: inherit;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 38px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            color: inherit;
+        }
+        .link {
+            margin: initial;
+        }
+    }
+    @include tabletC {
+        // display: flex;
+    
+    }
+}
