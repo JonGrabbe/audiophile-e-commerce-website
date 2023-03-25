@@ -10,6 +10,10 @@
     background-position: 70% 50%;
     background-repeat: no-repeat;
     color: #000000;
+    @include lg {
+        width: 48%;
+        height: 588px;
+    }
   }
   .text-container {
     @include tablet1 {
@@ -42,6 +46,7 @@
       text-transform: uppercase;
 
       color: #000000;
+      // tablet
       @include tablet1 {
         font-size: 40px;
         line-height: 44px;
@@ -54,5 +59,14 @@
         color: #d87d4a;
       }
     }
+    // desktop
+    @include lg {
+        width: 45%;
+        align-self: center;
+    }
+  }
+  @include lg {
+    display: flex;
+    justify-content: space-between;
   }
 }
