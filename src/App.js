@@ -6,6 +6,7 @@ import Categories from './components/categories/Categories';
 import LargeBanner from './components/large-banner/LargeBanner';
 import MediumBanner from './components/meduim-banner/MediumBanner';
 import TwoColBanner from './components/two-col-banner/TwoColBanner';
+import TextImageBanner from './components/text-image-banner/TextImageBanner';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <LargeBanner />
           <MediumBanner />
           <TwoColBanner />
+          <TextImageBanner />
         </div>
       </main>
     </div>
