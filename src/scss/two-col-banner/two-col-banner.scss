@@ -1,4 +1,9 @@
 .two-col-banner {
+    @mixin tabletC {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
 
     * {
         box-sizing: border-box;
@@ -9,13 +14,19 @@
         width: 100%;
         margin-bottom: 24px;
         border-radius: 10px;
+        @include tabletC {
+            width: 49%;
+            height: 320px;
+        }
     }
     .left-container {
         background-image: url('../../assets/home/mobile/image-earphones-yx1.jpg');
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
+        background-position: center;
         @include tabletC {
-            background-size: cover;
+            // background-size: contain;
+            // background-image: url('../../assets/home/tablet/image-earphones-yx1.jpg');
         }
     }
     .right-container {
@@ -37,9 +48,12 @@
         .link {
             margin: initial;
         }
+        @include tabletC {
+            padding-left: 41px;
+        }
     }
     @include tabletC {
-        // display: flex;
-    
+        display: flex;
+        justify-content: space-between;
     }
 }
