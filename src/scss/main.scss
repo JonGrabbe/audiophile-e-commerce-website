@@ -37,7 +37,7 @@ $screen-xl-min: 1200px;
  }
 
  @mixin tablet1 {
-    @media (min-width: #{$screen-md-min}) {
+    @media (min-width: 768px) {
         @content;
     }
  }
