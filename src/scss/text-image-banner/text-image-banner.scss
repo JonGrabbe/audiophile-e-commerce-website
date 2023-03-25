@@ -2,9 +2,29 @@
     margin-bottom: 49px;
     .img-container {
        height: 300px;
+       margin-bottom: 49px;
        background-image: url('../../assets/product-xx99-mark-two-headphones/mobile/image-gallery-1.jpg');
        background-size: cover;
        background-position: 70% 50%;
        background-repeat: no-repeat;
+    }
+    .text-container {
+        .heading {
+            margin-bottom: 49px;
+
+            font-family: inherit;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 38px;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            color: #000000;
+            .word {
+                color: #D87D4A;
+            }
+        }
     }
 }
