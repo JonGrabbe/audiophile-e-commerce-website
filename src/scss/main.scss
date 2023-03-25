@@ -35,6 +35,12 @@ $screen-xl-min: 1200px;
         @content;
     }
  }
+
+ @mixin tablet1 {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+ }
  
  // Large devices
  @mixin lg {
@@ -59,7 +65,7 @@ $screen-xl-min: 1200px;
 
 html {
     font-family: "Manrope";
-    color: white;
+    // color: white;
 }
 body {
     height: 100vh;
