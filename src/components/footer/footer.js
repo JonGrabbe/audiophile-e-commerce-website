@@ -1,5 +1,7 @@
 import logo from "../../assets/shared/desktop/logo.svg";
 import facebookIcon from '../../assets/shared/desktop/icon-facebook.svg';
+import twitterIcon from '../../assets/shared/desktop/icon-twitter.svg';
+import instagramIcon from '../../assets/shared/desktop/icon-instagram.svg';
 
 export default function Footer() {
   return (
@@ -13,10 +15,13 @@ export default function Footer() {
                 <a href="">Home</a>
               </li>
               <li>
-                <a href="">Home</a>
+                <a href="">Headphones</a>
               </li>
               <li>
-                <a href="">Home</a>
+                <a href="">Speakers</a>
+              </li>
+              <li>
+                <a href="">Earphones</a>
               </li>
             </ul>
           </nav>
@@ -32,9 +37,11 @@ export default function Footer() {
                 Copyright 2021. All Rights Reserved
             </p>
             <div className="social-container">
-                <img src={facebookIcon} alt="" />
-                <img src={facebookIcon} alt="" />
-                <img src={facebookIcon} alt="" />
+                <div className="inner-wrapper">
+                    <a href=""><img src={facebookIcon} alt="" /></a>
+                    <a href=""><img src={twitterIcon} alt="" /></a>
+                    <a href=""><img src={instagramIcon} alt="" /></a>
+                </div>
             </div>
         </div>
       </div>
