@@ -7,6 +7,7 @@ import LargeBanner from './components/large-banner/LargeBanner';
 import MediumBanner from './components/meduim-banner/MediumBanner';
 import TwoColBanner from './components/two-col-banner/TwoColBanner';
 import TextImageBanner from './components/text-image-banner/TextImageBanner';
+import Footer from './components/footer/footer';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <TextImageBanner />
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

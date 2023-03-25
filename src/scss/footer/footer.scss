@@ -1,0 +1,22 @@
+.footer {
+    box-sizing: border-box;
+    padding-top: 52px;
+    padding-left: 23px;
+    padding-right: 23px;
+    padding-bottom: 36px;
+    background-color: #101010;
+    color: #FFFFFF;
+    .wrapper {
+    }
+    .logo {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 56px;
+    }
+    .list {
+        li {
+            margin-bottom: 31px;
+            text-align: center;
+        }
+    }
+}
