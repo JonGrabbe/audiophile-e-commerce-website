@@ -38,9 +38,9 @@ export default function Footer() {
             </p>
             <div className="social-container">
                 <div className="inner-wrapper">
-                    <a href=""><img src={facebookIcon} alt="" /></a>
-                    <a href=""><img src={twitterIcon} alt="" /></a>
-                    <a href=""><img src={instagramIcon} alt="" /></a>
+                    <a href=""><img className="icon" src={facebookIcon} alt="" /></a>
+                    <a href=""><img className="icon" src={twitterIcon} alt="" /></a>
+                    <a href=""><img className="icon" src={instagramIcon} alt="" /></a>
                 </div>
             </div>
         </div>
