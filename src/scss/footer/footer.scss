@@ -1,4 +1,9 @@
 .footer {
+  @mixin tablet1 {
+    @media (min-width: 690px) {
+      @content;
+    }
+  }
   box-sizing: border-box;
   padding-top: 52px;
   padding-left: 23px;
@@ -6,15 +11,26 @@
   padding-bottom: 36px;
   background-color: #101010;
   color: #ffffff;
-  .wrapper {
+  @include tablet1 {
+    padding: 52px 23px;
   }
   .logo {
     display: block;
     margin: 0 auto;
     margin-bottom: 56px;
+    @include tablet1 {
+      // margin: initial;
+      // margin-right: auto;
+      display: inline;
+    }
   }
   .list {
     margin-bottom: 56px;
+    ul {
+      @include tablet1 {
+        display: flex;
+      }
+    }
     li {
       margin-bottom: 31px;
       text-align: center;
@@ -30,6 +46,13 @@
       text-transform: uppercase;
 
       color: #ffffff;
+      @include tablet1 {
+        margin-right: 34px;
+        margin-bottom: 0;
+      }
+    }
+    @include tablet1 {
+      margin-bottom: 46px;
     }
   }
   .text {
@@ -45,6 +68,9 @@
     text-align: center;
     mix-blend-mode: normal;
     opacity: 0.5;
+    @include tablet1 {
+      text-align: left;
+    }
   }
   .bottom-content-container {
     p {
