@@ -31,6 +31,9 @@
   .menu-button {
     background: none;
     border: none;
+    @include lg3 {
+        display: none;
+    }
   }
   @include lg2 {
       background-image: none;

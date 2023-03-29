@@ -79,7 +79,7 @@
             color: $defualt-text;
         }
     }
-    @include md {
+    @include lg3 {
         display: none !important;       
     }
 }
