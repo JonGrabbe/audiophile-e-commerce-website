@@ -9,6 +9,11 @@
         @content;
       }
     }
+    @mixin lg2 {
+      @media (min-width: 1020px) {
+        @content;
+      }
+    }
   // background image
   min-height: 600px;
   background-image: url("/assets/home/mobile/image-header.jpg");
@@ -26,6 +31,27 @@
   .menu-button {
     background: none;
     border: none;
+  }
+  @include lg2 {
+      background-image: none;
+      .header-content-desktop-container {
+        width: 77%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        .background-image-destop-container {
+            width: 50%;
+
+            background-image: url("/assets/home/desktop/image-hero.jpg");
+            background-size: 1220px;
+            background-repeat: no-repeat;
+            // background-position-y: -100px;
+            // background-position-x: 50%;
+            background-position-y: -88px;
+            background-position-x: 84%;
+            
+        }
+    }
   }
   @import "./header/mobile-dropdown/mobile-drowdown.scss";
   @import "./header/menu/menu.scss";

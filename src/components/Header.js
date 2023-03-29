@@ -23,7 +23,12 @@ export default function Header(props) {
         <MenuItems />
         <img src={cart} alt="" className="cart-icon" />
       </div>
-      <Content />
+
+      
+      <div className="header-content-desktop-container">
+        <Content />
+        <div className="background-image-destop-container"></div>
+      </div>
     </header>
   );
 }
