@@ -8,6 +8,9 @@ import MobileDropdown from "./header/mobile-dropdown-menu/MobileDropdown";
 
 export default function Header(props) {
   const [isOpen, setIsOpen] = useState(false);
+  if(props.isMenuBlureTrue) {
+    setIsOpen(props.isMenuBlureTrue)
+  }
   function handleClick() {
     setIsOpen(!isOpen)
     props.onMenuOpen(!isOpen)

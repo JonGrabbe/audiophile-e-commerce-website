@@ -27,7 +27,7 @@ function App() {
   return (
     <div className={'App'+' '+cn}>
 
-      <Header onMenuOpen={setMenuBlur} isMenuOpen={} />
+      <Header onMenuOpen={setMenuBlur} isMenuBlureTrue={!isMenuBlureTrue} />
       {isMenuBlureTrue ? <BlurContainer handleCLick={handleMenuBlurClick} /> : null}
       {/* body */}
       <main>
