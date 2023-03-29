@@ -10,7 +10,7 @@
       }
     }
     @mixin lg2 {
-      @media (min-width: 1020px) {
+      @media (min-width: 1423px) {
         @content;
       }
     }
@@ -61,6 +61,9 @@
   .content {
     max-width: 265px;
     margin: 0 auto;
+    @include lg2 {
+      margin: initial;
+    }
     .items-container {
       margin-top: 110px;
     }
@@ -68,6 +71,10 @@
     // text spacing
     .item {
       margin-bottom: 36px;
+      @include lg2 {
+        // margin-left: initial;
+        text-align: left;
+      }
     }
     h2 {
       /* NEW PRODUCT */
@@ -145,6 +152,9 @@
         margin: 0 auto;
         max-width: 349px;
       }
+      @include lg2 {
+        margin-left: initial;
+      }
     }
     .see-product-link {
       // position: absolute;
@@ -170,6 +180,9 @@
       text-decoration: none;
       letter-spacing: 1px;
       color: #ffffff;
+      @include lg2 {
+        margin: initial;
+      }
     }
     &.open {
       display: block;
