@@ -16,9 +16,13 @@
         .wrapper {
 
         }
+        @include tablet1 {
+            top: 89px;
+        }
         a {
             display: block;
         }
+        
         .item {
             background-color: $main-background;
             position: relative;

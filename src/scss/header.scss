@@ -15,6 +15,11 @@
             @content;
         }
      }
+    @mixin lg1 {
+        @media (min-width: 1020px) {
+            @content;
+        }
+     }
     @import './header/mobile-dropdown/mobile-drowdown.scss';
     @import './header/menu/menu.scss';
     .content {
