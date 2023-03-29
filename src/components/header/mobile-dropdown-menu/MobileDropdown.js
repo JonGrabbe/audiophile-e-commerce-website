@@ -2,6 +2,7 @@ import headphonesImage from '../../../assets/product-xx99-mark-one-headphones/mo
 import iconArrowRight from '../../../assets/shared/desktop/icon-arrow-right.svg';
 import speakerImg from '../../../assets/home/mobile/image-speaker-zx9.png';
 import earphoneImg from '../../../assets/home/mobile/image-earphones-yx1-earphones.png';
+import BlurContainer from './BlurContainer';
 
 export default function MobileDropdown(props) {
     let cn = "mobile-dropdown-menu-container";
@@ -41,9 +42,7 @@ export default function MobileDropdown(props) {
                     
                 </a>
                 
-                
             </div>
-            
         </div>
     )
 }

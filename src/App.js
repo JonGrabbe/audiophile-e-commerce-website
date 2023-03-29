@@ -9,6 +9,7 @@ import TwoColBanner from './components/two-col-banner/TwoColBanner';
 import TextImageBanner from './components/text-image-banner/TextImageBanner';
 import Footer from './components/footer/footer';
 import { useState } from 'react';
+import BlurContainer from './components/header/mobile-dropdown-menu/BlurContainer';
 
 function App() {
   const [isMenuBlureTrue, setMenuBlur] = useState(false);
@@ -21,7 +22,9 @@ function App() {
   console.log(isMenuBlureTrue)
   return (
     <div className={'App'+' '+cn}>
+
       <Header onMenuOpen={setMenuBlur} />
+      {isMenuBlureTrue ? <BlurContainer /> : null}
       {/* body */}
       <main>
         <Categories />

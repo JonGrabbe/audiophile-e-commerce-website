@@ -1,5 +1,6 @@
 .mobile-dropdown-menu-container {
     display: none;
+    z-index: 9000;
     &.open {
         position: absolute;
         top: 57px;

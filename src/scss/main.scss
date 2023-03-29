@@ -68,6 +68,7 @@ html {
     // color: white;
 }
 body {
+    position: relative;
     height: 100vh;
     background-color: white;
 }
@@ -135,6 +136,23 @@ body {
 
 @import './header.scss';
 @import './categories/categories.scss';
+.App {
+    position: relative;
+}
+.blur-container {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 55px;
+    width: 100vw;
+    bottom: 0%;
+    height: 100%;
+    background: #000000;
+    // mix-blend-mode: normal;
+    opacity: 0.4;
+    // background-color: red;
+    z-index: 100;
+}
 
 
 @import './test.scss';
