@@ -1,144 +1,153 @@
 .top-header {
-    // background image
-    min-height: 600px;
-    background-image: url("/assets/home/mobile/image-header.jpg");
-    // background-position: center;
-    background-position-y: -29px;
-    background-position-x: 50%;
-    background-repeat: no-repeat;
-    background-size: 370px;
-    background-color: $menu-element;
-    .menu-button {
-        background: none;
-        border: none;
-    }
     @mixin tablet1 {
-        @media (min-width: 755px) {
-            @content;
-        }
-     }
-    @mixin lg1 {
-        @media (min-width: 1020px) {
-            @content;
-        }
-     }
-    @import './header/mobile-dropdown/mobile-drowdown.scss';
-    @import './header/menu/menu.scss';
-    .content {
-        max-width: 265px;
-        margin: 0 auto;
-        .items-container {
-            margin-top: 110px;
-
-        }
-        position: relative;
-        // text spacing
-        .item {
-            margin-bottom: 36px;
-        }
-        h2 {
-            /* NEW PRODUCT */
-
-            /* NEW PRODUCT */
-
-            // position: absolute;
-            // height: 19px;
-            // left: 19.82%;
-            // right: 19.51%;
-            // top: 201px;
-
-            font-family: 'Manrope';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 19px;
-            text-align: center;
-            letter-spacing: 10px;
-            text-transform: uppercase;
-
-            color: #FFFFFF;
-
-            mix-blend-mode: normal;
-            opacity: 0.5;
-
-
-        }
-        h3 {
-            /* XX99 Mark II Headpho */
-            // position: absolute;
-            // height: 80px;
-            // left: 0%;
-            // right: 0%;
-            // // top: calc(50% - 80px/2 - 70px);
-            // top: 230px;
-
-            font-family: 'Manrope';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 36px;
-            line-height: 40px;
-            /* or 111% */
-            text-align: center;
-            letter-spacing: 1.28571px;
-            text-transform: uppercase;
-
-            color: #FFFFFF;
-        }
-        p {
-          /* Experience natural, */
-            // position: absolute;
-            // left: 0%;
-            // right: 0%;
-            // // top: 53.93%;
-            // top: 356px;
-            // bottom: 26.21%;
-
-            font-family: 'Manrope';
-            font-style: normal;
-            font-weight: 500;
-            font-size: 15px;
-            line-height: 25px;
-            /* or 167% */
-            text-align: center;
-
-            color: #FFFFFF;
-
-            mix-blend-mode: normal;
-            opacity: 0.75;
-
-        }
-        .see-product-link {
-            // position: absolute;
-            // left: 25.91%;
-            // right: 25.3%;
-            display: block;
-            box-sizing: border-box;
-            margin: auto;
-            width: 12rem;
-            padding: 15px 15px;
-
-
-            background: #D87D4A;
-
-            font-family: 'Manrope';
-            font-style: normal;
-            font-weight: 700;
-            font-size: 13px;
-            line-height: 18px;
-            /* identical to box height */
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            text-align: center;
-            text-decoration: none;
-            letter-spacing: 1px;
-            color: #FFFFFF;
-        }
-        &.open {
-            display: block;
-        }
-        // tablet
-        // @include md {
-
-        // }
+      @media (min-width: 755px) {
+        @content;
+      }
     }
+    @mixin lg1 {
+      @media (min-width: 1020px) {
+        @content;
+      }
+    }
+  // background image
+  min-height: 600px;
+  background-image: url("/assets/home/mobile/image-header.jpg");
+  // background-position: center;
+  background-position-y: -29px;
+  background-position-x: 50%;
+  background-repeat: no-repeat;
+  background-size: 370px;
+  background-color: $menu-element;
+  @include tablet1 {
+    min-height: 729px;
+    background-position-y: -73px;
+    background-size: 490px;
+  }
+  .menu-button {
+    background: none;
+    border: none;
+  }
+  @import "./header/mobile-dropdown/mobile-drowdown.scss";
+  @import "./header/menu/menu.scss";
+  .content {
+    max-width: 265px;
+    margin: 0 auto;
+    .items-container {
+      margin-top: 110px;
+    }
+    position: relative;
+    // text spacing
+    .item {
+      margin-bottom: 36px;
+    }
+    h2 {
+      /* NEW PRODUCT */
+
+      /* NEW PRODUCT */
+
+      // position: absolute;
+      // height: 19px;
+      // left: 19.82%;
+      // right: 19.51%;
+      // top: 201px;
+
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 19px;
+      text-align: center;
+      letter-spacing: 10px;
+      text-transform: uppercase;
+
+      color: #ffffff;
+
+      mix-blend-mode: normal;
+      opacity: 0.5;
+    }
+    h3 {
+      /* XX99 Mark II Headpho */
+      // position: absolute;
+      // height: 80px;
+      // left: 0%;
+      // right: 0%;
+      // // top: calc(50% - 80px/2 - 70px);
+      // top: 230px;
+
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 40px;
+      /* or 111% */
+      text-align: center;
+      letter-spacing: 1.28571px;
+      text-transform: uppercase;
+
+      color: #ffffff;
+      @include tablet1 {
+        font-size: 56px;
+        line-height: 58px;
+        letter-spacing: 2px;
+      }
+    }
+    p {
+      /* Experience natural, */
+      // position: absolute;
+      // left: 0%;
+      // right: 0%;
+      // // top: 53.93%;
+      // top: 356px;
+      // bottom: 26.21%;
+
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 25px;
+      /* or 167% */
+      text-align: center;
+
+      color: #ffffff;
+
+      mix-blend-mode: normal;
+      opacity: 0.75;
+      @include tablet1 {
+        margin: 0 auto;
+        max-width: 349px;
+      }
+    }
+    .see-product-link {
+      // position: absolute;
+      // left: 25.91%;
+      // right: 25.3%;
+      display: block;
+      box-sizing: border-box;
+      margin: auto;
+      width: 12rem;
+      padding: 15px 15px;
+
+      background: #d87d4a;
+
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 18px;
+      /* identical to box height */
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      text-align: center;
+      text-decoration: none;
+      letter-spacing: 1px;
+      color: #ffffff;
+    }
+    &.open {
+      display: block;
+    }
+    // tablet
+    @include tablet1 {
+        max-width: 379px;
+    }
+  }
 }
