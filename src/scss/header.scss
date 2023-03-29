@@ -10,6 +10,11 @@
         background: none;
         border: none;
     }
+    @mixin tablet1 {
+        @media (min-width: 755px) {
+            @content;
+        }
+     }
     @import './header/mobile-dropdown/mobile-drowdown.scss';
     .menu {
         display: flex;
