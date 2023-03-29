@@ -12,23 +12,22 @@ import { useState } from 'react';
 import BlurContainer from './components/header/mobile-dropdown-menu/BlurContainer';
 
 function App() {
-  const [isMenuBlureTrue, setMenuBlur] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   let cn = ''
-  if(isMenuBlureTrue === true) {
+  if(isMenuOpen === true) {
     cn = 'menu-open'
   } else {
     cn = ''
   }
   // console.log(isMenuBlureTrue)
-  function handleMenuBlurClick() {
-    setMenuBlur(false)
-    console.log('asdfasdf')
+  function handleClick() {
+    setIsMenuOpen(!isMenuOpen)
   }
   return (
     <div className={'App'+' '+cn}>
 
-      <Header onMenuOpen={setMenuBlur} isMenuBlureTrue={!isMenuBlureTrue} />
-      {isMenuBlureTrue ? <BlurContainer handleCLick={handleMenuBlurClick} /> : null}
+      <Header isMenuOpen={isMenuOpen} openMenuFunc={handleClick} />
+      {isMenuOpen ? <BlurContainer handleClick={handleClick}  /> : null}
       {/* body */}
       <main>
         <Categories />
