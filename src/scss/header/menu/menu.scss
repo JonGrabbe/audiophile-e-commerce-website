@@ -1,0 +1,38 @@
+.menu {
+    display: flex;
+    justify-content: space-between;
+    // justify-self: center;
+    align-items: center;
+    padding: 1rem;
+    // icon sizes
+    .menu-icon {
+        width: 16px;
+        height: 15px;
+    }
+    .logo {
+        width: 143px;
+        height: 25px;
+    }
+    .cart-icon {
+        width: 23px;
+        height: 20px;
+    }
+    // menu navigation
+    @import '../menu-items.scss';
+
+    // tablet
+    @include md {
+        .logo {
+            margin-right: auto;
+            margin-left: 42px;
+        }
+        .menu-icon {
+            
+        }
+    }
+    @include lg {
+        .logo {
+            margin-right: initial;
+        }
+    }
+}
