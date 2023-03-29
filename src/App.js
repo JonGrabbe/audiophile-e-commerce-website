@@ -19,12 +19,16 @@ function App() {
   } else {
     cn = ''
   }
-  console.log(isMenuBlureTrue)
+  // console.log(isMenuBlureTrue)
+  function handleMenuBlurClick() {
+    setMenuBlur(false)
+    console.log('asdfasdf')
+  }
   return (
     <div className={'App'+' '+cn}>
 
-      <Header onMenuOpen={setMenuBlur} />
-      {isMenuBlureTrue ? <BlurContainer /> : null}
+      <Header onMenuOpen={setMenuBlur} isMenuOpen={} />
+      {isMenuBlureTrue ? <BlurContainer handleCLick={handleMenuBlurClick} /> : null}
       {/* body */}
       <main>
         <Categories />
