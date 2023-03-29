@@ -8,13 +8,17 @@ import MobileDropdown from "./header/mobile-dropdown-menu/MobileDropdown";
 
 export default function Header(props) {
   const [isOpen, setIsOpen] = useState(false);
+  function handleClick() {
+    setIsOpen(!isOpen)
+    props.onMenuOpen(!isOpen)
+  }
   return (
     <header className="top-header wrapper">
       <div className="menu">
-        <button className="menu-button" onClick={() => setIsOpen(!isOpen)}>
+        <button className="menu-button" onClick={() => handleClick()}>
           <img src={menuIcon} alt="" className="menu-icon" />
         </button>
-        <MobileDropdown isOpen={isOpen} />
+        <MobileDropdown isOpen={isOpen} onMenuOpen={props.onMenuOpen} />
         <img src={logo} alt="" className="logo" />
         <MenuItems />
         <img src={cart} alt="" className="cart-icon" />
