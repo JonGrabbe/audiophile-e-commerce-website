@@ -16,6 +16,11 @@
         }
     }
 }
+@mixin lg1 {
+    @media (min-width: 1160px) {
+        @content;
+    }
+ }
 
 // desktop
 @include lg1 {
