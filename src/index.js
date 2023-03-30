@@ -12,11 +12,13 @@ const router = createBrowserRouter([
     {
       path: "/",
       element: <App />,
-      errorElement: <ErrorPage />
-    },
-    {
-        path: "headphones/",
-        element: <HeadphonesPage />
+      errorElement: <ErrorPage />,
+      children: [
+        {
+            path: "headphones/",
+            element: <HeadphonesPage />
+        }
+      ]
     }
   ]);
 

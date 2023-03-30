@@ -4,9 +4,7 @@ import Footer from "../../components/footer/footer"
 export default function HeadphonesPage(props) {
     return (
         <div className="headphones">
-            <Header />
-            
-            <Footer />
+            <p>fdasafsdasdfasdf</p>
         </div>
     )
 }
