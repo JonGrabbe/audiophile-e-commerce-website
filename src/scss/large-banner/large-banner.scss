@@ -65,6 +65,7 @@
     // background-color: #fff;
     background: #D87D4A;
     border-radius: 8px;
+    color: white;
     .right-container {
         position: absolute;
         bottom: 55px;
@@ -105,7 +106,7 @@
         }
     }
     .link {
-        background-color: $defualt-text;
+        // background-color: $defualt-text;
     }
     .speaker-img {
         position: absolute;

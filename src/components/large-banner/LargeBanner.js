@@ -13,7 +13,7 @@ export default function LargeBanner() {
                     <div className="wrapper">
                         <h1 className="title">ZX9 <br /> SPEAKER</h1>
                         <p>Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.</p>
-                        <a href="" className="main-button link">See Product</a>
+                        <a href="" className="main-button-black link">See Product</a>
                     </div>
                 </div>
             </div>

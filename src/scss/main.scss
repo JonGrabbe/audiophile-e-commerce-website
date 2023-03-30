@@ -110,6 +110,22 @@ body {
 
     color: #FFFFFF;
 }
+.main-button-white {
+    @extend .main-button;
+    color: white;
+    background-color: initial;
+    border: 1px solid white;
+}
+.main-button-black {
+    @extend .main-button;
+    color: white;
+    background-color: black;
+    &:hover {
+        background-color: #4C4C4C !important;
+
+    }
+}
+
 .see-through-button {
     display: block;
     width: 160px;
