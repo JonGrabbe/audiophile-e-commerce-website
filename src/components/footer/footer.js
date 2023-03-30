@@ -9,7 +9,7 @@ import InstagramIcon from "../svg-icons/InstagramIcon";
 export default function Footer() {
   return (
     <footer className="footer">
-      <div className="wrapper">
+      <div className="wrapper main-wrapper">
         <div className="main-content-container">
           <img className="logo" src={logo} alt="" />
           <nav className="list">
