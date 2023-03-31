@@ -7,16 +7,18 @@ import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./routes/ErrorPage";
 import HeadphonesPage from "./routes/headphones/HeadphonesPage";
+import Root from "../src/routes/root";
+import Main from "./components/main/Main";
 
 const router = createBrowserRouter([
     {
       path: "/",
-      element: <App />,
+      element: <Root />,
       errorElement: <ErrorPage />,
       children: [
         {
-            path: "headphones/",
-            element: <HeadphonesPage />
+            path: "/",
+            element: <Main />
         }
       ]
     }
