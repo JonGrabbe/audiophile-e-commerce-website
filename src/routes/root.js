@@ -5,6 +5,7 @@ import Footer from "../components/footer/footer";
 import { useState } from "react";
 import BlurContainer from "../components/header/mobile-dropdown-menu/BlurContainer";
 import { Outlet } from "react-router-dom";
+import Content from "../components/header/content/Content";
 
 function Root() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,7 +21,9 @@ function Root() {
   }
   return (
     <div className={"App" + " " + cn}>
-      <Header isMenuOpen={isMenuOpen} openMenuFunc={handleClick} />
+      <Header isMenuOpen={isMenuOpen} openMenuFunc={handleClick} >
+          <Content />
+      </Header>
       {isMenuOpen ? <BlurContainer handleClick={handleClick} /> : null}
       {/* body */}
       <Outlet />

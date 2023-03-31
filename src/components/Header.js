@@ -25,10 +25,11 @@ export default function Header(props) {
       </div>
 
       
-      <div className="header-content-desktop-container main-wrapper">
+      {/* <div className="header-content-desktop-container main-wrapper">
         <Content />
         <div className="background-image-destop-container"></div>
-      </div>
+      </div> */}
+      {props.children}
     </header>
   );
 }
