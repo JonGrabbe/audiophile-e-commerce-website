@@ -7,7 +7,7 @@ import BlurContainer from "../components/header/mobile-dropdown-menu/BlurContain
 import { Outlet } from "react-router-dom";
 import Content from "../components/header/content/Content";
 
-function Root() {
+function Root(props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   let cn = "";
   if (isMenuOpen === true) {
@@ -22,7 +22,8 @@ function Root() {
   return (
     <div className={"App" + " " + cn}>
       <Header isMenuOpen={isMenuOpen} openMenuFunc={handleClick} >
-          <Content />
+          {/* <Content /> */}
+          {props.headerContent}
       </Header>
       {isMenuOpen ? <BlurContainer handleClick={handleClick} /> : null}
       {/* body */}

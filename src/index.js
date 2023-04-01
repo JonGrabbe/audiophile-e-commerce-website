@@ -10,11 +10,12 @@ import HeadphonesPage from "./routes/headphones/HeadphonesPage";
 import Root from "../src/routes/root";
 import Main from "./components/main/Main";
 import CategoriesPage from "./components/categoriesPage/CategoriesPage";
+import Content from "./components/header/content/Content";
 
 const router = createBrowserRouter([
     {
       path: "/",
-      element: <Root />,
+      element: <Root headerContent={<Content />} />,
       errorElement: <ErrorPage />,
       children: [
         {

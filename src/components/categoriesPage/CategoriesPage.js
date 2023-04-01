@@ -1,4 +1,5 @@
-import Header from "../Header"
+import Header from "../Header";
+import "./CategoriesPage.scss";
 
 export default function CategoriesPage(props) {
     return (
