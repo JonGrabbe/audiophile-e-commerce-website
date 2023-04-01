@@ -1,10 +1,10 @@
-import Header from "../Header";
 import "./CategoriesPage.scss";
 
 export default function CategoriesPage(props) {
     return (
         <div>
-            <Header />
+           <h1>page!!!!!</h1>
+           <p>asdfhasdfkljhasdlfkjahdsf</p>
         </div>
     )
 }

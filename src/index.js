@@ -9,6 +9,7 @@ import ErrorPage from "./routes/ErrorPage";
 import HeadphonesPage from "./routes/headphones/HeadphonesPage";
 import Root from "../src/routes/root";
 import Main from "./components/main/Main";
+// import CategoriesPage from "./components/categoriesPage/CategoriesPage";
 import CategoriesPage from "./components/categoriesPage/CategoriesPage";
 import Content from "./components/header/content/Content";
 
@@ -26,8 +27,14 @@ const router = createBrowserRouter([
       ]
     },
     {
-      path: "categories/headphones/",
-      element: <CategoriesPage />
+      path: "/categories/headphones/",
+      element: <Root />,
+      children: [
+        {
+          path: "/categories/headphones/",
+          element: <CategoriesPage />
+        }
+      ]
     }
   ]);
 
