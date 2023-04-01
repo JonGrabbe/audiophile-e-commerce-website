@@ -27,7 +27,7 @@ const router = createBrowserRouter([
       ]
     },
     {
-      path: "/categories/headphones/",
+      path: "categories/headphones/",
       element: <Root />,
       children: [
         {

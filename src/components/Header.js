@@ -13,7 +13,7 @@ export default function Header(props) {
   //   props.onMenuOpen(!isOpen)
   // }
   return (
-    <header className="top-header">
+    <header className="top-header categories-page-header">
       <div className="menu main-wrapper">
         <button className="menu-button" onClick={() => props.openMenuFunc()}>
           <img src={menuIcon} alt="" className="menu-icon" />
