@@ -1,4 +1,40 @@
+@mixin tablet-categories {
+    @media (min-width: 768px) {
+        @content;
+    }
+ }
+@mixin desktop-categories {
+    @media (min-width: 1440px) {
+        @content;
+    }
+ }
+
 .categories-page-header {
-    min-height: initial;
-    background-image: initial;
+  min-height: initial;
+  background-image: initial;
+}
+
+.header-text {
+  padding-top: 78px;
+  padding-bottom: 39px;
+  @include tablet-categories {
+    padding-top: 137px;
+    padding-bottom: 104px;
+  }
+  @include desktop-categories {
+    padding-top: 103px;
+    padding-bottom: 103px;
+  }
+  h1 {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+  }
 }

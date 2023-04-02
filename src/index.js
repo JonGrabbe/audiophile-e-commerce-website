@@ -12,6 +12,7 @@ import Main from "./components/main/Main";
 // import CategoriesPage from "./components/categoriesPage/CategoriesPage";
 import CategoriesPage from "./components/categoriesPage/CategoriesPage";
 import Content from "./components/header/content/Content";
+import HeaderText from "./routes/components/header-text/HeaderText";
 
 const router = createBrowserRouter([
     {
@@ -28,7 +29,7 @@ const router = createBrowserRouter([
     },
     {
       path: "categories/headphones/",
-      element: <Root />,
+      element: <Root headerContent={<HeaderText text="Headphones" />} />,
       children: [
         {
           path: "/categories/headphones/",
