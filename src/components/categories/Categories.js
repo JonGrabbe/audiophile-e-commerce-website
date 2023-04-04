@@ -4,7 +4,6 @@ import iconArrowRight from '../../assets/shared/desktop/icon-arrow-right.svg';
 import speakerImg from '../../assets/home/mobile/image-speaker-zx9.png';
 import earphoneImg from '../../assets/home/mobile/image-earphones-yx1-earphones.png';
 
-
 // component for the categories in <main> </main> this is
 // not for the dropdown menu
 export default function Categories(props) {
