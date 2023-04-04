@@ -2,7 +2,7 @@ export default function NewProductItem(props) {
     return (
         <div className="new-product-item-container">
             <div className="left-container">
-
+                <img src={props.img} alt="" />
             </div>
             <div className="right-container">
                 <h2 className="header">New product</h2>
