@@ -68,11 +68,19 @@
 }
 
 .new-product-item-container {
+  @mixin tablet1 {
+    @media (min-width: 517px) {
+      @content;
+    }
+  }
   $margin-bottom: 32px;
   margin-bottom: 120px;
   .img {
     width: 100%;
     margin-bottom: $margin-bottom;
+    @include tablet1 {
+      height: 352px;
+    }
   }
   .header {
     @include headingTitleText;

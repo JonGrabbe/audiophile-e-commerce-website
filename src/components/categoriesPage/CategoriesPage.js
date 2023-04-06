@@ -1,6 +1,7 @@
 import "./CategoriesPage.scss";
 import productsData from "./products";
 import NewProductItem from "../../routes/components/new-product-item/NewProductItem";
+import Categories from "../categories/Categories";
 
 console.log(productsData.headphones)
 
@@ -14,6 +15,8 @@ export default function CategoriesPage(props) {
             })
            }
            {arr}
+
+           <Categories />
         </main>
     )
 }
