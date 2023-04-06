@@ -1,13 +1,37 @@
 @mixin tablet-categories {
-    @media (min-width: 768px) {
-        @content;
-    }
- }
+  @media (min-width: 768px) {
+    @content;
+  }
+}
 @mixin desktop-categories {
-    @media (min-width: 1440px) {
-        @content;
-    }
- }
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+@mixin headingTitleText {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 10px;
+  text-transform: uppercase;
+
+  color: #d87d4a;
+}
+@mixin heading {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #000000;
+}
 
 .categories-page-header {
   min-height: initial;
@@ -39,4 +63,26 @@
   }
 }
 
+.categories-page-container {
+  margin-top: 64px;
+}
 
+.new-product-item-container {
+  $margin-bottom: 32px;
+  margin-bottom: 120px;
+  .img {
+    width: 100%;
+    margin-bottom: $margin-bottom;
+  }
+  .header {
+    @include headingTitleText;
+    margin-bottom: $margin-bottom;
+  }
+  .title {
+    @include heading;
+    margin-bottom: $margin-bottom;
+  }
+  .text {
+    margin-bottom: $margin-bottom;
+  }
+}
