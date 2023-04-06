@@ -7,13 +7,13 @@ console.log(productsData.headphones)
 export default function CategoriesPage(props) {
     let arr = []
     return (
-        <div>
+        <main className="main-wrapper">
            {
             productsData.headphones.forEach(item => {
-                arr.push(<NewProductItem title={item.title} text={item.text} />)
+                arr.push(<NewProductItem title={item.title} text={item.text} img={item.image} />)
             })
            }
            {arr}
-        </div>
+        </main>
     )
 }
