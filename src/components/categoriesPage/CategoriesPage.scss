@@ -85,19 +85,25 @@
   color: white;
   $margin-bottom: 32px;
   margin-bottom: 120px;
-
-  @include desktop-categories {
+  &:last-of-type {
+    margin-bottom: initial;
+  }
+  @include desktop-categories() {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    margin-bottom: 160px;
   }
+
   .left-container {
-    background-color: #F1F1F1;
+    background-color: #f1f1f1;
     @include desktop-categories() {
       margin-right: 125px;
     }
     .img-container {
       height: 352px;
+      width: 327px;
       max-width: 400px;
       background-size: cover;
       background-position: center;
@@ -126,10 +132,28 @@
   .title {
     @include heading;
     margin-bottom: $margin-bottom;
+    @include desktop-categories {
+      font-weight: 700;
+      font-size: 40px;
+      line-height: 44px;
+      /* or 110% */
+      letter-spacing: 1.42857px;
+    }
   }
   .text {
     margin-bottom: $margin-bottom;
     color: black;
     @include text;
+  }
+  .item {
+    @include desktop-categories() {
+      text-align: left;
+    }
+  }
+  .link {
+    @include desktop-categories() {
+      margin: initial;
+      margin-right: auto;
+    }
   }
 }

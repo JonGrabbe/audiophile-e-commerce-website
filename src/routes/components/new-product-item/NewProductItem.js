@@ -7,9 +7,9 @@ export default function NewProductItem(props) {
             </div>
             <div className="right-container">
                 <div className="content-container">
-                    <h2 className="header">New product</h2>
-                    <h3 className="title">{props.title}</h3>
-                    <p className="text">{props.text}</p>
+                    <h2 className="header item">New product</h2>
+                    <h3 className="title item">{props.title}</h3>
+                    <p className="text item">{props.text}</p>
                     <a href="" className="see-product-link link">See product</a>
                 </div>
             </div>
