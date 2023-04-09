@@ -2,7 +2,7 @@ export default function NewProductItem(props) {
     return (
         <div className="new-product-item-container">
             <div className="left-container">
-                <img className="img" src={props.img} alt="" />
+                {/* <img className="img" src={props.img} alt="" /> */}
             </div>
             <div className="right-container">
                 <div className="content-container">

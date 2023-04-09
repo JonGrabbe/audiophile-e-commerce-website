@@ -85,13 +85,17 @@
   color: white;
   $margin-bottom: 32px;
   margin-bottom: 120px;
-  .img {
-    width: 100%;
-    margin-bottom: $margin-bottom;
-    @include tablet1 {
-      height: 352px;
-    }
+
+  .left-container {
+
   }
+  // .img {
+  //   width: 100%;
+  //   margin-bottom: $margin-bottom;
+  //   @include tablet1 {
+  //     height: 352px;
+  //   }
+  // }
   .header {
     @include headingTitleText;
     margin-bottom: $margin-bottom;
