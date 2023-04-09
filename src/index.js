@@ -14,6 +14,9 @@ import CategoriesPage from "./components/categoriesPage/CategoriesPage";
 import Content from "./components/header/content/Content";
 import HeaderText from "./routes/components/header-text/HeaderText";
 
+import HeadphonesProductsData from "./data/headphones-products";
+
+
 const router = createBrowserRouter([
     {
       path: "/",
@@ -33,7 +36,7 @@ const router = createBrowserRouter([
       children: [
         {
           path: "/categories/headphones/",
-          element: <CategoriesPage />
+          element: <CategoriesPage productsData={HeadphonesProductsData} />
         }
       ]
     },
