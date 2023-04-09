@@ -87,7 +87,12 @@
   margin-bottom: 120px;
 
   .left-container {
-
+    // background-image: url('../');
+    height: 352px;
+    max-width: 400px;
+    background-size: cover;
+    background-position-x: -14px;
+    background-repeat: no-repeat;
   }
   // .img {
   //   width: 100%;
