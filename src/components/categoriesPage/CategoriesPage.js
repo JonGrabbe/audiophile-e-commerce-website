@@ -10,7 +10,7 @@ export default function CategoriesPage(props) {
     return (
         <main className="main-wrapper categories-page-container">
            {
-            props.productsData.headphones.forEach(item => {
+            props.productsData[props.ProductType].forEach(item => {
                 arr.push(<NewProductItem title={item.title} text={item.text} img={item.image} />)
             })
            }

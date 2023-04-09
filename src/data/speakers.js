@@ -2,9 +2,6 @@ import xx99Mark1 from "../assets/product-xx99-mark-two-headphones/mobile/image-p
 import xx99Mark2 from "../assets/product-xx99-mark-one-headphones/mobile/image-product.jpg";
 import xx59 from "../assets/product-xx59-headphones/mobile/image-product.jpg";
 
-// speaker images
-import zx9 from "../assets/product-zx9-speaker/mobile/image-product.jpg";
-
 const productsData = {
   headphones: [
     {
@@ -26,7 +23,6 @@ const productsData = {
   speakers: [
     {
       title: "ZX9 speaker",
-      image: zx9,
       text: "Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pl    easing and practical audio setups.",
     },
     {
