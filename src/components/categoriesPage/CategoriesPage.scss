@@ -91,7 +91,7 @@
   color: white;
   $margin-bottom: 32px;
   margin-bottom: 120px;
-  &:last-of-type {
+  &:last-of-type{
     margin-bottom: initial;
   }
   @include desktop-categories() {
@@ -136,6 +136,10 @@
   //     height: 352px;
   //   }
   // }
+  .content-container {
+    max-width: 572px;
+    margin: 0 auto;
+  }
   .header {
     @include headingTitleText;
     margin-bottom: $margin-bottom;
@@ -168,3 +172,5 @@
     }
   }
 }
+
+@import './CategoriesContainer.scss';
