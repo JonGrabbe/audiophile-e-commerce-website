@@ -2,6 +2,7 @@ import "./CategoriesPage.scss";
 import productsData from "./products";
 import NewProductItem from "../../routes/components/new-product-item/NewProductItem";
 import Categories from "../categories/Categories";
+import TextImageBanner from "../text-image-banner/TextImageBanner";
 
 console.log(productsData.headphones)
 
@@ -17,6 +18,7 @@ export default function CategoriesPage(props) {
            {arr}
 
            <Categories />
+           <TextImageBanner />
         </main>
     )
 }
