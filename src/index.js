@@ -36,6 +36,16 @@ const router = createBrowserRouter([
           element: <CategoriesPage />
         }
       ]
+    },
+    {
+      path: "categories/speakers",
+      element: <Root headerContent={<HeaderText text="Speakers" />} />,
+      children: [
+        {
+          path: "/categories/speakers",
+          element: <CategoriesPage />
+        }
+      ]
     }
   ]);
 
