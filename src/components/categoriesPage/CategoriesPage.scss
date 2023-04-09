@@ -97,13 +97,18 @@
   }
 
   .left-container {
+    margin-bottom: 32px;
+    @include tablet-categories() {
+      margin-bottom: 53px;
+    }
     background-color: #f1f1f1;
     @include desktop-categories() {
       margin-right: 125px;
+      margin-bottom: initial;
     }
     .img-container {
       height: 352px;
-      width: 327px;
+      width: 100%;
       max-width: 400px;
       background-size: cover;
       background-position: center;
