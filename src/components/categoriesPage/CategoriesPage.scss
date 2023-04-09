@@ -74,6 +74,12 @@
 
 .categories-page-container {
   margin-top: 64px;
+  @include tablet-categories() {
+    margin-top: 120px;
+  }
+  @include desktop-categories() {
+    margin-top: 160px;
+  }
 }
 
 .new-product-item-container {
