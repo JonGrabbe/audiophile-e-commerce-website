@@ -1,176 +1,176 @@
-@mixin tablet-categories {
-  @media (min-width: 768px) {
-    @content;
-  }
-}
-@mixin desktop-categories {
-  @media (min-width: 1440px) {
-    @content;
-  }
-}
-@mixin headingTitleText {
-  font-family: "Manrope";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 19px;
-  text-align: center;
-  letter-spacing: 10px;
-  text-transform: uppercase;
-
-  color: #d87d4a;
-}
-@mixin heading {
-  font-family: "Manrope";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 38px;
-  text-align: center;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-
-  color: #000000;
-}
-@mixin text {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 25px;
-  /* or 167% */
-
-  text-align: center;
-}
-
-.categories-page-header {
-  min-height: initial;
-  background-image: initial;
-}
-
-.header-text {
-  padding-top: 78px;
-  padding-bottom: 39px;
-  @include tablet-categories {
-    padding-top: 137px;
-    padding-bottom: 104px;
-  }
-  @include desktop-categories {
-    padding-top: 103px;
-    padding-bottom: 103px;
-  }
-  h1 {
-    font-family: "Manrope";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 38px;
-    text-align: center;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-
-    color: #ffffff;
-  }
-}
-
 .categories-page-container {
   margin-top: 64px;
+  @mixin tablet-categories {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+  @mixin desktop-categories {
+    @media (min-width: 1440px) {
+      @content;
+    }
+  }
   @include tablet-categories() {
     margin-top: 120px;
   }
   @include desktop-categories() {
     margin-top: 160px;
   }
-}
+  @mixin headingTitleText {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    
+    color: #d87d4a;
+  }
+  @mixin heading {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    
+    color: #000000;
+  }
+  @mixin text {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    /* or 167% */
 
-.new-product-item-container {
-  @mixin tablet1 {
-    @media (min-width: 517px) {
-      @content;
+    text-align: center;
+  }
+
+  .categories-page-header {
+    min-height: initial;
+    background-image: initial;
+  }
+
+  .header-text {
+    padding-top: 78px;
+    padding-bottom: 39px;
+    @include tablet-categories {
+      padding-top: 137px;
+      padding-bottom: 104px;
+    }
+    @include desktop-categories {
+      padding-top: 103px;
+      padding-bottom: 103px;
+    }
+    h1 {
+      font-family: "Manrope";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 38px;
+      text-align: center;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      color: #ffffff;
     }
   }
-  color: white;
-  $margin-bottom: 32px;
-  margin-bottom: 120px;
-  &:last-of-type{
-    margin-bottom: initial;
-  }
-  @include desktop-categories() {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 
-    margin-bottom: 160px;
-  }
 
-  .left-container {
-    margin-bottom: 32px;
-    @include tablet-categories() {
-      margin-bottom: 53px;
-    }
-    background-color: #f1f1f1;
-    @include desktop-categories() {
-      margin-right: 125px;
-      margin-bottom: initial;
-    }
-    .img-container {
-      height: 352px;
-      width: 100%;
-      max-width: 400px;
-      background-size: cover;
-      background-position: center;
-      // background-position-x: -14px;
-      background-repeat: no-repeat;
-      margin: 0 auto;
-      @include desktop-categories() {
-        max-width: initial;
-        width: 540px;
-        height: 560px;
+  .new-product-item-container {
+    @mixin tablet1 {
+      @media (min-width: 517px) {
+        @content;
       }
     }
-    // background-image: url('../');
-  }
-  // .img {
-  //   width: 100%;
-  //   margin-bottom: $margin-bottom;
-  //   @include tablet1 {
-  //     height: 352px;
-  //   }
-  // }
-  .content-container {
-    max-width: 572px;
-    margin: 0 auto;
-  }
-  .header {
-    @include headingTitleText;
-    margin-bottom: $margin-bottom;
-  }
-  .title {
-    @include heading;
-    margin-bottom: $margin-bottom;
-    @include desktop-categories {
-      font-weight: 700;
-      font-size: 40px;
-      line-height: 44px;
-      /* or 110% */
-      letter-spacing: 1.42857px;
+    color: white;
+    $margin-bottom: 32px;
+    margin-bottom: 120px;
+    &:last-of-type {
+      margin-bottom: initial;
     }
-  }
-  .text {
-    margin-bottom: $margin-bottom;
-    color: black;
-    @include text;
-  }
-  .item {
     @include desktop-categories() {
-      text-align: left;
-    }
-  }
-  .link {
-    @include desktop-categories() {
-      margin: initial;
-      margin-right: auto;
-    }
-  }
-}
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-@import './CategoriesContainer.scss';
+      margin-bottom: 160px;
+    }
+
+    .left-container {
+      margin-bottom: 32px;
+      @include tablet-categories() {
+        margin-bottom: 53px;
+      }
+      background-color: #f1f1f1;
+      @include desktop-categories() {
+        margin-right: 125px;
+        margin-bottom: initial;
+      }
+      .img-container {
+        height: 352px;
+        width: 100%;
+        max-width: 400px;
+        background-size: cover;
+        background-position: center;
+        // background-position-x: -14px;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        @include desktop-categories() {
+          max-width: initial;
+          width: 540px;
+          height: 560px;
+        }
+      }
+      // background-image: url('../');
+    }
+    // .img {
+    //   width: 100%;
+    //   margin-bottom: $margin-bottom;
+    //   @include tablet1 {
+    //     height: 352px;
+    //   }
+    // }
+    .content-container {
+      max-width: 572px;
+      margin: 0 auto;
+    }
+    .header {
+      @include headingTitleText;
+      margin-bottom: $margin-bottom;
+    }
+    .title {
+      @include heading;
+      margin-bottom: $margin-bottom;
+      @include desktop-categories {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 44px;
+        /* or 110% */
+        letter-spacing: 1.42857px;
+      }
+    }
+    .text {
+      margin-bottom: $margin-bottom;
+      color: black;
+      @include text;
+    }
+    .item {
+      @include desktop-categories() {
+        text-align: left;
+      }
+    }
+    .link {
+      @include desktop-categories() {
+        margin: initial;
+        margin-right: auto;
+      }
+    }
+  }
+
+  @import "./CategoriesContainer.scss";
+}
