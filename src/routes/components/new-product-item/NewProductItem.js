@@ -1,8 +1,9 @@
 export default function NewProductItem(props) {
     return (
         <div className="new-product-item-container">
-            <div className="left-container" style={{backgroundImage: `url(${props.img})`}}>
+            <div className="left-container" >
                 {/* <img className="img" src={props.img} alt="" /> */}
+                <div className="img-container" style={{backgroundImage: `url(${props.img})`}}></div>
             </div>
             <div className="right-container">
                 <div className="content-container">

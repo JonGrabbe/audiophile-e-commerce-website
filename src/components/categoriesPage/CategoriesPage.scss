@@ -86,13 +86,31 @@
   $margin-bottom: 32px;
   margin-bottom: 120px;
 
+  @include desktop-categories {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
   .left-container {
+    background-color: #F1F1F1;
+    @include desktop-categories() {
+      margin-right: 125px;
+    }
+    .img-container {
+      height: 352px;
+      max-width: 400px;
+      background-size: cover;
+      background-position: center;
+      // background-position-x: -14px;
+      background-repeat: no-repeat;
+      margin: 0 auto;
+      @include desktop-categories() {
+        max-width: initial;
+        width: 540px;
+        height: 560px;
+      }
+    }
     // background-image: url('../');
-    height: 352px;
-    max-width: 400px;
-    background-size: cover;
-    background-position-x: -14px;
-    background-repeat: no-repeat;
   }
   // .img {
   //   width: 100%;
