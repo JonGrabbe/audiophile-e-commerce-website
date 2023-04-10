@@ -1,17 +1,13 @@
-import { Link } from "react-router-dom";
-
 export default function NewProductItem(props) {
   return (
     <div className="new-product-item-container">
-      <Link>
-        <div className="left-container">
-          {/* <img className="img" src={props.img} alt="" /> */}
-          <div
-            className="img-container"
-            style={{ backgroundImage: `url(${props.img})` }}
-          ></div>
-        </div>
-      </Link>
+      <div className="left-container">
+        {/* <img className="img" src={props.img} alt="" /> */}
+        <div
+          className="img-container"
+          style={{ backgroundImage: `url(${props.img})` }}
+        ></div>
+      </div>
       <div className="right-container">
         <div className="content-container">
           <h2 className="header item">New product</h2>

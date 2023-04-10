@@ -20,7 +20,7 @@ export default function CategoriesPage(props) {
           />
         );
       })}
-      <Router>{arr}</Router>
+      {arr}
 
       <Categories />
       <TextImageBanner />
