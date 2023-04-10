@@ -12,8 +12,9 @@ export default function Header(props) {
   //   setIsOpen(!isOpen)
   //   props.onMenuOpen(!isOpen)
   // }
+  let c = props.hasBGI ? ' background-image' : null;
   return (
-    <header className="top-header categories-page-header">
+    <header className={"top-header categories-page-header"+c} >
       <div className="menu main-wrapper">
         <button className="menu-button" onClick={() => props.openMenuFunc()}>
           <img src={menuIcon} alt="" className="menu-icon" />

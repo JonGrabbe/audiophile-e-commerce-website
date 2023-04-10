@@ -21,7 +21,7 @@ function Root(props) {
   }
   return (
     <div className={"App" + " " + cn}>
-      <Header isMenuOpen={isMenuOpen} openMenuFunc={handleClick} >
+      <Header isMenuOpen={isMenuOpen} openMenuFunc={handleClick} hasBGI={props.hasBGI} >
           {/* <Content /> */}
           {props.headerContent}
       </Header>

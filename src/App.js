@@ -24,7 +24,7 @@ function App() {
     setIsMenuOpen(!isMenuOpen)
   }
   return (
-    <div className={'App'+' '+cn}>
+    <div className={'App '+' '+cn}>
 
       <Header isMenuOpen={isMenuOpen} openMenuFunc={handleClick} />
       {isMenuOpen ? <BlurContainer handleClick={handleClick}  /> : null}

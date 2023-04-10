@@ -1,19 +1,6 @@
+.background-header {
+}
 .top-header {
-    @mixin tablet1 {
-      @media (min-width: 755px) {
-        @content;
-      }
-    }
-    @mixin lg1 {
-      @media (min-width: 1020px) {
-        @content;
-      }
-    }
-    @mixin lg2 {
-      @media (min-width: 1423px) {
-        @content;
-      }
-    }
   // background image
   min-height: 600px;
   background-image: url("/assets/home/mobile/image-header.jpg");
@@ -22,38 +9,55 @@
   background-position-x: 50%;
   background-repeat: no-repeat;
   background-size: 370px;
-  background-color: $menu-element;
   @include tablet1 {
     min-height: 729px;
     background-position-y: -73px;
     background-size: 490px;
   }
+}
+
+.top-header {
+  @mixin tablet1 {
+    @media (min-width: 755px) {
+      @content;
+    }
+  }
+  @mixin lg1 {
+    @media (min-width: 1020px) {
+      @content;
+    }
+  }
+  @mixin lg2 {
+    @media (min-width: 1423px) {
+      @content;
+    }
+  }
+  background-color: $menu-element;
   .menu-button {
     background: none;
     border: none;
     @include lg3 {
-        display: none;
+      display: none;
     }
   }
   @include lg2 {
-      background-image: none;
-      .header-content-desktop-container {
-        width: 77%;
-        height: 100%;
-        display: flex;
-        justify-content: space-between;
-        .background-image-destop-container {
-            width: 50%;
+    background-image: none;
+    .header-content-desktop-container {
+      width: 77%;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      .background-image-destop-container {
+        width: 50%;
 
-            background-image: url("/assets/home/desktop/image-hero.jpg");
-            background-size: 1220px;
-            background-repeat: no-repeat;
-            // background-position-y: -100px;
-            // background-position-x: 50%;
-            background-position-y: -88px;
-            background-position-x: 84%;
-            
-        }
+        background-image: url("/assets/home/desktop/image-hero.jpg");
+        background-size: 1220px;
+        background-repeat: no-repeat;
+        // background-position-y: -100px;
+        // background-position-x: 50%;
+        background-position-y: -88px;
+        background-position-x: 84%;
+      }
     }
   }
   @import "./header/mobile-dropdown/mobile-drowdown.scss";
@@ -183,7 +187,7 @@
       letter-spacing: 1px;
       color: #ffffff;
       &:hover {
-        background-color: #FBAF85;
+        background-color: #fbaf85;
       }
       @include lg2 {
         margin: initial;
@@ -194,7 +198,7 @@
     }
     // tablet
     @include tablet1 {
-        max-width: 379px;
+      max-width: 379px;
     }
   }
 }

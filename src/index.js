@@ -20,7 +20,7 @@ import productsData from "./data/headphones-products";
 const router = createBrowserRouter([
     {
       path: "/",
-      element: <Root headerContent={<Content />} />,
+      element: <Root headerContent={<Content />} hasBGI={true} />,
       errorElement: <ErrorPage />,
       children: [
         {
