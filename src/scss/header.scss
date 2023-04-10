@@ -1,19 +1,19 @@
 .background-header {
+  &.top-header {
+    // background image
+    min-height: 600px;
+    background-image: url("/assets/home/mobile/image-header.jpg");
+    // background-position: center;
+    background-position-y: -29px;
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+    background-size: 370px;
+    @include tablet1 {
+      min-height: 729px;
+      background-position-y: -73px;
+      background-size: 490px;
+    }
 }
-.top-header {
-  // background image
-  min-height: 600px;
-  background-image: url("/assets/home/mobile/image-header.jpg");
-  // background-position: center;
-  background-position-y: -29px;
-  background-position-x: 50%;
-  background-repeat: no-repeat;
-  background-size: 370px;
-  @include tablet1 {
-    min-height: 729px;
-    background-position-y: -73px;
-    background-size: 490px;
-  }
 }
 
 .top-header {
