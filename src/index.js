@@ -17,43 +17,43 @@ import HeaderText from "./routes/components/header-text/HeaderText";
 import productsData from "./data/headphones-products";
 
 
-const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Root headerContent={<Content />} hasBGI={true} />,
-      errorElement: <ErrorPage />,
-      children: [
-        {
-            path: "/",
-            element: <Main />
-        },
+// const router = createBrowserRouter([
+//     {
+//       path: "/",
+//       element: <Root headerContent={<Content />} hasBGI={true} />,
+//       errorElement: <ErrorPage />,
+//       children: [
+//         {
+//             path: "/",
+//             element: <Main />
+//         },
         
-      ]
-    },
-    {
-      path: "categories/headphones/",
-      element: <Root headerContent={<HeaderText text="Headphones" />} />,
-      children: [
-        {
-          path: "/categories/headphones/",
-          element: <CategoriesPage productsData={productsData} ProductType="headphones" />
-        }
-      ]
-    },
-    {
-      path: "categories/speakers",
-      element: <Root headerContent={<HeaderText text="Speakers" />} />,
-      children: [
-        {
-          path: "/categories/speakers",
-          element: <CategoriesPage productsData={productsData} ProductType="speakers" />
-        }
-      ]
-    }
-  ]);
+//       ]
+//     },
+//     {
+//       path: "categories/headphones/",
+//       element: <Root headerContent={<HeaderText text="Headphones" />} />,
+//       children: [
+//         {
+//           path: "/categories/headphones/",
+//           element: <CategoriesPage productsData={productsData} ProductType="headphones" />
+//         }
+//       ]
+//     },
+//     {
+//       path: "categories/speakers",
+//       element: <Root headerContent={<HeaderText text="Speakers" />} />,
+//       children: [
+//         {
+//           path: "/categories/speakers",
+//           element: <CategoriesPage productsData={productsData} ProductType="speakers" />
+//         }
+//       ]
+//     }
+//   ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<RouterProvider router={router} />);
+root.render(<Root />);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
