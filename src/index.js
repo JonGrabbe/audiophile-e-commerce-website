@@ -4,7 +4,11 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  BrowserRouter,
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 import ErrorPage from "./routes/ErrorPage";
 import HeadphonesPage from "./routes/headphones/HeadphonesPage";
 import Root from "../src/routes/root";
@@ -16,7 +20,6 @@ import HeaderText from "./routes/components/header-text/HeaderText";
 
 import productsData from "./data/headphones-products";
 
-
 // const router = createBrowserRouter([
 //     {
 //       path: "/",
@@ -27,7 +30,7 @@ import productsData from "./data/headphones-products";
 //             path: "/",
 //             element: <Main />
 //         },
-        
+
 //       ]
 //     },
 //     {
@@ -53,7 +56,11 @@ import productsData from "./data/headphones-products";
 //   ]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Root />);
+root.render(
+  <BrowserRouter>
+    <Root  />
+  </BrowserRouter>
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
