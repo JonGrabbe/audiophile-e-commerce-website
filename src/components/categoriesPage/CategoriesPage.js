@@ -1,5 +1,4 @@
 import { BrowserRouter as Router } from "react-router-dom";
-import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import "./CategoriesPage.scss";
 import NewProductItem from "../../routes/components/new-product-item/NewProductItem";
