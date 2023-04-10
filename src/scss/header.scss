@@ -1,4 +1,4 @@
-.background-header {
+.background-image {
   &.top-header {
     // background image
     min-height: 600px;
@@ -12,6 +12,9 @@
       min-height: 729px;
       background-position-y: -73px;
       background-size: 490px;
+    }
+    @include lg2 {
+      background-image: initial;
     }
 }
 }

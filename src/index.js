@@ -19,6 +19,7 @@ import Content from "./components/header/content/Content";
 import HeaderText from "./routes/components/header-text/HeaderText";
 
 import productsData from "./data/headphones-products";
+import Home from "./components/home/Home";
 
 // const router = createBrowserRouter([
 //     {
@@ -58,7 +59,7 @@ import productsData from "./data/headphones-products";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <Root  />
+    <Home />
   </BrowserRouter>
 );
 
