@@ -1,15 +1,41 @@
+@mixin tablet-categories {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin desktop-categories {
+  @media (min-width: 1440px) {
+    @content;
+  }
+}
+
+.header-text {
+  padding-top: 78px;
+  padding-bottom: 39px;
+  @include tablet-categories {
+    padding-top: 137px;
+    padding-bottom: 104px;
+  }
+  @include desktop-categories {
+    padding-top: 103px;
+    padding-bottom: 103px;
+  }
+  h1 {
+    font-family: "Manrope";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #ffffff;
+  }
+}
+
 .categories-page-container {
   margin-top: 64px;
-  @mixin tablet-categories {
-    @media (min-width: 768px) {
-      @content;
-    }
-  }
-  @mixin desktop-categories {
-    @media (min-width: 1440px) {
-      @content;
-    }
-  }
   @include tablet-categories() {
     margin-top: 120px;
   }
@@ -25,7 +51,7 @@
     text-align: center;
     letter-spacing: 10px;
     text-transform: uppercase;
-    
+
     color: #d87d4a;
   }
   @mixin heading {
@@ -37,7 +63,7 @@
     text-align: center;
     letter-spacing: 1px;
     text-transform: uppercase;
-    
+
     color: #000000;
   }
   @mixin text {
@@ -54,32 +80,6 @@
     min-height: initial;
     background-image: initial;
   }
-
-  .header-text {
-    padding-top: 78px;
-    padding-bottom: 39px;
-    @include tablet-categories {
-      padding-top: 137px;
-      padding-bottom: 104px;
-    }
-    @include desktop-categories {
-      padding-top: 103px;
-      padding-bottom: 103px;
-    }
-    h1 {
-      font-family: "Manrope";
-      font-style: normal;
-      font-weight: 700;
-      font-size: 28px;
-      line-height: 38px;
-      text-align: center;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-
-      color: #ffffff;
-    }
-  }
-
 
   .new-product-item-container {
     @mixin tablet1 {
