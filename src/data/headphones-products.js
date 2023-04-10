@@ -5,6 +5,8 @@ import xx59 from "../assets/product-xx59-headphones/mobile/image-product.jpg";
 // speaker images
 import zx9 from "../assets/product-zx9-speaker/mobile/image-product.jpg";
 import zx7 from "../assets/product-zx7-speaker/mobile/image-product.jpg";
+// earphones
+import yx1 from "../assets/product-yx1-earphones/mobile/image-product.jpg";
 
 const productsData = {
   headphones: [
@@ -34,6 +36,13 @@ const productsData = {
       title: "ZX7 SPEAKER",
       image: zx7,
       text: "Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",
+    },
+  ],
+  earphones: [
+    {
+      title: "YX1 WIRELESS EARPHONES",
+      image: yx1,
+      text: "Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.",
     },
   ],
 };

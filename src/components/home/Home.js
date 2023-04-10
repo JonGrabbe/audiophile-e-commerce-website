@@ -5,6 +5,8 @@ import Root from "../../routes/root";
 import Main from "../main/Main";
 import Content from "../header/content/Content";
 import CategoriesPage from "../categoriesPage/CategoriesPage";
+import HeaderText from "../../routes/components/header-text/HeaderText";
+import productsData from "../../data/headphones-products";
 
 export default function Home(props) {
   return (
@@ -15,11 +17,13 @@ export default function Home(props) {
         </Route>
       </Routes>
 
-      {/* <Routes>
-        <Route path="/categories/headphones" element={<CategoriesPage />}>
-            <Route index element={<} />
+      <Routes>
+        <Route path="/categories/" element={<Root headerContent={<HeaderText text="Headphones" />} />}>
+            <Route path="headphones" element={<CategoriesPage productsData={productsData} ProductType="headphones" />} />
+            <Route path="speakers" element={<CategoriesPage productsData={productsData} ProductType="speakers" />} />
+            <Route path="earphones" element={<CategoriesPage productsData={productsData} ProductType="earphones" />} />
         </Route>
-      </Routes> */}
+      </Routes>
     </>
   );
 }
