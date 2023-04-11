@@ -8,7 +8,7 @@ export default function NewProductItem(props) {
         {/* <img className="img" src={props.img} alt="" /> */}
         <div
           className="img-container"
-          style={{ backgroundImage: `url(${imgUrl})` }}
+          style={{ backgroundImage: `url(${"../../assets/"+imgUrl})` }}
         ></div>
       </div>
       <div className="right-container">

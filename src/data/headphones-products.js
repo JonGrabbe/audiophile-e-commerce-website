@@ -14,18 +14,21 @@ const productsData = {
       title: "XX99 Mark II Headphones",
       id: "xx99-mark-2",
       image: xx99Mark1,
+      slug: 'xx99-mark-two-headphones',
       text: "The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.",
       features: "Featuring a genuine leather head strap and premium earcups, these headphones deliver superior comfort for those who like to enjoy endless listening. It includes intuitive controls designed for any situation. Whether you’re taking a business call or just in your own personal space, the auto on/off and pause features ensure that you’ll never miss a beat."
     },
     {
       title: "XX99 Mark I Headphones",
       id: "xx99-mark-1",
+      slug: 'xx99-mark-one-headphones',
       image: xx99Mark2,
       text: "As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.",
     },
     {
       title: "XX59 Headphones",
       image: xx59,
+      slug: 'xx59-headphone',
       id: "xx59",
       text: "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
     },
@@ -48,6 +51,7 @@ const productsData = {
     {
       title: "YX1 WIRELESS EARPHONES",
       id: "yx1",
+      slug: 'yx1-earphones',
       image: yx1,
       text: "Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones. Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.",
     },
