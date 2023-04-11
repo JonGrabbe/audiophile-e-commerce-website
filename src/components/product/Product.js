@@ -1,4 +1,4 @@
-import "./product.scss";
+// import "./product.scss";
 import { useParams } from "react-router-dom";
 import data from "../../data.json";
 import productsData from "../../data/headphones-products";
@@ -57,26 +57,27 @@ export default function Product(props) {
   });
 
   return (
-    <>
+    <main className="main-wrapper categories-page-container">
       <div className="product-container">
-        <div className="img-container">
+        <div className="img-container item">
           <img src={'../../assets/'+img} alt="" />
         </div>
         <div className="product-content-container">
-          <h2 className="header">New Product</h2>
-          <h3 className="product-title">{title}</h3>
-          <p className="description">{description}</p>
-          <p className="price">{price}</p>
+          <h2 className="header item">New Product</h2>
+          <h3 className="product-title item">{title}</h3>
+          <p className="description item">{description}</p>
+          <p className="price item">${price.toLocaleString()}</p>
           <div className="add-to-cart-container">
             <div className="amount-button-container">
-              <button className="subtract">-</button>
-              <div className="amount"></div>
-              <button className="add">+</button>
+              <button className="subtract inc">-</button>
+              <div className="amount">1</div>
+              <button className="add inc">+</button>
             </div>
-            <button className="add-to-cart"></button>
+            <button className="add-to-cart-button">add to cart</button>
           </div>
         </div>
       </div>
-    </>
+
+    </main>
   );
 }

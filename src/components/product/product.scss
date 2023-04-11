@@ -1,5 +1,114 @@
+@mixin tablet1 {
+    @media (min-width: 768px) {
+        @content;
+    }
+ }
+ @mixin headerText {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+
+    color: #D87D4A;
+ }
+ @mixin titleText {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #000000;
+ }
+ @mixin pText {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    /* or 167% */
+
+
+    color: #000000;
+
+    mix-blend-mode: normal;
+    opacity: 0.5;
+ }
 .product-container {
+    @include tablet1() {
+        display: flex;
+        justify-content: space-between;
+    }
     .img-container {
-        
+        @include tablet1() {
+            width: 35%;
+            height: 480px;
+            background-color: grey;
+        }
+        img {
+            width: 100%;
+            @include tablet1() {
+                width: 281px;
+                margin-top: calc((480px - 280px) / 2);
+                display: block;
+            }
+        }
+    }
+    .header {
+        @include headerText;
+    }
+    .product-title {
+        @include titleText;
+    }
+    .description {
+        @include pText;
+    }
+    .item {
+        margin-bottom: 36px;
+    }
+    .add-to-cart-container {
+        display: flex;
+        align-items: center;
+        button {
+            border: none;
+            background: none;
+        }
+        .amount-button-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 0 22px;
+            width: 120px;
+            height: 55px;
+            margin-right: 16px;
+            background: #F1F1F1;
+            .subtract {
+
+            }
+            .amount {
+
+            }
+            .inc {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 18px;
+                text-transform: uppercase;
+
+                color: #000000;
+
+                mix-blend-mode: normal;
+                opacity: 0.25;
+            }
+            button {
+                background: none;
+                border: none;
+            }
+        }
+        .add-to-cart-button {
+            @include main-button;
+            height: 55px;
+            width: 160px;
+        }
     }
 }

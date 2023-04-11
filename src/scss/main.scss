@@ -78,6 +78,29 @@ $screen-xl-min: 1200px;
     }
 }
 
+// main button
+@mixin main-button {
+    width: 12rem;
+      padding: 15px 15px;
+    padding: 15px 0;
+    background: #D87D4A;
+    font-family: 'Manrope';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 18px;
+    text-align: center;
+
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #FFFFFF;
+    &:hover {
+        background-color: black !important;
+        color: white !important;
+    }
+}
+
 
 html {
     font-family: "Manrope";
@@ -195,6 +218,7 @@ body {
 @import 'two-col-banner/two-col-banner.scss';
 @import 'text-image-banner/text-image-banner.scss';
 @import 'footer/footer.scss';
+@import '../components//product/product.scss';
 
 
 
