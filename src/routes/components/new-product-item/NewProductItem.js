@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function NewProductItem(props) {
   return (
     <div className="new-product-item-container">
@@ -13,9 +15,12 @@ export default function NewProductItem(props) {
           <h2 className="header item">New product</h2>
           <h3 className="title item">{props.title}</h3>
           <p className="text item">{props.text}</p>
-          <a href="" className="see-product-link link">
+          {/* <a href="" className="see-product-link link">
             See product
-          </a>
+          </a> */}
+          <Link to={"/product/"+props.slug} className="see-product-link link" >
+            See Product
+          </Link>
         </div>
       </div>
     </div>

@@ -17,6 +17,7 @@ export default function CategoriesPage(props) {
             title={item.title}
             text={item.text}
             img={item.image}
+            slug={item.id}
           />
         );
       })}
