@@ -5,6 +5,7 @@ import logo from "../../assets/shared/desktop/logo.svg";
 import FacebookIcon from "../svg-icons/facebook";
 import TwitterIcon from "../svg-icons/TwitterIcon";
 import InstagramIcon from "../svg-icons/InstagramIcon";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -15,16 +16,16 @@ export default function Footer() {
           <nav className="list">
             <ul>
               <li>
-                <a href="">Home</a>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <a href="">Headphones</a>
+                <Link to="/categories/headphones">Headphones</Link>
               </li>
               <li>
-                <a href="">Speakers</a>
+                <Link to="/categories/speakers">Speakers</Link>
               </li>
               <li>
-                <a href="">Earphones</a>
+                <Link to="/categories/earphones">Earphones</Link>
               </li>
             </ul>
           </nav>

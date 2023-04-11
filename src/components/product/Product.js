@@ -33,10 +33,15 @@ export default function Product(props) {
 
     return (
         <>
-            <h1>product {title}</h1>
-            <p>
-                
-            </p>
+            <div className="product-container">
+                <div className="img-container">
+
+                </div>
+                <div className="product-content-container">
+                    <h2 className="header">New Product</h2>
+                    <h3 className="product-title">{title}</h3>
+                </div>
+            </div>
         </>
     )
 }

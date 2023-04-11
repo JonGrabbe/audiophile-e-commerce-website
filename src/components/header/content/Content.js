@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Content() {
   return (
     <div className="header-content-desktop-container main-wrapper">
@@ -9,9 +11,9 @@ export default function Content() {
             Experience natural, lifelike audio and exceptional build quality
             made for the passionate music enthusiast.
           </p>
-          <a href="" className="see-product-link item">
+          <Link to="/product/xx99-mark-two-headphones" className="see-product-link item">
             see product
-          </a>
+          </Link>
         </div>
       </div>
       <div className="background-image-destop-container"></div>
