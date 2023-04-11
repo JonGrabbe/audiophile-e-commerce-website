@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom"
-import productsData from "../../data/headphones-products"
 import data from '../../data.json';
 
 export default function Product(props) {
