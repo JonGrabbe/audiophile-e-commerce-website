@@ -28,6 +28,8 @@ export default function Product(props) {
     data.forEach(item => {
         if(item.slug === id) {
             title = item.name
+            description = item.description;
+            price = item.price;
         }
     })
 
@@ -40,6 +42,18 @@ export default function Product(props) {
                 <div className="product-content-container">
                     <h2 className="header">New Product</h2>
                     <h3 className="product-title">{title}</h3>
+                    <p className="description">
+                        {description}
+                    </p>
+                    <p className="price">{price}</p>
+                    <div className="add-to-cart-container">
+                        <div className="amount-button-container">
+                            <button className="subtract">-</button>
+                            <div className="amount"></div>
+                            <button className="add">+</button>
+                        </div>
+                        <button className="add-to-cart"></button>
+                    </div>
                 </div>
             </div>
         </>
