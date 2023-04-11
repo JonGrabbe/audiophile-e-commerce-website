@@ -1,13 +1,14 @@
 import { Link } from "react-router-dom";
 
 export default function NewProductItem(props) {
+  let imgUrl = props.img.split("assets/")[1]
   return (
     <div className="new-product-item-container">
       <div className="left-container">
         {/* <img className="img" src={props.img} alt="" /> */}
         <div
           className="img-container"
-          style={{ backgroundImage: `url(${props.img})` }}
+          style={{ backgroundImage: `url(${imgUrl})` }}
         ></div>
       </div>
       <div className="right-container">
