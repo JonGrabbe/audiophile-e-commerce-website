@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function MenuItems(props) {
     let cn = "menu-items";
     if(props.isOpen) {
@@ -8,10 +10,10 @@ export default function MenuItems(props) {
     return (
         <nav className="menu-items">
             <ul>
-                <li className="item"><a href="">Home</a></li>
-                <li className="item"><a href="">Headphones</a></li>
-                <li className="item"><a href="">Speakers</a></li>
-                <li className="item"><a href="">Earphones</a></li>
+                <li className="item"><Link to="/">Home</Link></li>
+                <li className="item"><Link to="/categories/headphones">Headphones</Link></li>
+                <li className="item"><Link to="/categories/speakers">Speakers</Link></li>
+                <li className="item"><Link to="/categories/earphones">Earphones</Link></li>
             </ul>
         </nav>
     );

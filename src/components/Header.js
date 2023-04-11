@@ -5,6 +5,8 @@ import cart from "../assets/shared/desktop/icon-cart.svg";
 import Content from "./header/Content";
 import MenuItems from "./header/MenuItems";
 import MobileDropdown from "./header/mobile-dropdown-menu/MobileDropdown";
+import { Link } from "react-router-dom";
+
 
 export default function Header(props) {
   // const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +22,7 @@ export default function Header(props) {
           <img src={menuIcon} alt="" className="menu-icon" />
         </button>
         <MobileDropdown isOpen={props.isMenuOpen} />
-        <img src={logo} alt="" className="logo" />
+        <Link to="/"><img src={logo} alt="" className="logo" /></Link>
         <MenuItems />
         <img src={cart} alt="" className="cart-icon" />
       </div>
