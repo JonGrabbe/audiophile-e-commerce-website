@@ -8,6 +8,7 @@ import CategoriesPage from "../categoriesPage/CategoriesPage";
 import HeaderText from "../../routes/components/header-text/HeaderText";
 import productsData from "../../data/headphones-products";
 import Product from "../product/Product";
+import CategoriesRouteChild from "../categories-route-child/CategoriesRouteChild";
 
 export default function Home(props) {
   return (
@@ -21,6 +22,19 @@ export default function Home(props) {
             <Route path="speakers" element={<CategoriesPage productsData={productsData} ProductType="speakers" />} />
             <Route path="earphones" element={<CategoriesPage productsData={productsData} ProductType="earphones" />} />
         </Route>
+
+        {/* <Route path="/categories/headphones" >
+          <Route element={<Root headerContent={<HeaderText text="Headphones" />} />} >
+            <CategoriesPage productsData={productsData} ProductType="headphones" />
+          </Route>
+        </Route> */}
+
+        {/* <Route path="/categories/headphones" element={<CategoriesRouteChild category="headphones" />} /> */}
+        {/* <Route path="/categories/headphones" element={<CategoriesRouteChild category="headphones" />} /> */}
+        {/* <Route path="/categories" */}
+
+
+
         <Route path="/product" element={<Root />}>
           <Route path="/product/:id" element={<Product />} />
         </Route>
