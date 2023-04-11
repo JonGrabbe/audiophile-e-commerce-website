@@ -16,7 +16,7 @@ export default function Home(props) {
         <Route path="/" element={<Root headerContent={<Content />} hasBGI={true} />}>
          <Route index element={<Main />} />
         </Route>
-        <Route path="/categories/" element={<Root headerContent={<HeaderText text="Headphones" />} />}>
+        <Route path="/categories/" element={<Root />}>
             <Route path="headphones" element={<CategoriesPage productsData={productsData} ProductType="headphones" />} />
             <Route path="speakers" element={<CategoriesPage productsData={productsData} ProductType="speakers" />} />
             <Route path="earphones" element={<CategoriesPage productsData={productsData} ProductType="earphones" />} />
