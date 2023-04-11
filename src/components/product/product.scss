@@ -42,7 +42,8 @@
 .product-container {
     @include tablet1() {
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
+        // margin: 0 auto;
     }
     .img-container {
         display: flex;
@@ -75,6 +76,7 @@
     }
     .product-content-container {
         margin-top: 45px;
+        max-width: 445px;
     }
     .header {
         @include headerText;
@@ -125,12 +127,22 @@
             button {
                 background: none;
                 border: none;
+                &:hover {
+                    cursor: pointer;
+                }
             }
         }
         .add-to-cart-button {
             @include main-button;
+            &:hover {
+                background-color: #FBAF85 !important;
+                cursor: pointer;
+            }
             height: 55px;
             width: 160px;
         }
     }
 }
+
+
+@import './product-main-content.scss';

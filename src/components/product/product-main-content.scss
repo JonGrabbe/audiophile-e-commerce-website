@@ -1,0 +1,62 @@
+.heading-main {
+    @include titleText;
+    font-size: 24px;
+}
+.main-spacer {
+    margin-top: 94px;
+}
+.default-text-p {
+    @include pText;
+    margin-bottom: 40px;
+}
+
+
+.includes-container {
+    @include tablet1 {
+        display: flex;
+        // justify-content: space-between;
+        align-items: flex-start;
+    }
+    .heading-main {
+        @include tablet1 {
+            margin-top:  initial;
+            font-size: 32px;
+            line-height: 36px;
+            letter-spacing: 1.14286px;
+        }
+    }
+    .list {
+        margin-top: 34px;
+        @include tablet1 {
+            margin-left: 170px;
+            margin-top: initial;
+        }
+        .quantity {
+            margin-right: 24px;
+    
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 25px;
+            /* identical to box height, or 167% */
+    
+    
+            color: #D87D4A;
+        }
+        .name {
+            font-weight: 500;
+            font-size: 15px;
+            line-height: 25px;
+            /* identical to box height, or 167% */
+    
+    
+            color: #000000;
+    
+            mix-blend-mode: normal;
+            opacity: 0.5;
+        }
+        .list-item {
+            margin-bottom: 22px;
+        }
+    }
+
+}

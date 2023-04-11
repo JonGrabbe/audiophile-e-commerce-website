@@ -3,6 +3,16 @@ import { useParams } from "react-router-dom";
 import data from "../../data.json";
 import productsData from "../../data/headphones-products";
 
+
+function ListItem(props) {
+    return (
+        <li className="list-item">
+            <span className="quantity">{props.quantity}x</span>
+            <span className="name">{props.name}</span>
+        </li>
+    )
+}
+
 export default function Product(props) {
   let { id } = useParams();
   // let text;
@@ -37,9 +47,9 @@ export default function Product(props) {
         img = item.image.mobile;
       }
     });
-    return img.split('assets/')[1]
+    return img.split("assets/")[1];
   }
-  let img = getImage(id)
+  let img = getImage(id);
 
   let title;
   let description;
@@ -53,6 +63,7 @@ export default function Product(props) {
       title = item.name;
       description = item.description;
       price = item.price;
+      inTheBox = item.includes;
     }
   });
 
@@ -60,7 +71,7 @@ export default function Product(props) {
     <main className="main-wrapper categories-page-container">
       <div className="product-container">
         <div className="img-container item">
-          <img src={'../../assets/'+img} alt="" />
+          <img src={"../../assets/" + img} alt="" />
         </div>
         <div className="product-content-container">
           <h2 className="header item">New Product</h2>
@@ -77,6 +88,34 @@ export default function Product(props) {
           </div>
         </div>
       </div>
+
+      {/* main content */}
+      <h3 className="heading-main main-spacer">Features</h3>
+      <p className="default-text-p main-spacer">
+        Featuring a genuine leather head strap and premium earcups, these
+        headphones deliver superior comfort for those who like to enjoy endless
+        listening. It includes intuitive controls designed for any situation.
+        Whether you’re taking a business call or just in your own personal
+        space, t he auto on/off and pause features ensure that you’ll never miss
+        a beat.
+      </p>
+      <p className="default-text-p">
+        The advanced Active Noise Cancellation with built-in equalizer allow you
+        to experience your audio world on your terms. It lets you enjoy your
+        audio in peace, but quickly interact with your surroundings when you
+        need to. Combined with Bluetooth 5. 0 compliant connectivity and 17 hour
+        battery life, the XX99 Mark II headphones gives you superior sound,
+        cutting-edge technology, and a modern design aesthetic.
+      </p>
+      <div className="includes-container main-spacer">
+        <h3 className="heading-main">IN THE BOX</h3>
+        <ul className="list">
+            {
+                inTheBox ? inTheBox.map(item => <ListItem quantity={item.quantity} name={item.item} />) : null
+            }
+        </ul>
+      </div>
+
 
     </main>
   );
