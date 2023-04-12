@@ -11,11 +11,32 @@
 }
 
 
+.two-col-text-container {
+    max-width: 1230px;
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .left-col {
+            max-width: 635px;
+        }
+        .right-col {
+            align-self: flex-start;
+            margin-left: 120px;
+        }
+    }
+}
+
+
 .includes-container {
     @include tablet1 {
         display: flex;
         // justify-content: space-between;
         align-items: flex-start;
+    }
+    @include desktop {
+        display: initial;
+
     }
     .heading-main {
         @include tablet1 {
@@ -30,6 +51,11 @@
         @include tablet1 {
             margin-left: 170px;
             margin-top: initial;
+        }
+        @include desktop {
+            margin-top: 47px;
+            margin-left: initial;
+            width: 350px;
         }
         .quantity {
             margin-right: 24px;
