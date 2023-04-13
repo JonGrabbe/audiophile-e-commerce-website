@@ -1,24 +1,9 @@
-/** @jsxImportSource @emotion/react */
-import { jsx } from "@emotion/react";
+// import "./product.scss";
 import { useParams } from "react-router-dom";
 import data from "../../data.json";
 import productsData from "../../data/headphones-products";
 import Gallery from "../gallery/Gallery";
 import ProductIncludes from "../product-includes/ProductIncludes";
-import Categories from "../categories/Categories";
-import TextImageBanner from "../../components/text-image-banner/TextImageBanner";
-import { css } from "@emotion/react";
-
-const style = css`
-  color: lime;
-`
-function Text(props) {
-  return (
-    <p css={style}>
-      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure molestias facere quia rerum velit quas officia temporibus laboriosam hic facilis.
-    </p>
-  )
-}
 
 
 function ListItem(props) {
@@ -165,11 +150,7 @@ export default function Product(props) {
       {/* product includes */}
       <ProductIncludes others={others} />
 
-      {/* categories */}
-      <Categories />
 
-      <TextImageBanner />
-      
     </main>
   );
 }

@@ -1,12 +1,35 @@
+import { useState } from "react";
 import MainLink from "../main-link/MainLink";
 import getImagePath from "../product/getImagePath";
 
+
+
+function ResponsiveImage(props) {
+    const [img, setImg] = useState(props.img.mobile)
+
+    function myFunction(x) {
+        if (x.matches) { // If media query matches
+        //   document.body.style.backgroundColor = "yellow";
+        } else {
+        //  document.body.style.backgroundColor = "pink";
+        }
+      }
+      
+      var x = window.matchMedia("(max-width: 700px)")
+      myFunction(x) // Call listener function at run time
+      x.addListener(myFunction) // Attach listener function on state changes
+
+      return (
+        <img src={img} />
+      )
+}
 
 function Item(props) {
     return (
         <div className="item-container">
             <div className="image-container">
-                <img className="img" src={props.img} alt="" />
+                {/* <img className="img" src={props.img} alt="" /> */}
+                <ResponsiveImage img={props.img} />
             </div>
             <h3 className="title">{props.title}</h3>
             <MainLink to={props.productLink} text="see product" />
@@ -21,7 +44,7 @@ export default function ProductIncludes(props) {
             <div className="product-includes-container">
                 {
                     props.others.map(item => (
-                        <Item img={getImagePath(item.image.mobile, '../../assets/')} title={item.name} productLink={'/product/'+item.slug} />
+                        <Item img={props.image} title={item.name} productLink={'/product/'+item.slug} />
                     ))
                 }
             </div>
