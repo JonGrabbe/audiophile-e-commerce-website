@@ -1,16 +1,16 @@
 export default function Gallery(props) {
     return (
-        <div className="gallery-container">
+        <div className="gallery-container main-spacer">
             <div className="left-container">
                 <div className="top-image-container">
-                    <img src={props.imgTop} alt="" />
+                    <img className="img" src={props.imgTop} alt="" />
                 </div>
                 <div className="bottom-image-container">
-                    <img src={props.imgBottom} alt="" />
+                    <img className="img" src={props.imgBottom} alt="" />
                 </div>
             </div>
             <div className="right-container">
-                <img src={props.imgRight} alt="" />
+                <img className="img" src={props.imgRight} alt="" />
             </div>
         </div>
     )
