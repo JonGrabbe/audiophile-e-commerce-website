@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import data from "../../data.json";
 import productsData from "../../data/headphones-products";
 import Gallery from "../gallery/Gallery";
+import ProductIncludes from "../product-includes/ProductIncludes";
 
 
 function ListItem(props) {
@@ -86,6 +87,7 @@ export default function Product(props) {
       description = item.description;
       price = item.price;
       inTheBox = item.includes;
+      others= item.others;
     }
   });
 
@@ -144,6 +146,9 @@ export default function Product(props) {
 
       {/* gallery */}
       <Gallery imgTop={getGalleryImage(id).top} imgBottom={getGalleryImage(id).bottom} imgRight={getGalleryImage(id).right} />
+
+      {/* product includes */}
+      <ProductIncludes others={others} />
 
 
     </main>
