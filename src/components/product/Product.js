@@ -2,6 +2,7 @@
 import { useParams } from "react-router-dom";
 import data from "../../data.json";
 import productsData from "../../data/headphones-products";
+import Gallery from "../gallery/Gallery";
 
 
 function ListItem(props) {
@@ -30,6 +31,8 @@ export default function Product(props) {
 
   // console.log(text)
 
+  const asstetsPath = '../../assets/';
+
   function getImageUrl(slug) {
     let url;
     data.forEach((item) => {
@@ -38,6 +41,25 @@ export default function Product(props) {
       }
     });
     return url.split("assets/")[1];
+  }
+
+  function convertUrlString(str) {
+    return asstetsPath+str.split("assets/")[1];
+  }
+
+  function getGalleryImage(slug) {
+    let img;
+    data.forEach(item => {
+      if(item.slug === slug) {
+        let gallery = item.gallery;
+        img = {
+          top: convertUrlString(gallery.first.mobile),
+          bottom: convertUrlString(gallery.second.mobile),
+          right: convertUrlString(gallery.third.mobile)
+        }
+      }
+    })
+    return img
   }
 
   function getImage(slug) {
@@ -119,6 +141,9 @@ export default function Product(props) {
             </ul>
           </div>
       </div>
+
+      {/* gallery */}
+      <Gallery imgTop={getGalleryImage(id).top} imgBottom={getGalleryImage(id).bottom} imgRight={getGalleryImage(id).right} />
 
 
     </main>
