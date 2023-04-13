@@ -170,9 +170,6 @@ export default function Product(props) {
 
       <TextImageBanner />
       
-
-      <Text />
-
     </main>
   );
 }
