@@ -1,13 +1,21 @@
-.product-includes-container {
+.others-heading {
+    @include titleText;
     margin-top: 127px;
-    padding-bottom: 52px;
-    .heading {
-        @include titleText;
-        margin-bottom: 49px;
-        letter-spacing: 0.857143px;
-        font-size: 24px;
-        line-height: 36px;
-        text-align: center;
+    margin-bottom: 49px;
+    letter-spacing: 0.857143px;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    @include tablet1 {
+        font-size: 32px;
+        margin-bottom: 61px;
+    }
+}
+.product-includes-container {
+    // margin-top: 127px;
+    // padding-bottom: 52px;
+    @include tablet1 {
+        display: flex;
     }
     .item-container {
         .main-button {
@@ -22,6 +30,7 @@
             line-height: 33px;
             letter-spacing: 1.71429px;
             text-align: center;
+            
         }
 
 

@@ -16,13 +16,15 @@ function Item(props) {
 
 export default function ProductIncludes(props) {
     return (
-        <div className="product-includes-container">
-            <h2 className="heading">You may also like</h2>
-            {
-                props.others.map(item => (
-                    <Item img={getImagePath(item.image.mobile, '../../assets/')} title={item.name} productLink={'/product/'+item.slug} />
-                ))
-            }
-        </div>
+        <>
+            <h2 className="others-heading">You may also like</h2>
+            <div className="product-includes-container">
+                {
+                    props.others.map(item => (
+                        <Item img={getImagePath(item.image.mobile, '../../assets/')} title={item.name} productLink={'/product/'+item.slug} />
+                    ))
+                }
+            </div>
+        </>
     )
 }
