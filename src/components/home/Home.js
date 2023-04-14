@@ -49,12 +49,35 @@ export default function Home(props) {
     setCart(newObj)
   }
 
+  function subtractAmount(slug, amount) {
+    let newObj = {
+      ...cart
+    }
+    for(let property in newObj) {
+      if(property === slug) {
+        newObj[property].amount -= amount
+      }
+    }
+
+    setCart(newObj)
+  }
+
+  function addAmount(slug, amount) {
+    let newObj = {
+      ...cart
+    }
+  }
+
+  function removeAll() {
+
+  }
+
 
   return (
     <>
       <Routes>
         <Route path="/" element={<Root headerContent={<Content />} hasBGI={true} />}>
-         <Route index element={<Main />} />
+         <Route index element={<Main handleSubtractAmount={subtractAmount} />} />
         </Route>
         <Route path="/categories/" element={<Root />}>
             <Route path="headphones" element={<CategoriesPage productsData={productsData} ProductType="headphones" />} />
