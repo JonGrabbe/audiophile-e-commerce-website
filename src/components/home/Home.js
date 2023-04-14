@@ -48,7 +48,11 @@ export default function Home(props) {
     // }
     newObj[slug] = getProductObj(slug)
     newObj[slug].isInCart = true
-    newObj[slug].amount = amountMap[slug]
+    if(!amountMap[slug]) {
+      amountMap[slug] = 1
+    } else {
+      newObj[slug].amount = amountMap[slug]
+    }
     setCart(newObj)
   }
 
