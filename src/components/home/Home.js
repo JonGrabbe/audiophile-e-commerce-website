@@ -55,7 +55,10 @@ export default function Home(props) {
     }
     for(let property in newObj) {
       if(property === slug) {
-        newObj[property].amount -= amount
+        if(newObj[property].quantity > 1) {
+          newObj[property].quantity -= amount
+
+        }
       }
     }
 
@@ -66,6 +69,12 @@ export default function Home(props) {
     let newObj = {
       ...cart
     }
+    for(let property in newObj) {
+      if(property === slug) {
+        newObj[property].quantity += amount
+      }
+    }
+    setCart(newObj)
   }
 
   function removeAll() {
@@ -77,7 +86,7 @@ export default function Home(props) {
     <>
       <Routes>
         <Route path="/" element={<Root headerContent={<Content />} hasBGI={true} />}>
-         <Route index element={<Main handleSubtractAmount={subtractAmount} />} />
+         <Route index element={<Main />} />
         </Route>
         <Route path="/categories/" element={<Root />}>
             <Route path="headphones" element={<CategoriesPage productsData={productsData} ProductType="headphones" />} />
@@ -85,7 +94,7 @@ export default function Home(props) {
             <Route path="earphones" element={<CategoriesPage productsData={productsData} ProductType="earphones" />} />
         </Route>
         <Route path="/product" element={<Root />}>
-          <Route path="/product/:id" element={<Product handleAddToCart={addToCart} />} />
+          <Route path="/product/:id" element={<Product handleAddToCart={addToCart} handleSubtractAmount={subtractAmount} handleAddAmount={addAmount} />} />
         </Route>
       </Routes>
     </>

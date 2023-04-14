@@ -125,9 +125,9 @@ export default function Product(props) {
           <p className="price item">${price.toLocaleString()}</p>
           <div className="add-to-cart-container">
             <div className="amount-button-container">
-              <button onClick={subtractAmount} className="subtract inc">-</button>
+              <button onClick={() => props.handleSubtractAmount(id, 1)} className="subtract inc">-</button>
               <div className="amount">{productQuantity}</div>
-              <button onClick={addAmount} className="add inc">+</button>
+              <button onClick={() => props.handleAddAmount(id, 1)} className="add inc">+</button>
             </div>
             <button className="add-to-cart-button" onClick={addToCart}>add to cart</button>
           </div>
