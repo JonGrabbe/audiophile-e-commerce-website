@@ -19,6 +19,7 @@ export default function Home(props) {
     }
   }
   const [cart, setCart] = useState(cartObj)
+  const [amountMap, setAmountMap] = useState({})
 
   function getProductObj(slug) {
     let obj;
@@ -47,17 +48,38 @@ export default function Home(props) {
     // }
     newObj[slug] = getProductObj(slug)
     newObj[slug].isInCart = true
+    newObj[slug].amount = amountMap[slug]
     setCart(newObj)
   }
 
 
   function changeAmount(slug, operation) {
     let newObj = {
-      ...cart
+      ...amountMap
     }
-    // if(operation === '+') {
-
-    // }
+    console.log(slug, operation)
+    let p = newObj[slug];
+    function operate(num, operation) {
+      if(operation === '+') {
+        return num + 1
+      }
+      if(operation === '-' && num > 1) {
+        return num -= 1
+      }
+    }
+    if(newObj[slug]) {
+      if(operation === '+') {
+        newObj[slug] += 1
+      }
+      if(operation === '-' && p > 1) {
+        newObj[slug] -= 1
+      }
+    } else {
+      if(operation === '+') {
+        newObj[slug] = 2
+      }
+    }
+    setAmountMap(newObj)
   }
 
 
@@ -73,7 +95,7 @@ export default function Home(props) {
             <Route path="earphones" element={<CategoriesPage productsData={productsData} ProductType="earphones" />} />
         </Route>
         <Route path="/product" element={<Root />}>
-          <Route path="/product/:id" element={<Product handleAddToCart={addToCart} />} />
+          <Route path="/product/:id" element={<Product handleAddToCart={addToCart} handleChangeAmount={changeAmount} amountMap={amountMap} />} />
         </Route>
       </Routes>
     </>
