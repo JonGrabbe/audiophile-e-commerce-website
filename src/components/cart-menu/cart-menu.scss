@@ -1,4 +1,5 @@
 .cart-blur-container {
+    display: none;
     position: absolute;
     z-index: 100;
     width: 320px;
@@ -7,7 +8,6 @@
     mix-blend-mode: normal;
     opacity: 0.4;
 }
-
 .cart-menu-container {
     display: none;
     position: absolute;

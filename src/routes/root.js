@@ -33,7 +33,7 @@ function Root(props) {
           {/* <Content /> */}
           {props.headerContent}
       </Header>
-      <CartMenu isCartOpen={isCartOpen} />
+      <CartMenu isCartOpen={isCartOpen} cartProps={props.cartProps} />
       {isMenuOpen ? <BlurContainer handleClick={handleClick} /> : null}
       {/* body */}
       <Outlet />

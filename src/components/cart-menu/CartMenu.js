@@ -38,11 +38,11 @@ export default function CartMenu(props) {
     }
     return (
         <div>
-            <div className="cart-blur-container">
+            <div className="cart-blur-container" style={style}>
             </div>
                 <div className="cart-menu-container" style={style}>
                     <div className="top-container">
-                        <h2 className="heading">Cart </h2>
+                        <h2 className="heading">Cart {props.cartProps ? props.cartProps.cart.length : null}</h2>
                         <button className="remove-all-button">remove all</button>
                     </div>
                     {/* <div className="cart-items-container">

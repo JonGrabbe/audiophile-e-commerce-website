@@ -82,13 +82,16 @@ export default function Home(props) {
     setAmountMap(newObj)
   }
 
-  
+  let cartProps = {
+    cart: cart,
+    amountMap: amountMap
+  }
 
 
   return (
     <>
       <Routes>
-        <Route path="/" element={<Root headerContent={<Content />} hasBGI={true} />}>
+        <Route path="/" element={<Root headerContent={<Content />} hasBGI={true} cartProps={cartProps} />}>
          <Route index element={<Main />} />
         </Route>
         <Route path="/categories/" element={<Root />}>
