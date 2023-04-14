@@ -13,6 +13,14 @@
 
 .two-col-text-container {
     max-width: 1230px;
+    .left-col {
+        .default-text-p {
+            &:first-of-type {
+                margin-top: 40px;
+            }
+        }
+
+    }
     @include desktop {
         display: flex;
         justify-content: space-between;

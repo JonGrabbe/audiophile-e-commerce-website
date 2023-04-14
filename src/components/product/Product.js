@@ -96,6 +96,7 @@ export default function Product(props) {
       price = item.price;
       inTheBox = item.includes;
       others= item.others;
+      features = item.features.split('\n\n');
     }
   });
 
@@ -125,7 +126,7 @@ export default function Product(props) {
       <div className="two-col-text-container main-spacer">
           <div className="left-col">
               <h3 className="heading-main">Features</h3>
-              <p className="default-text-p main-spacer">
+              {/* <p className="default-text-p main-spacer">
                 Featuring a genuine leather head strap and premium earcups, these
                 headphones deliver superior comfort for those who like to enjoy endless
                 listening. It includes intuitive controls designed for any situation.
@@ -140,7 +141,14 @@ export default function Product(props) {
                 need to. Combined with Bluetooth 5. 0 compliant connectivity and 17 hour
                 battery life, the XX99 Mark II headphones gives you superior sound,
                 cutting-edge technology, and a modern design aesthetic.
+              </p> */}
+              <p className="default-text-p">
+                {features[0]}
               </p>
+              <p className="default-text-p">
+                {features[1]}
+              </p>
+              {/* <p className="default-text-p main-spacer"></p> */}
           </div>
           <div className="includes-container right-col">
             <h3 className="heading-main">IN THE BOX</h3>
