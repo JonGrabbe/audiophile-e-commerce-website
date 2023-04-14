@@ -23,7 +23,7 @@ export default function Product(props) {
   const [productQuantity, setProductQuantity] = useState(1)
   const [slug, setSlug] = useState(id)
   function addToCart() {
-    props.handleAddToCart(slug, productQuantity)
+    props.handleAddToCart(id, productQuantity)
   }
   // let text;
   // let title;

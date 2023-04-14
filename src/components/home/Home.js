@@ -9,6 +9,7 @@ import HeaderText from "../../routes/components/header-text/HeaderText";
 import productsData from "../../data/headphones-products";
 import Product from "../product/Product";
 import { useState } from "react";
+import data from '../../data.json';
 
 export default function Home(props) {
   let cartObj = {
@@ -17,10 +18,36 @@ export default function Home(props) {
 
     }
   }
-  function addToCart(slug, amount) {
-    console.log(slug, amount)
+  const [cart, setCart] = useState(cartObj)
+  function getProductObj(slug) {
+    // let obj = []
+    let r;
+    data.forEach(item => {
+      if(item.slug === slug) {
+        r = item
+      }
+    })
+    // console.log(r)
+    // obj.slug = slug;
+    // obj.name = r.name
+    let obj = {
+      ...r
+    }
+    // console.log('obj', obj)
+    return obj;
   }
-  const [cart, setCart] = useState()
+  function addToCart(slug, amount) {
+    // console.log(slug, amount)
+    let item = {
+      "item": getProductObj(slug),
+      quantity: amount
+    }
+    let newObj = {
+      ...cart
+    }
+    newObj.cart.push(item)
+    setCart(newObj)
+  }
   return (
     <>
       <Routes>
