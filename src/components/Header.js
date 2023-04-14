@@ -7,6 +7,7 @@ import MenuItems from "./header/MenuItems";
 import MobileDropdown from "./header/mobile-dropdown-menu/MobileDropdown";
 import { Link, useMatch, useParams } from "react-router-dom";
 import HeaderText from "../routes/components/header-text/HeaderText";
+import Cart from "./cart/Cart";
 
 
 export default function Header(props) {
@@ -32,7 +33,8 @@ export default function Header(props) {
         <MobileDropdown isOpen={props.isMenuOpen} />
         <Link to="/"><img src={logo} alt="" className="logo" /></Link>
         <MenuItems />
-        <img src={cart} alt="" className="cart-icon" />
+        {/* <img src={cart} alt="" className="cart-icon" /> */}
+        <Cart />
       </div>
 
       
