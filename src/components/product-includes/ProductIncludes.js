@@ -5,6 +5,7 @@ import getImagePath from "../product/getImagePath";
 function Item(props) {
     let mobileSrc = getImagePath(props.img.mobile, '../../assets/')+' 300w';
     let tabletSrc = getImagePath(props.img.tablet, '../../assets/')+' 730w';
+    let desktopSrc = getImagePath(props.img.desktop, '../../assets/')+' 1100w';
     return (
         <div className="item-container">
             <div className="image-container">
@@ -12,6 +13,10 @@ function Item(props) {
                     <source 
                         media="(min-width: 760px)"
                         srcSet={tabletSrc}
+                    />
+                    <source 
+                        media="(min-width: 1100px)"
+                        srcSet={desktopSrc}
                     />
                     <img 
                         className="img" 
