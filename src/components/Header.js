@@ -20,7 +20,7 @@ export default function Header(props) {
   let mathches = ['headphones', 'speakers', 'earphones']
   let categoriesTitle = useMatch("/categories/*")
   
-  console.log(categoriesTitle)
+  // console.log(categoriesTitle)
 
 
   let c = props.hasBGI ? ' background-image' : null;
@@ -34,7 +34,7 @@ export default function Header(props) {
         <Link to="/"><img src={logo} alt="" className="logo" /></Link>
         <MenuItems />
         {/* <img src={cart} alt="" className="cart-icon" /> */}
-        <Cart />
+        <Cart handleDisplayCart={props.handleDisplayCart} />
       </div>
 
       

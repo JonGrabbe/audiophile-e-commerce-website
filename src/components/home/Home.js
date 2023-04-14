@@ -82,6 +82,8 @@ export default function Home(props) {
     setAmountMap(newObj)
   }
 
+  
+
 
   return (
     <>

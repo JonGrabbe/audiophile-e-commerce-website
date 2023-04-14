@@ -1,0 +1,39 @@
+.cart-blur-container {
+    
+}
+
+.cart-menu-container {
+    display: none;
+    position: absolute;
+    z-index: 10000;
+    top: 70px;
+    right: 10px;
+    background-color: green;
+    height: 400px;
+    width: 300px;
+    .heading {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25px;
+        /* identical to box height */
+
+        letter-spacing: 1.28571px;
+        text-transform: uppercase;
+
+        color: #000000;
+    }
+    .remove-all-button {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 25px;
+        /* identical to box height, or 167% */
+
+        text-decoration-line: underline;
+
+        color: #000000;
+
+        mix-blend-mode: normal;
+        opacity: 0.5;
+    }
+}
