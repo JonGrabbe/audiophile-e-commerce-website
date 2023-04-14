@@ -113,13 +113,11 @@ export default function Product(props) {
           <p className="price item">${price.toLocaleString()}</p>
           <div className="add-to-cart-container">
             <div className="amount-button-container">
-              <button onClick={() => props.handleChangeAmount(id, '-')} className="subtract inc">-</button>
-              <div className="amount">
-                {props.cart[id] ? props.cart[id].amount : 1}
-              </div>
-              <button onClick={() => props.handleChangeAmount(id, '+')} className="add inc">+</button>
+              <button className="subtract inc">-</button>
+              <div className="amount">1</div>
+              <button className="add inc">+</button>
             </div>
-            <button className="add-to-cart-button" onClick={() => addToCart(id, 1, true)}>add to cart</button>
+            <button className="add-to-cart-button" onClick={() => addToCart(id)}>add to cart</button>
           </div>
         </div>
       </div>
