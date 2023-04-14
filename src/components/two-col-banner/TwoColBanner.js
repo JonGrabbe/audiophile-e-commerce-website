@@ -7,7 +7,7 @@ export default function TwoColBanner() {
             <div className="right-container item">
                 <div className="text-container">
                     <h2 className="title">YX1 Earphones</h2>
-                    <Link to="/product/yx1-earphones" className="see-through-button link main-button">See Product</Link>
+                    <Link to="/product/yx1-earphones" className="see-through-button link">See Product</Link>
                 </div>
             </div>
         </div>

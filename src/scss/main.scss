@@ -188,6 +188,11 @@ body {
     letter-spacing: 1px;
     text-transform: uppercase;
 
+    &:hover {
+        background-color: #4C4C4C !important;
+        color: white !important;
+    }
+
 }
 .see-product-link {
     // position: absolute;
