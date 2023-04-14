@@ -22,8 +22,20 @@ export default function Product(props) {
   let { id } = useParams();
   const [productQuantity, setProductQuantity] = useState(1)
   const [slug, setSlug] = useState(id)
+
+  function addAmount() {
+    setProductQuantity(productQuantity + 1)
+  }
+
+  function subtractAmount() {
+    if(productQuantity > 1) {
+      setProductQuantity(productQuantity - 1)
+    }
+  }
+
   function addToCart() {
     props.handleAddToCart(id, productQuantity)
+    setProductQuantity(1)
   }
   // let text;
   // let title;
@@ -113,9 +125,9 @@ export default function Product(props) {
           <p className="price item">${price.toLocaleString()}</p>
           <div className="add-to-cart-container">
             <div className="amount-button-container">
-              <button className="subtract inc">-</button>
-              <div className="amount">1</div>
-              <button className="add inc">+</button>
+              <button onClick={subtractAmount} className="subtract inc">-</button>
+              <div className="amount">{productQuantity}</div>
+              <button onClick={addAmount} className="add inc">+</button>
             </div>
             <button className="add-to-cart-button" onClick={addToCart}>add to cart</button>
           </div>

@@ -45,9 +45,11 @@ export default function Home(props) {
     let newObj = {
       ...cart
     }
-    newObj.cart.push(item)
+    newObj[slug] = item
     setCart(newObj)
   }
+
+
   return (
     <>
       <Routes>
