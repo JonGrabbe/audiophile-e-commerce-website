@@ -8,14 +8,18 @@ function Item(props) {
     return (
         <div className="item-container">
             <div className="image-container">
-                <img 
-                    className="img" 
-                    alt="" 
-                    src={getImagePath(props.img.mobile, '../../assets/')}
-                    srcSet={mobileSrc+', '+tabletSrc}
-                    sizes="(min-width: 300px) 300px, (min-width: 730px) 730px"
-                     
-                />
+                <picture>
+                    <source 
+                        media="(min-width: 760px)"
+                        srcSet={tabletSrc}
+                    />
+                    <img 
+                        className="img" 
+                        alt="" 
+                        src={getImagePath(props.img.mobile, '../../assets/')}
+                    />
+
+                </picture>
             </div>
             <h3 className="title">{props.title}</h3>
             <MainLink to={props.productLink} text="see product" />

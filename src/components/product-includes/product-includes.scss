@@ -16,6 +16,7 @@
     // padding-bottom: 52px;
     @include tablet1 {
         display: flex;
+        gap: 11px;
     }
     .item-container {
         .main-button {
