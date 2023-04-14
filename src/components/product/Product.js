@@ -4,6 +4,8 @@ import data from "../../data.json";
 import productsData from "../../data/headphones-products";
 import Gallery from "../gallery/Gallery";
 import ProductIncludes from "../product-includes/ProductIncludes";
+import Categories from "../categories/Categories";
+import TextImageBanner from "../text-image-banner/TextImageBanner";
 
 
 function ListItem(props) {
@@ -149,6 +151,11 @@ export default function Product(props) {
 
       {/* product includes */}
       <ProductIncludes others={others} />
+
+      {/* categores */}
+      <Categories />
+
+      <TextImageBanner />
 
 
     </main>
