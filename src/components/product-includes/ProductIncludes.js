@@ -1,38 +1,21 @@
-import { useState } from "react";
 import MainLink from "../main-link/MainLink";
 import getImagePath from "../product/getImagePath";
 
 
-
-function ResponsiveImage(props) {
-    const [img, setImg] = useState(getImagePath(props.img.mobile, '../../assets/'))
-    console.log(img)
-
-    function myFunction(x) {
-        if (x.matches) { // If media query matches
-        //   document.body.style.backgroundColor = "yellow";
-            setImg(getImagePath(props.img.tablet, '../../assets/'))
-        } else {
-        //  document.body.style.backgroundColor = "pink";
-        }
-      }
-      
-      var x = window.matchMedia("(min-width: 700px)")
-      myFunction(x) // Call listener function at run time
-      x.addListener(myFunction) // Attach listener function on state changes
-
-      return (
-        <img src={img} className="img" />
-
-      )
-}
-
 function Item(props) {
+    let mobileSrc = getImagePath(props.img.mobile, '../../assets/')+' 300w';
+    let tabletSrc = getImagePath(props.img.tablet, '../../assets/')+' 730w';
     return (
         <div className="item-container">
             <div className="image-container">
-                {/* <img className="img" src={props.img} alt="" /> */}
-                <ResponsiveImage img={props.img} />
+                <img 
+                    className="img" 
+                    alt="" 
+                    src={getImagePath(props.img.mobile, '../../assets/')}
+                    srcSet={mobileSrc+', '+tabletSrc}
+                    sizes="(min-width: 300px) 300px, (min-width: 730px) 730px"
+                     
+                />
             </div>
             <h3 className="title">{props.title}</h3>
             <MainLink to={props.productLink} text="see product" />
