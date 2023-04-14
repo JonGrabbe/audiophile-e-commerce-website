@@ -22,20 +22,8 @@ export default function Product(props) {
   let { id } = useParams();
   const [productQuantity, setProductQuantity] = useState(1)
   const [slug, setSlug] = useState(id)
-
-  function addAmount() {
-    setProductQuantity(productQuantity + 1)
-  }
-
-  function subtractAmount() {
-    if(productQuantity > 1) {
-      setProductQuantity(productQuantity - 1)
-    }
-  }
-
   function addToCart() {
-    props.handleAddToCart(id, productQuantity)
-    setProductQuantity(1)
+    props.handleAddToCart(slug, productQuantity)
   }
   // let text;
   // let title;
@@ -126,10 +114,12 @@ export default function Product(props) {
           <div className="add-to-cart-container">
             <div className="amount-button-container">
               <button onClick={() => props.handleChangeAmount(id, '-')} className="subtract inc">-</button>
-              <div className="amount">{props.cart[id] ? props.cart[id].quantity : 1}</div>
+              <div className="amount">
+                {props.cart[id] ? props.cart[id].amount : 1}
+              </div>
               <button onClick={() => props.handleChangeAmount(id, '+')} className="add inc">+</button>
             </div>
-            <button className="add-to-cart-button" onClick={addToCart}>add to cart</button>
+            <button className="add-to-cart-button" onClick={() => addToCart(id, 1, true)}>add to cart</button>
           </div>
         </div>
       </div>

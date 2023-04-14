@@ -11,101 +11,82 @@ import Product from "../product/Product";
 import { useState } from "react";
 import data from '../../data.json';
 
+function getProductObj(slug) {
+  let obj;
+  data.forEach(item => {
+    if(item.slug === slug) {
+      obj = {
+        ...item
+      }
+    }
+  })
+  return obj;
+}
+
 export default function Home(props) {
   let cartObj = {
-    cart: [],
     getTotal() {
 
     }
   }
   const [cart, setCart] = useState(cartObj)
-  function getProductObj(slug) {
-    // let obj = []
-    let r;
-    data.forEach(item => {
-      if(item.slug === slug) {
-        r = item
-      }
-    })
-    // console.log(r)
-    // obj.slug = slug;
-    // obj.name = r.name
-    let obj = {
-      ...r
-    }
-    // console.log('obj', obj)
-    return obj;
-  }
-  function addToCart(slug, amount) {
+
+  function addToCart(slug, amount, isInCart) {
     // console.log(slug, amount)
-    let item = {
-      "item": getProductObj(slug),
-      quantity: amount
-    }
     let newObj = {
       ...cart
     }
-    newObj[slug] = item
-    setCart(newObj)
+    if(isInCart) {
+      newObj[slug].isInCart = true
+    } else {
+      newObj[slug] = getProductObj(slug)
+      newObj[slug].amount = amount
+      setCart(newObj)
+    }
   }
 
-  function subtractAmount(slug, amount) {
+  function addToCartAmoun(slug, operation) {
+    // keeps track of amount added but not added
+    // to the cart
     let newObj = {
       ...cart
     }
-    for(let property in newObj) {
-      if(property === slug) {
-        if(newObj[property].quantity > 1) {
-          newObj[property].quantity -= amount
-
-        } else {
-          newObj[slug] = getProductObj(slug)
-        }
-      }
+    if(operation === '+') {
+      newObj[slug].amount += 1
     }
-
-    setCart(newObj)
-  }
-
-  function addAmount(slug, amount) {
-    let newObj = {
-      ...cart
-    }
-    for(let property in newObj) {
-      if(property === slug) {
-        newObj[property].quantity += amount
-      } else {
-        newObj[slug] = getProductObj(slug)
-        // setCart(newObj)
-      }
+    if(operation === '-' && newObj[slug].amount > 1) {
+      newObj[slug].amount -= 1
     }
     setCart(newObj)
   }
 
   function changeAmount(slug, operation) {
+    // console.log(slug)
     let newObj = {
       ...cart
     }
-    for(let property in newObj) {
-      if(property === slug) {
+    for(let p in newObj) {
+      if(newObj[p].slug === slug) {
+        // console.log(newObj[p])
         if(operation === '+') {
-          newObj[property].quantity += 1
+          // console.log('asdfasd')
+          newObj[p].amount += 1
+          setCart(newObj)
+          // addToCartAmoun(slug, '+')
         }
-        if(operation === '-' && newObj[property].quantity > 1) {
-          newObj[property].quantity -= 1
+        if(operation === '-' && newObj[p].amount > 1) {
+          newObj[p].amount -= 1
+          setCart(newObj)
+          // addToCartAmoun(slug, '-')
         }
       } else {
-        newObj[slug] = getProductObj(slug)
-        // setCart(newObj)
+        if(operation !== '-') {
+          addToCart(slug, 2)
+        }
+        // changeAmount(slug, operation)
       }
     }
-    setCart(newObj)
   }
-
-  function removeAll() {
-
-  }
-
 
   return (
     <>
@@ -119,7 +100,7 @@ export default function Home(props) {
             <Route path="earphones" element={<CategoriesPage productsData={productsData} ProductType="earphones" />} />
         </Route>
         <Route path="/product" element={<Root />}>
-          <Route path="/product/:id" element={<Product handleAddToCart={addToCart} handleChangeAmount={changeAmount} cart={cart} />} />
+          <Route path="/product/:id" element={<Product handleChangeAmount={changeAmount} handleAddToCart={addToCart} cart={cart} />} />
         </Route>
       </Routes>
     </>
