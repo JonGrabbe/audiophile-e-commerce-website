@@ -6,6 +6,7 @@ import Gallery from "../gallery/Gallery";
 import ProductIncludes from "../product-includes/ProductIncludes";
 import Categories from "../categories/Categories";
 import TextImageBanner from "../text-image-banner/TextImageBanner";
+import { useState } from "react";
 
 
 function ListItem(props) {
@@ -19,6 +20,11 @@ function ListItem(props) {
 
 export default function Product(props) {
   let { id } = useParams();
+  const [productQuantity, setProductQuantity] = useState(1)
+  const [slug, setSlug] = useState(id)
+  function addToCart() {
+    props.handleAddToCart(slug, productQuantity)
+  }
   // let text;
   // let title;
   // for(let pt in productsData) {
@@ -110,7 +116,7 @@ export default function Product(props) {
               <div className="amount">1</div>
               <button className="add inc">+</button>
             </div>
-            <button className="add-to-cart-button">add to cart</button>
+            <button className="add-to-cart-button" onClick={addToCart}>add to cart</button>
           </div>
         </div>
       </div>

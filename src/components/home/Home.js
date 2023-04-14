@@ -8,8 +8,19 @@ import CategoriesPage from "../categoriesPage/CategoriesPage";
 import HeaderText from "../../routes/components/header-text/HeaderText";
 import productsData from "../../data/headphones-products";
 import Product from "../product/Product";
+import { useState } from "react";
 
 export default function Home(props) {
+  let cartObj = {
+    cart: [],
+    getTotal() {
+
+    }
+  }
+  function addToCart(slug, amount) {
+    console.log(slug, amount)
+  }
+  const [cart, setCart] = useState()
   return (
     <>
       <Routes>
@@ -22,7 +33,7 @@ export default function Home(props) {
             <Route path="earphones" element={<CategoriesPage productsData={productsData} ProductType="earphones" />} />
         </Route>
         <Route path="/product" element={<Root />}>
-          <Route path="/product/:id" element={<Product />} />
+          <Route path="/product/:id" element={<Product handleAddToCart={addToCart} />} />
         </Route>
       </Routes>
     </>
