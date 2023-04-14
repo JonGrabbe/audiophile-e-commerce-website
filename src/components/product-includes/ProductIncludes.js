@@ -5,22 +5,25 @@ import getImagePath from "../product/getImagePath";
 
 
 function ResponsiveImage(props) {
-    const [img, setImg] = useState(props.img.mobile)
+    const [img, setImg] = useState(getImagePath(props.img.mobile, '../../assets/'))
+    console.log(img)
 
     function myFunction(x) {
         if (x.matches) { // If media query matches
         //   document.body.style.backgroundColor = "yellow";
+            setImg(getImagePath(props.img.tablet, '../../assets/'))
         } else {
         //  document.body.style.backgroundColor = "pink";
         }
       }
       
-      var x = window.matchMedia("(max-width: 700px)")
+      var x = window.matchMedia("(min-width: 700px)")
       myFunction(x) // Call listener function at run time
       x.addListener(myFunction) // Attach listener function on state changes
 
       return (
-        <img src={img} />
+        <img src={img} className="img" />
+
       )
 }
 
@@ -44,7 +47,7 @@ export default function ProductIncludes(props) {
             <div className="product-includes-container">
                 {
                     props.others.map(item => (
-                        <Item img={props.image} title={item.name} productLink={'/product/'+item.slug} />
+                        <Item img={item.image} title={item.name} productLink={'/product/'+item.slug} />
                     ))
                 }
             </div>
