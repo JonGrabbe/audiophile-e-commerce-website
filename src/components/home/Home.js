@@ -58,6 +58,8 @@ export default function Home(props) {
         if(newObj[property].quantity > 1) {
           newObj[property].quantity -= amount
 
+        } else {
+          newObj[slug] = getProductObj(slug)
         }
       }
     }
@@ -72,6 +74,29 @@ export default function Home(props) {
     for(let property in newObj) {
       if(property === slug) {
         newObj[property].quantity += amount
+      } else {
+        newObj[slug] = getProductObj(slug)
+        // setCart(newObj)
+      }
+    }
+    setCart(newObj)
+  }
+
+  function changeAmount(slug, operation) {
+    let newObj = {
+      ...cart
+    }
+    for(let property in newObj) {
+      if(property === slug) {
+        if(operation === '+') {
+          newObj[property].quantity += 1
+        }
+        if(operation === '-' && newObj[property].quantity > 1) {
+          newObj[property].quantity -= 1
+        }
+      } else {
+        newObj[slug] = getProductObj(slug)
+        // setCart(newObj)
       }
     }
     setCart(newObj)
@@ -94,7 +119,7 @@ export default function Home(props) {
             <Route path="earphones" element={<CategoriesPage productsData={productsData} ProductType="earphones" />} />
         </Route>
         <Route path="/product" element={<Root />}>
-          <Route path="/product/:id" element={<Product handleAddToCart={addToCart} handleSubtractAmount={subtractAmount} handleAddAmount={addAmount} />} />
+          <Route path="/product/:id" element={<Product handleAddToCart={addToCart} handleChangeAmount={changeAmount} cart={cart} />} />
         </Route>
       </Routes>
     </>
