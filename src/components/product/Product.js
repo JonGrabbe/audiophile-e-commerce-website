@@ -20,6 +20,7 @@ function ListItem(props) {
 
 export default function Product(props) {
   let { id } = useParams();
+  
   const [productQuantity, setProductQuantity] = useState(1)
   const [slug, setSlug] = useState(id)
   function addToCart() {
