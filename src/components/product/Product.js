@@ -20,7 +20,7 @@ function ListItem(props) {
 
 export default function Product(props) {
   let { id } = useParams();
-  
+
   const [productQuantity, setProductQuantity] = useState(1)
   const [slug, setSlug] = useState(id)
   function addToCart() {
@@ -120,7 +120,7 @@ export default function Product(props) {
               </div>
               <button onClick={() => props.handleChangeAmount(id, '+')} className="add inc">+</button>
             </div>
-            <button className="add-to-cart-button" onClick={() => addToCart(id)}>add to cart</button>
+            <button className="add-to-cart-button" onClick={() => props.handleAddToCart(id)}>add to cart</button>
           </div>
         </div>
       </div>
