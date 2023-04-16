@@ -36,12 +36,14 @@ const productsData = {
   speakers: [
     {
       title: "ZX9 speaker",
+      slug: 'zx9-speaker',
       image: zx9,
       id: "zX9",
       text: "Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pl    easing and practical audio setups.",
     },
     {
       title: "ZX7 SPEAKER",
+      slug: 'zx7-speaker',
       id: "zx7",
       image: zx7,
       text: "Stream high quality sound wirelessly with minimal loss. The ZX7 bookshelf speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",

@@ -13,7 +13,7 @@ import data from '../../data.json';
 
 export default function Home(props) {
   let cartObj = {
-    
+
   }
   const [cart, setCart] = useState(cartObj)
   const [amountMap, setAmountMap] = useState({})
@@ -85,6 +85,7 @@ export default function Home(props) {
 
   function removeAll() {
     setCart({})
+    setAmountMap({})
   }
 
   let cartProps = {
@@ -104,7 +105,7 @@ export default function Home(props) {
             <Route path="speakers" element={<CategoriesPage productsData={productsData} ProductType="speakers" />} />
             <Route path="earphones" element={<CategoriesPage productsData={productsData} ProductType="earphones" />} />
         </Route>
-        <Route path="/product" element={<Root amountMap={amountMap} />}>
+        <Route path="/product" element={<Root amountMap={amountMap} handleRemoveAll={removeAll} />}>
           <Route path="/product/:id" element={<Product handleAddToCart={addToCart} handleChangeAmount={changeAmount} amountMap={amountMap} />} />
         </Route>
       </Routes>
