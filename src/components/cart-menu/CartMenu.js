@@ -1,4 +1,5 @@
 import getImage from "../../functions/getImage";
+import ProductAmountChangeButton from "../product-amount-change-button/ProductAmountChangeButton";
 
 function Checkout(props) {
     return (
@@ -41,6 +42,7 @@ function CartItem(props) {
                 <h3 className="heading">{props.title}</h3>
                 <p>${props.price}</p>
             </div>
+            <ProductAmountChangeButton />
         </div>
     )
 }

@@ -58,5 +58,40 @@
             width: 62px;
             border-radius: 8px;
         }
+        .amount-button-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 0 22px;
+            width: 120px;
+            height: 55px;
+            margin-right: 16px;
+            background: #F1F1F1;
+            .subtract {
+
+            }
+            .amount {
+
+            }
+            .inc {
+                font-weight: 700;
+                font-size: 20px;
+                line-height: 18px;
+                text-transform: uppercase;
+
+                color: #000000;
+
+                mix-blend-mode: normal;
+                opacity: 0.25;
+            }
+            button {
+                background: none;
+                border: none;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
     }
 }
