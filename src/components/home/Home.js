@@ -30,6 +30,14 @@ export default function Home(props) {
     return obj
   }
 
+  function getTotal(obj) {
+    let total = 0
+    for(let property in obj) {
+      total += obj[property].price
+    }
+    return total
+  }
+
   // added product object to parent object
   // if amount is undefiened it is assumed to
   // be 1
@@ -50,6 +58,7 @@ export default function Home(props) {
     } else {
       newObj[slug].amount = amountMap[slug]
     }
+    newObj[slug].total = getTotal(newObj)
     setCart(newObj)
   }
 

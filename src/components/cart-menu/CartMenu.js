@@ -48,6 +48,26 @@ function CartItem(props) {
     )
 }
 
+function getTotal(obj) {
+    let total = 0;
+    for(let property in obj) {
+        total += obj[property].price
+    }
+    return total
+}
+
+function ButtonContainer(props) {
+    return (
+        <div className="botton-container">
+            <div className="total-container">
+                <span className="title">Total</span>
+                <span className="total">${props.total}</span>
+            </div>
+            <a href="/checkout" className="checkout-link">checkout</a>
+        </div>
+    )
+}
+
 export default function CartMenu(props) {
     let style;
     if(props.isCartOpen) {
@@ -81,13 +101,9 @@ export default function CartMenu(props) {
                             cartItems
                         }
                     </div>
-                    {/* <div className="botton-container">
-                        <div className="total-container">
-                            <span className="title">Total</span>
-                            <span className="total">${props.cart.getTotal()}</span>
-                        </div>
-                        <a href="/checkout" className="checkout-link">checkout</a>
-                    </div> */}
+                    {
+                        cartItems.length ? <ButtonContainer total={props.cart.total} /> : null
+                    }
                 </div>
         </div>
     )
