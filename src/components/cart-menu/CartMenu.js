@@ -33,6 +33,15 @@ function CartItem(props) {
     )
 }
 
+function productsAmount(obj) {
+    let num = 0;
+    for(let product in obj) {
+        num += obj[product]
+    }
+    console.log(num)
+    return num
+}
+
 export default function CartMenu(props) {
     let style;
     if(props.isCartOpen) {
@@ -40,6 +49,7 @@ export default function CartMenu(props) {
             display: 'initial'
         }
     }
+    productsAmount(props.amountMap)
     console.log(props.amountMap)
     return (
         <div>
@@ -47,7 +57,7 @@ export default function CartMenu(props) {
             </div>
                 <div className="cart-menu-container" style={style}>
                     <div className="top-container">
-                        <h2 className="heading">Cart {props.amountMap ? Object.keys(props.amountMap).length : null}</h2>
+                        <h2 className="heading">Cart {props.amountMap ? productsAmount(props.amountMap) : null}</h2>
                         <button className="remove-all-button">remove all</button>
                     </div>
                     <div className="cart-items-container">
