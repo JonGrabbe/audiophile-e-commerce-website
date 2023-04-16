@@ -13,10 +13,7 @@ import data from '../../data.json';
 
 export default function Home(props) {
   let cartObj = {
-    cart: [],
-    getTotal() {
-
-    }
+    
   }
   const [cart, setCart] = useState(cartObj)
   const [amountMap, setAmountMap] = useState({})
@@ -84,6 +81,10 @@ export default function Home(props) {
       }
     }
     setAmountMap(newObj)
+  }
+
+  function removeAll() {
+    setCart({})
   }
 
   let cartProps = {
