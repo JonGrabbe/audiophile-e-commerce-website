@@ -23,25 +23,26 @@ function DefaultCart(props) {
     )
 }
 
-function CartItem(props) {
-    return (
-        <div className="cart-item">
-            <img src={getImage(props.slug)} alt="" className="img" />
-            {/* <div className="info-container">
-                <h3 className="heading">{props.title}</h3>
-                <p>{props.price}</p>
-            </div> */}
-        </div>
-    )
-}
 
 function productsAmount(obj) {
     let num = 0;
     for(let product in obj) {
         num += obj[product]
     }
-    console.log(num)
+    // console.log(num)
     return num
+}
+
+function CartItem(props) {
+    return (
+        <div className="cart-item">
+            <img src={getImage(props.slug)} alt="" className="img" />
+            <div className="info-container">
+                <h3 className="heading">{props.title}</h3>
+                <p>${props.price}</p>
+            </div>
+        </div>
+    )
 }
 
 export default function CartMenu(props) {
@@ -52,7 +53,16 @@ export default function CartMenu(props) {
         }
     }
     productsAmount(props.amountMap)
-    console.log(props.amountMap)
+    // console.log(props.amountMap)
+
+    let cartItems = [];
+    for(let property in props.cart) {
+        console.log(property)
+        let obj = props.cart[property];
+        cartItems.push(<CartItem slug={props.cart[property].slug} title={obj.name} price={obj.price} />)
+    }
+    console.log(cartItems)
+
     return (
         <div>
             <div className="cart-blur-container" style={style}>
@@ -63,7 +73,9 @@ export default function CartMenu(props) {
                         <button onClick={() => props.handleRemoveAll()} className="remove-all-button">remove all</button>
                     </div>
                     <div className="cart-items-container">
-                        
+                        {
+                            cartItems
+                        }
                     </div>
                     {/* <div className="botton-container">
                         <div className="total-container">

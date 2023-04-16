@@ -105,7 +105,7 @@ export default function Home(props) {
             <Route path="speakers" element={<CategoriesPage productsData={productsData} ProductType="speakers" />} />
             <Route path="earphones" element={<CategoriesPage productsData={productsData} ProductType="earphones" />} />
         </Route>
-        <Route path="/product" element={<Root amountMap={amountMap} handleRemoveAll={removeAll} />}>
+        <Route path="/product" element={<Root amountMap={amountMap} handleRemoveAll={removeAll} cart={cart} />}>
           <Route path="/product/:id" element={<Product handleAddToCart={addToCart} handleChangeAmount={changeAmount} amountMap={amountMap} />} />
         </Route>
       </Routes>

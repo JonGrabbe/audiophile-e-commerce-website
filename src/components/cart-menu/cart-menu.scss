@@ -52,4 +52,11 @@
         mix-blend-mode: normal;
         opacity: 0.5;
     }
+    .cart-items-container {
+        margin-top: 37px;
+        .img {
+            width: 62px;
+            border-radius: 8px;
+        }
+    }
 }
