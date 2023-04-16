@@ -14,7 +14,7 @@
     z-index: 10000;
     top: 110px;
     right: 10px;
-    height: 400px;
+    min-height: 400px;
     width: 300px;
     box-sizing: border-box;
     background-color: white;
@@ -56,6 +56,7 @@
         margin-top: 37px;
         .cart-item {
             // display: flex;
+            margin-bottom: 42px;
             
             .img {
                 width: 62px;

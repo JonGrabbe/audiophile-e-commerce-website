@@ -42,7 +42,8 @@ function CartItem(props) {
                 <h3 className="heading title">{props.title}</h3>
                 <p className="price">${props.price}</p>
             </div>
-            <ProductAmountChangeButton />
+            <ProductAmountChangeButton handleChangeAmount={props.handleChangeAmount} slug={props.slug} amount={props.amount} />
+            <hr />
         </div>
     )
 }
@@ -61,7 +62,8 @@ export default function CartMenu(props) {
     for(let property in props.cart) {
         console.log(property)
         let obj = props.cart[property];
-        cartItems.push(<CartItem slug={props.cart[property].slug} title={obj.name} price={obj.price} />)
+        let amount = props.amountMap[property]
+        cartItems.push(<CartItem slug={props.cart[property].slug} title={obj.name} price={obj.price} amount={amount} handleChangeAmount={props.handleChangeAmount} />)
     }
     console.log(cartItems)
 
