@@ -54,9 +54,22 @@
     }
     .cart-items-container {
         margin-top: 37px;
-        .img {
-            width: 62px;
-            border-radius: 8px;
+        .cart-item {
+            // display: flex;
+            
+            .img {
+                width: 62px;
+                border-radius: 8px;
+                margin-bottom: 16px;
+            }
+            .title {
+                font-size: 15px;
+                line-height: 25px;
+                // margin-bottom: 16px;
+            }
+            .info-container {
+                margin-bottom: 16px;
+            }
         }
         .amount-button-container {
             display: flex;

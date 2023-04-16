@@ -39,8 +39,8 @@ function CartItem(props) {
         <div className="cart-item">
             <img src={getImage(props.slug)} alt="" className="img" />
             <div className="info-container">
-                <h3 className="heading">{props.title}</h3>
-                <p>${props.price}</p>
+                <h3 className="heading title">{props.title}</h3>
+                <p className="price">${props.price}</p>
             </div>
             <ProductAmountChangeButton />
         </div>
