@@ -59,6 +59,25 @@ export default function Home(props) {
       return obj
     }
 
+    function changeProductAmount(slug, operation) {
+      let obj = {
+        ...amountMap
+      }
+      if(operation === '+') {
+        if(obj[slug]) {
+          obj[slug] += 1
+        } else {
+          obj[slug] = 2
+        }
+      }
+      if(obj[slug]) {
+        if(operation === '-' && obj[slug] > 1) {
+          obj[slug] -= 1
+        }
+      }
+      setAmountMap(obj)
+    }
+
     function getAmountMapVal(slug) {
       if(amountMap[slug]) {
         return amountMap[slug]
@@ -200,7 +219,7 @@ export default function Home(props) {
             <Route path="earphones" element={<CategoriesPage productsData={productsData} ProductType="earphones" />} />
         </Route>
         <Route path="/product" element={<Root />}>
-          <Route path="/product/:id" element={<Product handleAddToCart={addToCart}  />} />
+          <Route path="/product/:id" element={<Product handleAddToCart={addToCart} handleChangeAmount={changeProductAmount} amountMap={amountMap} />} />
         </Route>
       </Routes>
     </>

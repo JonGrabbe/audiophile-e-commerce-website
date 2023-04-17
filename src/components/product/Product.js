@@ -116,7 +116,7 @@ export default function Product(props) {
             <div className="amount-button-container">
               <button onClick={() => props.handleChangeAmount(id, '-')} className="subtract inc">-</button>
               <div className="amount">
-                {/* {props.amountMap[id] ? props.amountMap[id] : 1} */}
+                {props.amountMap[id] ? props.amountMap[id] : 1}
               </div>
               <button onClick={() => props.handleChangeAmount(id, '+')} className="add inc">+</button>
             </div>
