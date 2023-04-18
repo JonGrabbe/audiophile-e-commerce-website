@@ -133,6 +133,7 @@ export default function Home(props) {
             newObj.products[i].isInCart = true
           }
         })
+        setCart(newObj)
       }
       // if the product isnt in the array
       if(!isInArray) {
