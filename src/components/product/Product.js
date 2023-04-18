@@ -101,6 +101,20 @@ export default function Product(props) {
     }
   });
 
+  function getAmount(arr, slug) {
+    let amount;
+    arr.forEach(item => {
+      if(item.slug === slug) {
+        amount = item.amount
+      }
+    })
+    return amount
+  }
+
+  function getProductObj(slug) {
+
+  }
+
   return (
     <main className="main-wrapper categories-page-container">
       <div className="product-container">
@@ -116,7 +130,10 @@ export default function Product(props) {
             <div className="amount-button-container">
               <button onClick={() => props.handleChangeAmount(id, '-')} className="subtract inc">-</button>
               <div className="amount">
-                {props.amountMap[id] ? props.amountMap[id] : 1}
+                {/* {props.amountMap[id] ? props.amountMap[id] : 1} */}
+                {
+                  getAmount(props.cart.products, id) ? getAmount(props.cart.products, id) : 1
+                }
               </div>
               <button onClick={() => props.handleChangeAmount(id, '+')} className="add inc">+</button>
             </div>

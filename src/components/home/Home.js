@@ -59,25 +59,6 @@ export default function Home(props) {
       return obj
     }
 
-    function changeProductAmount(slug, operation) {
-      let obj = {
-        ...amountMap
-      }
-      if(operation === '+') {
-        if(obj[slug]) {
-          obj[slug] += 1
-        } else {
-          obj[slug] = 2
-        }
-      }
-      if(obj[slug]) {
-        if(operation === '-' && obj[slug] > 1) {
-          obj[slug] -= 1
-        }
-      }
-      setAmountMap(obj)
-    }
-
     function getAmountMapVal(slug) {
       if(amountMap[slug]) {
         return amountMap[slug]
@@ -86,7 +67,51 @@ export default function Home(props) {
       }
     }
 
-    function addToCart(slug, amount) {
+    function getProductObjFromCart(slug, obj) {
+      let product;
+      obj.products.forEach((item, i) => {
+        if(item.slug === slug) {
+          product = {
+            obj: item,
+            index: i
+          }
+        }
+      })
+      return product
+    }
+
+
+    function changeProductAmount(slug, operation) {
+      // if object already exists then inc amount
+
+      // if object dosent exist then push object to cart.products without the isInCart property and set
+      // amount to 2
+      let newObj = {
+        ...cart
+      }
+      let product = getProductObjFromCart(slug, newObj)
+      if(product) {
+        if(operation === '+') {
+          newObj.products[product.index].amount += 1
+          setCart(newObj)
+        }
+        if(operation === '-' && product.obj.amount > 1) {
+          newObj.products[product.index].amount -= 1
+          setCart(newObj)
+        }
+      } else {
+        if(operation === '+') {
+          let newProduct = getProductObj(slug);
+          newProduct.amount = 2
+          newObj.products.push(newProduct)
+          setCart(newObj)
+        }
+      }
+
+    }
+
+
+    function addToCart(slug, isInCart) {
       let newObj = {
         ...cart
       }
@@ -105,14 +130,18 @@ export default function Home(props) {
         // newObj.products.push(getProductObj(slug))
         newObj.products.forEach((item, i) => {
           if(item.slug === slug) {
-            newObj.products[i].amount = getAmountMapVal(slug)
+            newObj.products[i].isInCart = true
           }
         })
       }
       // if the product isnt in the array
       if(!isInArray) {
         let productObj = getProductObj(slug)
-        productObj.amount = getAmountMapVal(slug)
+        // productObj.amount = getAmountMapVal(slug)
+        productObj.isInCart = true
+        if(!productObj.amount) {
+          productObj.amount = 1
+        }
         newObj.products.push(productObj)
         setCart(newObj)
       }
@@ -133,7 +162,7 @@ export default function Home(props) {
             <Route path="earphones" element={<CategoriesPage productsData={productsData} ProductType="earphones" />} />
         </Route>
         <Route path="/product" element={<Root />}>
-          <Route path="/product/:id" element={<Product handleAddToCart={addToCart} handleChangeAmount={changeProductAmount} amountMap={amountMap} />} />
+          <Route path="/product/:id" element={<Product handleAddToCart={addToCart} handleChangeAmount={changeProductAmount} amountMap={amountMap} cart={cart} />} />
         </Route>
       </Routes>
     </>
