@@ -148,6 +148,10 @@ export default function Home(props) {
       }
 
     }
+
+    function removeProductFromCart(slug) {
+      
+    }
   
 
 
