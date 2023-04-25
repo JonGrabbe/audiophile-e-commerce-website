@@ -95,7 +95,7 @@
         align-items: center;
         button {
             border: none;
-            background: none;
+            // background: none;
         }
         .amount-button-container {
             display: flex;
@@ -130,6 +130,9 @@
                 &:hover {
                     cursor: pointer;
                 }
+            }
+            .remove-from-cart-button {
+                font-size: 13px;
             }
         }
         .add-to-cart-button {
