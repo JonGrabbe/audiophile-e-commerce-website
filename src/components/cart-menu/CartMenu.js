@@ -93,7 +93,7 @@ export default function CartMenu(props) {
             </div>
                 <div className="cart-menu-container" style={style}>
                     <div className="top-container">
-                        <h2 className="heading">Cart {props.amountMap && productsAmount(props.amountMap) !== 0 ? productsAmount(props.amountMap) : null}</h2>
+                        <h2 className="heading">Cart {props.cart ? props.cart.products.length : null} </h2>
                         <button onClick={() => props.handleRemoveAll()} className="remove-all-button">remove all</button>
                     </div>
                     <div className="cart-items-container">
