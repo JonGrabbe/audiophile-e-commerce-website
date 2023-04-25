@@ -124,7 +124,7 @@ export default function Product(props) {
   console.log(getProductObj(id, props.cart.products))
 
   function isInCart(slug, arr) {
-    let bool;
+    let bool = false;
     arr.forEach(item => {
       if(item.slug === slug) {
         if(item.isInCart) {
@@ -166,7 +166,7 @@ export default function Product(props) {
           <p className="price item">${price.toLocaleString()}</p>
           <div className="add-to-cart-container">
             {
-              isInCart(id, props.cart.products) ? <RemoveFromCart /> : <AmountButtonContainer {...props} />
+              isInCart(id, props.cart.products) ? <RemoveFromCart handleRemoveItem={props.handleRemoveItem} slug={id} /> : <AmountButtonContainer {...props} />
             }
               {/* <AmountButtonContainer {...props} /> */}
           </div>

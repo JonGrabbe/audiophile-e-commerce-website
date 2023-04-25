@@ -153,9 +153,14 @@ export default function Home(props) {
       let newObj = {
         ...cart
       }
-      if(slug === '') {
-        
-      }
+      // newObj.products = newObj.products.filter(item => item.slug !== slug && item.isInCart)
+      newObj.products.forEach(item => {
+        if(item.slug === slug) {
+          item.isInCart = false
+        }
+      })
+
+      setCart(newObj)
     }
   
 
@@ -172,7 +177,7 @@ export default function Home(props) {
             <Route path="earphones" element={<CategoriesPage productsData={productsData} ProductType="earphones" />} />
         </Route>
         <Route path="/product" element={<Root />}>
-          <Route path="/product/:id" element={<Product handleAddToCart={addToCart} handleChangeAmount={changeProductAmount} amountMap={amountMap} cart={cart} />} />
+          <Route path="/product/:id" element={<Product handleAddToCart={addToCart} handleChangeAmount={changeProductAmount} amountMap={amountMap} cart={cart} handleRemoveItem={removeProductFromCart} />} />
         </Route>
       </Routes>
     </>
