@@ -150,7 +150,12 @@ export default function Home(props) {
     }
 
     function removeProductFromCart(slug) {
-      
+      let newObj = {
+        ...cart
+      }
+      if(slug === '') {
+        
+      }
     }
   
 

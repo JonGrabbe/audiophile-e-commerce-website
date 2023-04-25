@@ -112,7 +112,7 @@ export default function Product(props) {
     return amount
   }
 
-  function getProductObj(arr, slug) {
+  function getProductObj(slug, arr) {
     let obj;
     arr.forEach(item => {
       if(item.slug === slug) {
@@ -121,23 +121,35 @@ export default function Product(props) {
     })
     return obj
   }
+  console.log(getProductObj(id, props.cart.products))
 
-  getProductObj(props.cart.products, id)
-
-  // function isProduct
+  function isInCart(slug, arr) {
+    let bool;
+    arr.forEach(item => {
+      if(item.slug === slug) {
+        if(item.isInCart) {
+          bool = true
+        }
+      }
+    })
+    return bool
+  }
 
   function AmountButtonContainer(props) {
     return (
-      <div className="amount-button-container">
+      <>
+        <div className="amount-button-container">
         <button onClick={() => props.handleChangeAmount(id, '-')} className="subtract inc">-</button>
-        <div className="amount">
-          {/* {props.amountMap[id] ? props.amountMap[id] : 1} */}
-          {
-            getAmount(props.cart.products, id) ? getAmount(props.cart.products, id) : 1
-          }
+          <div className="amount">
+            {/* {props.amountMap[id] ? props.amountMap[id] : 1} */}
+            {
+              getAmount(props.cart.products, id) ? getAmount(props.cart.products, id) : 1
+            }
+          </div>
+          <button onClick={() => props.handleChangeAmount(id, '+')} className="add inc">+</button>
         </div>
-        <button onClick={() => props.handleChangeAmount(id, '+')} className="add inc">+</button>
-      </div>
+        <button className="add-to-cart-button" onClick={() => props.handleAddToCart(id)}>add to cart</button>
+      </>
     )
   }
 
@@ -154,20 +166,9 @@ export default function Product(props) {
           <p className="price item">${price.toLocaleString()}</p>
           <div className="add-to-cart-container">
             {
-              // getProductObj(props.cart.products, id).isInCart ? <RemoveFromCart /> : <AmountButtonContainer />
+              isInCart(id, props.cart.products) ? <RemoveFromCart /> : <AmountButtonContainer {...props} />
             }
-            {/* <AmountButtonContainer /> */}
-            <div className="amount-button-container">
-              <button onClick={() => props.handleChangeAmount(id, '-')} className="subtract inc">-</button>
-              <div className="amount">
-                {/* {props.amountMap[id] ? props.amountMap[id] : 1} */}
-                {
-                  getAmount(props.cart.products, id) ? getAmount(props.cart.products, id) : 1
-                }
-              </div>
-              <button onClick={() => props.handleChangeAmount(id, '+')} className="add inc">+</button>
-            </div>
-          </div>
+              {/* <AmountButtonContainer {...props} /> */}
           </div>
         </div>
       </div>
