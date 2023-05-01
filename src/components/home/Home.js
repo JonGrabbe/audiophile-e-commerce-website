@@ -6,14 +6,34 @@ import Main from "../main/Main";
 import Content from "../header/content/Content";
 import CategoriesPage from "../categoriesPage/CategoriesPage";
 import HeaderText from "../../routes/components/header-text/HeaderText";
-import productsData from "../../data/headphones-products";
 import Product from "../product/Product";
 import { useState } from "react";
+
+// import productsData from "../../data/headphones-products";
 import data from '../../data.json';
+
 import axios from "axios";
 
-// axios('https://audio-site-1a87c-default-rtdb.firebaseio.com/data.json')
-//   .then(data => console.log(data))
+const [productsData, setProductsData] = useState()
+
+function getProductData() {
+  let pd = {}
+  axios('https://audio-site-1a87c-default-rtdb.firebaseio.com/data.json')
+    .then(data => {
+      console.log(data)
+      let arr = data.data;
+      // create categories properties
+      arr.forEach(item => {
+        
+      })
+      // add prodcut object to each category property
+      setProductsData(pd)
+    })
+}
+
+getProductData()
+
+
 
 export default function Home(props) {
   let cartObj = {
