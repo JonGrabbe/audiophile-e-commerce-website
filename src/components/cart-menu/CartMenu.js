@@ -79,12 +79,15 @@ export default function CartMenu(props) {
     // console.log(props.amountMap)
 
     let cartItems = [];
-    for(let property in props.cart) {
-        console.log(property)
-        let obj = props.cart[property];
-        let amount = props.amountMap[property]
-        cartItems.push(<CartItem slug={props.cart[property].slug} title={obj.name} price={obj.price} amount={amount} handleChangeAmount={props.handleChangeAmount} />)
-    }
+    // for(let property in props.cart.products) {
+    //     console.log(property)
+    //     let obj = props.cart[property];
+    //     let amount = props.amountMap[property]
+    //     cartItems.push(<CartItem slug={props.cart[property].slug} title={obj.name} price={obj.price} amount={amount} handleChangeAmount={props.handleChangeAmount} />)
+    // }
+    props.cart.products.forEach(item => {
+        cartItems.push(<CartItem slug={item.slug} title={item.name} price={item.price} amount={item.amount} handleChangeAmount={props.handleChangeAmount} />)
+    })
     console.log(cartItems)
 
     return (

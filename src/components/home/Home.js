@@ -10,6 +10,10 @@ import productsData from "../../data/headphones-products";
 import Product from "../product/Product";
 import { useState } from "react";
 import data from '../../data.json';
+import axios from "axios";
+
+// axios('https://audio-site-1a87c-default-rtdb.firebaseio.com/data.json')
+//   .then(data => console.log(data))
 
 export default function Home(props) {
   let cartObj = {
