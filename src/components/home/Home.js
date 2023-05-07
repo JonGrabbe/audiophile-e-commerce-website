@@ -167,7 +167,7 @@ export default function Home(props) {
 
   return (
     <>
-      <Routes>
+      {/* <Routes>
         <Route path="/" element={<Root headerContent={<Content />} hasBGI={true} />}>
          <Route index element={<Main />} />
         </Route>
@@ -178,6 +178,20 @@ export default function Home(props) {
         </Route>
         <Route path="/product" element={<Root cart={cart} handleChangeAmount={changeProductAmount} />}>
           <Route path="/product/:id" element={<Product handleAddToCart={addToCart} handleChangeAmount={changeProductAmount} amountMap={amountMap} cart={cart} handleRemoveItem={removeProductFromCart} />} />
+        </Route>
+      </Routes> */}
+
+      <Routes>
+        <Route element={<Root headerContent={<Content />} hasBGI={true} cart={cart} handleChangeAmount={changeProductAmount} />} >
+          <Route index element={<Main />} />
+          <Route path="/categories/">
+              <Route path="headphones" element={<CategoriesPage productsData={productsData} ProductType="headphones" />} />
+              <Route path="speakers" element={<CategoriesPage productsData={productsData} ProductType="speakers" />} />
+              <Route path="earphones" element={<CategoriesPage productsData={productsData} ProductType="earphones" />} />
+          </Route>
+          <Route path="/product">
+            <Route path="/product/:id" element={<Product handleAddToCart={addToCart} handleChangeAmount={changeProductAmount} amountMap={amountMap} cart={cart} handleRemoveItem={removeProductFromCart} />} />
+          </Route>
         </Route>
       </Routes>
     </>
