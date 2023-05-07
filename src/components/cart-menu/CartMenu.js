@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import getImage from "../../functions/getImage";
 import ProductAmountChangeButton from "../product-amount-change-button/ProductAmountChangeButton";
 
@@ -48,13 +49,6 @@ function CartItem(props) {
     )
 }
 
-function getTotal(obj) {
-    let total = 0;
-    for(let property in obj) {
-        total += obj[property].price
-    }
-    return total
-}
 
 function ButtonContainer(props) {
     return (
@@ -69,6 +63,7 @@ function ButtonContainer(props) {
 }
 
 export default function CartMenu(props) {
+    const [cartItems, setCartItems] = useState([])
     let style;
     if(props.isCartOpen) {
         style = {
@@ -78,19 +73,50 @@ export default function CartMenu(props) {
     productsAmount(props.amountMap)
     // console.log(props.amountMap)
 
-        let cartItems = [];
         // for(let property in props.cart) {
-        //     console.log(property)
-        //     let obj = props.cart[property];
-        //     let amount = props.amountMap[property]
-        //     cartItems.push(<CartItem slug={props.cart[property].slug} title={obj.name} price={obj.price} amount={amount} handleChangeAmount={props.handleChangeAmount} />)
-        // }
-        // console.log(cartItems)
+            //     console.log(property)
+            //     let obj = props.cart[property];
+            //     let amount = props.amountMap[property]
+            //     cartItems.push(<CartItem slug={props.cart[property].slug} title={obj.name} price={obj.price} amount={amount} handleChangeAmount={props.handleChangeAmount} />)
+            // }
+            // console.log(cartItems)
+            
+    // useEffect(() => {
+    // let arr = [];
+    // props.cart.products.forEach(item => {   
+    //     arr.push(<CartItem slug={item.slug} title={item.name} price={item.price} amount={item.amount} handleChangeAmount={props.handleChangeAmount} />)
+    //     // console.log(item)
+    // })
+    //     setCartItems(arr)
+    // }, [props.cart.products])
 
-        props.cart.products.forEach(item => {
-            cartItems.push(<CartItem slug={item.slug} title={item.name} price={item.price} amount={item.amount} handleChangeAmount={props.handleChangeAmount} />)
-            // console.log(item)
+    function filterProducts(arr) {
+        let newArr = arr.filter(item => item.isInCart);
+        return newArr.map(item => <CartItem slug={item.slug} title={item.name} price={item.price} amount={item.amount} handleChangeAmount={props.handleChangeAmount} />)
+    }
+
+    function hasProductsInCart() {
+        let arr = props.cart.products;
+        if(filterProducts(arr).length > 0) {
+            return true
+        } else {
+            return false
+        }
+    }
+
+    function getTotal(arr) {
+        let total = 0
+        arr.forEach(item => {
+            for(let i = 0; i <item.amount; i++) {
+                total += item.price
+            }
         })
+        console.log(total)
+        return total
+    }
+
+
+
 
         // console.log(props.cart)
 
@@ -107,11 +133,11 @@ export default function CartMenu(props) {
                     </div>
                     <div className="cart-items-container">
                         {
-                            cartItems ? cartItems : null
+                           hasProductsInCart() ?  filterProducts(props.cart.products) : null
                         }
                     </div>
                     {
-                        cartItems.length ? <ButtonContainer total={props.cart.total} /> : null
+                        hasProductsInCart() ? <ButtonContainer total={getTotal(props.cart.products)} /> : null
                     }
                 </div>
         </div>
