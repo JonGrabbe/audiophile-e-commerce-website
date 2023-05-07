@@ -78,17 +78,23 @@ export default function CartMenu(props) {
     productsAmount(props.amountMap)
     // console.log(props.amountMap)
 
-    let cartItems = [];
-    // for(let property in props.cart.products) {
-    //     console.log(property)
-    //     let obj = props.cart[property];
-    //     let amount = props.amountMap[property]
-    //     cartItems.push(<CartItem slug={props.cart[property].slug} title={obj.name} price={obj.price} amount={amount} handleChangeAmount={props.handleChangeAmount} />)
-    // }
-    props.cart.products.forEach(item => {
-        cartItems.push(<CartItem slug={item.slug} title={item.name} price={item.price} amount={item.amount} handleChangeAmount={props.handleChangeAmount} />)
-    })
-    console.log(cartItems)
+        let cartItems = [];
+        // for(let property in props.cart) {
+        //     console.log(property)
+        //     let obj = props.cart[property];
+        //     let amount = props.amountMap[property]
+        //     cartItems.push(<CartItem slug={props.cart[property].slug} title={obj.name} price={obj.price} amount={amount} handleChangeAmount={props.handleChangeAmount} />)
+        // }
+        // console.log(cartItems)
+
+        props.cart.products.forEach(item => {
+            cartItems.push(<CartItem slug={item.slug} title={item.name} price={item.price} amount={item.amount} handleChangeAmount={props.handleChangeAmount} />)
+            // console.log(item)
+        })
+
+        // console.log(props.cart)
+
+
 
     return (
         <div>
@@ -96,12 +102,12 @@ export default function CartMenu(props) {
             </div>
                 <div className="cart-menu-container" style={style}>
                     <div className="top-container">
-                        <h2 className="heading">Cart {props.cart ? props.cart.products.length : null} </h2>
+                        <h2 className="heading">Cart {props.amountMap && productsAmount(props.amountMap) !== 0 ? productsAmount(props.amountMap) : null}</h2>
                         <button onClick={() => props.handleRemoveAll()} className="remove-all-button">remove all</button>
                     </div>
                     <div className="cart-items-container">
                         {
-                            cartItems
+                            cartItems ? cartItems : null
                         }
                     </div>
                     {
