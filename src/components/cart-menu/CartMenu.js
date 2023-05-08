@@ -62,13 +62,40 @@ function ButtonContainer(props) {
     )
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 export default function CartMenu(props) {
     const [cartItems, setCartItems] = useState([])
-    let style;
-    if(props.isCartOpen) {
-        style = {
-            display: 'initial'
+    const [style, setStyle] = useState()    
+    useEffect(() => {
+        if(props.isCartOpen) {
+            setStyle({
+                display: 'initial'
+            })
+        } else {
+            setStyle({
+                display: 'none'
+            })
         }
+    }, [props.isCartOpen])
+
+    function blureContainerClick() {
+        // console.log('asdfasdf')
+        // setStyle({
+        //     display: 'none'
+        // })
+        props.handleDisplayCart()
     }
     productsAmount(props.amountMap)
     // console.log(props.amountMap)
@@ -124,7 +151,7 @@ export default function CartMenu(props) {
 
     return (
         <div>
-            <div className="cart-blur-container" style={style}>
+            <div className="cart-blur-container" style={style} onClick={blureContainerClick}>
             </div>
                 <div className="cart-menu-container" style={style}>
                     <div className="top-container">

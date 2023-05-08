@@ -10,7 +10,7 @@
 }
 .cart-menu-container {
     display: none;
-    position: absolute;
+    position: fixed;
     z-index: 10000;
     top: 110px;
     right: 10px;
