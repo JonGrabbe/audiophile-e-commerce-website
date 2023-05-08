@@ -182,7 +182,7 @@ export default function Home(props) {
       </Routes> */}
 
       <Routes>
-        <Route element={<Root cart={cart} handleChangeAmount={changeProductAmount} />} >
+        <Route element={<Root headerContent={<Content />} hasBGI={true} cart={cart} handleChangeAmount={changeProductAmount} />} >
           <Route index element={<Main />} />
           <Route path="/categories/">
               <Route path="headphones" element={<CategoriesPage productsData={productsData} ProductType="headphones" />} />

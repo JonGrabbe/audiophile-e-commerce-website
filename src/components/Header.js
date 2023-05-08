@@ -3,13 +3,12 @@ import menuIcon from "../assets/shared/tablet/icon-hamburger.svg";
 import logo from "../assets/shared/desktop/logo.svg";
 import cart from "../assets/shared/desktop/icon-cart.svg";
 // import Content from "./header/Content";
+import Content from "./header/content/Content";
 import MenuItems from "./header/MenuItems";
 import MobileDropdown from "./header/mobile-dropdown-menu/MobileDropdown";
-import { Link, useMatch, useParams } from "react-router-dom";
+import { Link, Route, Routes, useMatch, useParams } from "react-router-dom";
 import HeaderText from "../routes/components/header-text/HeaderText";
 import Cart from "./cart/Cart";
-import { Routes, Route } from "react-router-dom";
-import Content from "./header/content/Content";
 
 
 export default function Header(props) {
@@ -24,7 +23,10 @@ export default function Header(props) {
   
   // console.log(categoriesTitle)
 
-  let c = props.hasBGI ? ' background-image' : null;
+
+  let homeMatch = useMatch("/")
+  let c = homeMatch ? ' background-image' : null;
+
   return (
     <header className={"top-header categories-page-header"+c} >
       <div className="menu main-wrapper">
@@ -43,15 +45,10 @@ export default function Header(props) {
         <Content />
         <div className="background-image-destop-container"></div>
       </div> */}
-
       <Routes>
         <Route path="/" element={<Content />} />
-       
       </Routes>
-
-      
-      {/* {props.children} */}
-
+          {/* {props.children} */}
       {categoriesTitle ? <HeaderText text={categoriesTitle.pathname.split('categories/')[1]} /> : null}
     </header>
   );
