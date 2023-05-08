@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import getImage from "../../functions/getImage";
 import ProductAmountChangeButton from "../product-amount-change-button/ProductAmountChangeButton";
+import { NavLink } from "react-router-dom";
 
 function Checkout(props) {
     return (
@@ -57,7 +58,10 @@ function ButtonContainer(props) {
                 <span className="title light-grey-text-8">Total</span>
                 <span className="total bold-text-6">${props.total}</span>
             </div>
-            <a href="/checkout" className="checkout-link">checkout</a>
+            {/* <a href="/checkout" className="checkout-link">checkout</a> */}
+            <NavLink className="checkout-link" to="/checkout">
+                Checkout
+            </NavLink>
         </div>
     )
 }

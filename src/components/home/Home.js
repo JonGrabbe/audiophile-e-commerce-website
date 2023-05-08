@@ -10,6 +10,7 @@ import productsData from "../../data/headphones-products";
 import Product from "../product/Product";
 import { useState } from "react";
 import data from '../../data.json';
+import CheckoutPage from "../checkout-page/CheckoutPage";
 
 export default function Home(props) {
   let cartObj = {
@@ -192,6 +193,7 @@ export default function Home(props) {
           <Route path="/product">
             <Route path="/product/:id" element={<Product handleAddToCart={addToCart} handleChangeAmount={changeProductAmount} amountMap={amountMap} cart={cart} handleRemoveItem={removeProductFromCart} />} />
           </Route>
+          <Route path="/checkout" element={<CheckoutPage />} />
         </Route>
       </Routes>
     </>
