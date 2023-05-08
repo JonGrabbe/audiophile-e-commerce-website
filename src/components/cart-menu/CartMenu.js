@@ -52,10 +52,10 @@ function CartItem(props) {
 
 function ButtonContainer(props) {
     return (
-        <div className="botton-container">
+        <div className="button-container">
             <div className="total-container">
-                <span className="title">Total</span>
-                <span className="total">${props.total}</span>
+                <span className="title light-grey-text-8">Total</span>
+                <span className="total bold-text-6">${props.total}</span>
             </div>
             <a href="/checkout" className="checkout-link">checkout</a>
         </div>

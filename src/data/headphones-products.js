@@ -28,7 +28,7 @@ const productsData = {
     {
       title: "XX59 Headphones",
       image: xx59,
-      slug: 'xx59-headphone',
+      slug: 'xx59-headphones',
       id: "xx59",
       text: "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.",
     },
