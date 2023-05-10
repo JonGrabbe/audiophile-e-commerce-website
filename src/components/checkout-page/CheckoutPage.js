@@ -1,10 +1,15 @@
 import CartContainer from "./CartContainer";
 import CheckoutModal from "../checkout-modal/CheckoutModal";
+import { useState } from "react";
 
 export default function CheckoutPage(props) {
+    const [isModalOpen, setIsModalOpen] = useState(false)
+    function modalClick() {
+        setIsModalOpen(!isModalOpen)
+    }
     return (
         <>
-            <CheckoutModal {...props} />
+            {isModalOpen ? <CheckoutModal {...props} handleClick={modalClick} /> : null} 
             <div className="checkout-page-wrapper">
                 <div className="checkout-page-container">
                     <form action="" className="main-form">
@@ -76,7 +81,7 @@ export default function CheckoutPage(props) {
                     </form>
                 </div>
 
-                <CartContainer {...props} />
+                <CartContainer {...props} handleClick={modalClick} />
             </div>
         </>
     )

@@ -1,7 +1,8 @@
+import { useState } from 'react';
 import checkMark from '../../assets/checkout/icon-order-confirmation.svg';
 import getImage from '../../functions/getImage';
 import priceStr from '../../functions/priceStr';
-import OrangeButton from '../orange-button/OrangeButton';
+import OrangeNavLink from '../orangeNavLink/OrangeNavLink';
 
 function getTotal(arr) {
     let total = 0
@@ -64,7 +65,7 @@ function MultipleProducts(props) {
 }
 
 export default function CheckoutModal(props) {
-    console.log(props.cart.products)
+    // console.log(props.cart.products)
     let productList;
     if(props.cart.products.length > 1) {
         productList = (
@@ -77,7 +78,7 @@ export default function CheckoutModal(props) {
     }
     return (
         <>
-            <div className="checkout-modal-wrapper">
+            <div className="checkout-modal-wrapper" onClick={props.handleClick}>
             </div>
                 <div className="checkout-modal-container">
                     <div className="checkmark-container">
@@ -98,7 +99,9 @@ export default function CheckoutModal(props) {
                             </p>
                         </div>
                     </div>
-                    <OrangeButton cn="button" text="BACK TO HOME" />
+                    {/* <OrangeButton cn="button" text="BACK TO HOME" /> */}
+                    <OrangeNavLink cn="button" text="BACK TO HOME" to="/" />
+
                 </div>
         </>
     )
