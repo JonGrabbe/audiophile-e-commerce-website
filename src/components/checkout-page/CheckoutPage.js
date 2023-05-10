@@ -5,7 +5,7 @@ export default function CheckoutPage(props) {
         <div className="checkout-page-wrapper">
             <div className="checkout-page-container">
                 <form action="" className="main-form">
-                    <h2 className="bold-text-4 h2">Checkout</h2>
+                    <h2 className="bold-text-4 h2 heading">Checkout</h2>
                     <div className="section-container">
                         <h3 className="heading">Billing Details</h3>
                         <div className="input-container name">
@@ -32,7 +32,7 @@ export default function CheckoutPage(props) {
                             <input type="text" className="input" id="zip" placeholder="10001" required />
                         </div>
                         <div className="input-container city">
-                            <label htmlFor="city" className="lable">city</label>
+                            <label htmlFor="city" className="label">city</label>
                             <input type="text" className="input" id="city" placeholder="New York" required />
                         </div>
                         <div className="input-container country">
@@ -66,7 +66,7 @@ export default function CheckoutPage(props) {
                     </div>
                 </form>
             </div>
-            
+
             <CartContainer {...props} />
         </div>
     )

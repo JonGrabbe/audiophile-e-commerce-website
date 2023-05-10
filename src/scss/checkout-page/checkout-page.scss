@@ -1,16 +1,35 @@
+@mixin tablet1 {
+    @media (min-width: 782px) {
+        @content;
+    }
+}
+@mixin fullWidthCol {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
 .checkout-page-wrapper {
     background-color: $light-background;
     padding: 24px;
+    @include tablet1 {
+        padding: 39px;
+    }
 }
 .checkout-page-container {
     $border-color: #CFCFCF;
     padding: 24px 32px;
     background-color: white;
+    
     .h2 {
         margin-bottom: 43px;
     }
     .label {
         @include boldText;
+    }
+    .heading {
+        @include tablet1() {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
     }
     .input-container {
         margin-bottom: 27px;
@@ -20,6 +39,7 @@
             display: block;
         }
         .input {
+            width: 100%;
             background: #FFFFFF;
             border: 1px solid #CFCFCF;
             border-radius: 8px;
@@ -29,20 +49,32 @@
             font-size: 14px;
             line-height: 19px;
             letter-spacing: -0.25px;
+            box-sizing: border-box;
 
             color: #000000;
 
             mix-blend-mode: normal;
             opacity: 0.4;
         }
+        @include tablet1() {
+            padding: 10px;
+            &.address {
+                @include fullWidthCol();
+            }
+        }
     }
     .section-container {
+        @include tablet1() {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
         .heading {
             & {
                 @extend .light-grey-text-8;
             }
             color: $button-color;
             margin-bottom: 28px;
+           
         }
     }
     .payment-method-container {

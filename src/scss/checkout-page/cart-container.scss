@@ -1,3 +1,10 @@
+
+
+@mixin tablet1 {
+    @media (min-width: 782px) {
+        @content;
+    }
+}
 .cart-checkout-container {
     padding: 24px 32px;
     margin-top: 32px;
@@ -63,5 +70,9 @@
                 margin-top: 38px;
             }
         }
+    }
+    .pay-button {
+        border: initial;
+        width: 100%;
     }
 }

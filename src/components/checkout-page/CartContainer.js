@@ -1,4 +1,5 @@
 import getImage from "../../functions/getImage"
+import OrangeButton from "../orange-button/OrangeButton"
 
 function getTotal(arr) {
     let total = 0
@@ -42,6 +43,7 @@ function CartItem(props) {
     )
 }
 
+
 export default function CartContainer(props) {
     getGrandTotal(props.cart.products)
     getVat(props.cart.products)
@@ -73,6 +75,7 @@ export default function CartContainer(props) {
                     <p className="val grand-total">{priceStr(getGrandTotal(props.cart.products))}</p>
                 </div>
             </div>
+            <OrangeButton cn="pay-button" text="Continue & Pay" />
             
         </div>
     )
