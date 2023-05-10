@@ -1,0 +1,58 @@
+.checkout-page-wrapper {
+    background-color: $light-background;
+    padding: 24px;
+}
+.checkout-page-container {
+    $border-color: #CFCFCF;
+    padding: 24px 32px;
+    background-color: white;
+    .h2 {
+        margin-bottom: 43px;
+    }
+    .label {
+        @include boldText;
+    }
+    .input-container {
+        margin-bottom: 27px;
+        .label {
+            @include boldText;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .input {
+            background: #FFFFFF;
+            border: 1px solid #CFCFCF;
+            border-radius: 8px;
+            padding: 13px;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 19px;
+            letter-spacing: -0.25px;
+
+            color: #000000;
+
+            mix-blend-mode: normal;
+            opacity: 0.4;
+        }
+    }
+    .section-container {
+        .heading {
+            & {
+                @extend .light-grey-text-8;
+            }
+            color: $button-color;
+            margin-bottom: 28px;
+        }
+    }
+    .payment-method-container {
+        margin-bottom: 37px;
+    }
+    .radio-item-container {
+        background: #FFFFFF;
+        border: 1px solid $border-color;
+        border-radius: 8px;
+        padding: 13px;
+        margin-bottom: 16px;
+    }
+}

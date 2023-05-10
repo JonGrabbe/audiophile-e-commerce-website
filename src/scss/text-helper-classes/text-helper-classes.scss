@@ -11,6 +11,16 @@
   mix-blend-mode: normal;
   opacity: 0.5;
 }
+.bold-text-4 {
+  ont-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 38px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: #000000;
+}
 
 .bold-text-6 {
   font-family: "Manrope";
@@ -22,6 +32,16 @@
 
   text-align: center;
   text-transform: uppercase;
+
+  color: #000000;
+}
+
+@mixin boldText {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: -0.214286px;
 
   color: #000000;
 }

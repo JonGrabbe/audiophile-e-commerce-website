@@ -2,6 +2,7 @@
 @import './text-helper-classes/text-helper-classes.scss';
 $menu-element: #191919;
 $main-background: #F2F2F2;
+$light-background: #FAFAFA;
 $button-color: #D87D4A;
 $defualt-text: #000000;
 $menu-element-text: #FFFFFF;
@@ -238,6 +239,7 @@ body {
 @import '../components//product/product.scss';
 @import '../components/product-includes/product-includes.scss';
 @import '../components/cart-menu/cart-menu.scss';
+@import './checkout-page/checkout-page.scss';
 
 
 
