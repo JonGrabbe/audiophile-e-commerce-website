@@ -44,14 +44,20 @@ export default function CheckoutPage(props) {
                         <h3 className="heading">Payment Details</h3>
                         <div className="payment-method-container">
                             <h4 className="label payment-method-heading">Payment Method</h4>
-                            <div className="radio-item-container">
-                                <input type="radio" name="payment" id="emoney" value="emoney" />
-                                <label htmlFor="emoney" className="label">e-Money</label>
-                            </div>
-                            <div className="radio-item-container">
-                                <input type="radio" name="payment" id="cashdelivery" value="cashdelivery" />
-                                <label htmlFor="cashdelivery" className="label">Cash on Delivery</label>
-                            </div>
+                                <div className="radio-item-container">
+                            <label htmlFor="emoney">
+                                    <input type="radio" name="payment" id="emoney" value="emoney" />
+                                    {/* <label htmlFor="emoney" className="label">e-Money</label> */}
+                                    <span className="label">e-Money</span>
+                            </label>
+                                </div>
+                                <div className="radio-item-container">
+                            <label htmlFor="cashdelivery">
+                                    <input type="radio" name="payment" id="cashdelivery" value="cashdelivery" />
+                                    {/* <label htmlFor="cashdelivery" className="label">Cash on Delivery</label> */}
+                                    <span className="label">Cash on Delivery</span>
+                            </label>
+                                </div>
                         </div>
                         <div className="button-container">
                             <div className="input-container">

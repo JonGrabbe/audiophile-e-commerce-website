@@ -5,11 +5,19 @@
         @content;
     }
 }
+@mixin desktop1 {
+    @media (min-width: 1130px) {
+        @content;
+    }
+}
 .cart-checkout-container {
     padding: 24px 32px;
     margin-top: 32px;
     background-color: white;
     border-radius: 8px;
+    @include desktop1() {
+        margin-top: 0;
+    }
     .heading {
         text-align: left;
         margin-bottom: 37px;

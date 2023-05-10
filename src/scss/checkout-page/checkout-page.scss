@@ -3,6 +3,11 @@
         @content;
     }
 }
+@mixin desktop1 {
+    @media (min-width: 1130px) {
+        @content;
+    }
+}
 @mixin fullWidthCol {
     grid-column-start: 1;
     grid-column-end: 3;
@@ -13,11 +18,20 @@
     @include tablet1 {
         padding: 39px;
     }
+    @include desktop1() {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
 }
 .checkout-page-container {
     $border-color: #CFCFCF;
     padding: 24px 32px;
     background-color: white;
+    @include desktop1 {
+        width: 730px;
+        margin-right: 30px;
+    }
     
     .h2 {
         margin-bottom: 43px;
