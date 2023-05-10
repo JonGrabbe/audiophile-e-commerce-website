@@ -3,6 +3,7 @@
 $menu-element: #191919;
 $main-background: #F2F2F2;
 $light-background: #FAFAFA;
+$light-grey-element: #F1F1F1;
 $button-color: #D87D4A;
 $defualt-text: #000000;
 $menu-element-text: #FFFFFF;
@@ -240,6 +241,7 @@ body {
 @import '../components/product-includes/product-includes.scss';
 @import '../components/cart-menu/cart-menu.scss';
 @import './checkout-page/checkout-page.scss';
+@import '../components//checkout-modal/checkout-model.scss';
 
 
 
