@@ -1,3 +1,5 @@
+import CartContainer from "./CartContainer";
+
 export default function CheckoutPage(props) {
     return (
         <div className="checkout-page-wrapper">
@@ -63,11 +65,9 @@ export default function CheckoutPage(props) {
                         </div>
                     </div>
                 </form>
-                <div className="cart-container">
-                    <h2 className="heading">Summary</h2>
-                    
-                </div>
             </div>
+            
+            <CartContainer {...props} />
         </div>
     )
 }
