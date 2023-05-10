@@ -56,7 +56,7 @@ function MultipleProducts(props) {
         <>
             {props.children}
             <hr />
-            <p className="multipe-items-text">
+            <p className="multiple-items-text">
                 {text} 
             </p>
         </>
@@ -68,7 +68,9 @@ export default function CheckoutModal(props) {
     let productList;
     if(props.cart.products.length > 1) {
         productList = (
-            <MultipleProducts arr={props.cart.products} />
+            <MultipleProducts arr={props.cart.products} >
+                <ProductItem {...props.cart.products[0]} />
+            </MultipleProducts>
         )
     } else if(props.cart.products) {
         productList = <ProductItem {...props.cart.products[0]} />
@@ -96,7 +98,7 @@ export default function CheckoutModal(props) {
                             </p>
                         </div>
                     </div>
-                    <OrangeButton cn="button" />
+                    <OrangeButton cn="button" text="BACK TO HOME" />
                 </div>
         </>
     )

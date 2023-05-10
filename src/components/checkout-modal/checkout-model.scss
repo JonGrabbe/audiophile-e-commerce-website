@@ -1,3 +1,14 @@
+@mixin tablet1 {
+    @media (min-width: 782px) {
+        @content;
+    }
+}
+@mixin desktop1 {
+    @media (min-width: 1130px) {
+        @content;
+    }
+}
+
 .checkout-modal-wrapper {
     position: absolute;
     width: 100%;
@@ -8,12 +19,27 @@
     opacity: 0.4;
 }
 .checkout-modal-container {
+    $width: 288px;
+    width: $width;
+    // width: 228px;
+    max-width: 450px;
+    box-sizing: border-box;
     background-color: white;
     position: absolute;
     z-index: 9999;
     top: 224px;
-    left: 50px;
+    left: calc(((100vw - $width) / 2) - 0px);
+    // left: 5%;
+    // left: 0;
+    // right: 0;
     padding: 32px;
+    border-radius: 8px;
+    // margin-left: auto;
+    @include tablet1 {
+        $width: 380px;
+        width: $width;
+        left: calc(((100vw - $width) / 2) - 0px);
+    }
     .heading {
         & {
             @extend .bold-text-5;
@@ -27,16 +53,73 @@
         margin-bottom: 31px;
     }
     .cart-items-container {
+        margin-bottom: 23px;
         .top {
+            border-radius: 10px 10px 0 0;
+            padding: 8px;
             background-color: $light-grey-element;
+            .multiple-items-text {
+                text-align: center;
+                margin-top: 18px;
+                margin-bottom: 12px;
+                & {
+                    @extend .light-grey-text-8;
+                }
+            }
+            hr {
+                color: $light-grey-element;
+            }
         }
         .product-item-container {
             display: flex;
             .img {
-                width: 60px;
+                width: 75px;
             }
-
-
+            .info-container {
+                margin-top: 10px;
+            }
+            .name {
+                & {
+                    @extend .bold-text-7;
+                }
+                // margin-bottom: 13px;
+            }
+            .price {
+                & {
+                    @extend .light-grey-text-8;
+                }
+            }
+            .amount {
+                & {
+                    @extend .light-grey-text-8;
+                }
+                margin-top: 10px;
+                margin-left: 20px;
+            }
         }
+        .bottom {
+            padding: 24px 21px;
+            background-color: black;
+            border-radius: 0 0 10px 10px;
+            .text {
+                & {
+                    @extend .light-grey-text-8;
+                }
+                margin-bottom: 21px;
+                color: white;
+                text-transform: uppercase;
+            }
+            .price {
+                & {
+                    @extend .bold-text-6;
+                }
+                color: white;
+                text-align: left;
+            }
+        }
+    }
+    .button {
+        border: none;
+        width: 100%;
     }
 }

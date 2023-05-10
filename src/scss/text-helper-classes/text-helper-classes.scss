@@ -49,6 +49,17 @@
   color: #000000;
 }
 
+.bold-text-7 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 25px;
+  /* identical to box height, or 167% */
+
+
+  color: #000000;
+}
+
 @mixin boldText {
   font-style: normal;
   font-weight: 700;
