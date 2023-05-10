@@ -43,7 +43,7 @@ export default function CheckoutPage(props) {
                     <div className="section-container">
                         <h3 className="heading">Payment Details</h3>
                         <div className="payment-method-container">
-                            <h4 htmlFor="payment" className="label">Payment Method</h4>
+                            <h4 className="label payment-method-heading">Payment Method</h4>
                             <div className="radio-item-container">
                                 <input type="radio" name="payment" id="emoney" value="emoney" />
                                 <label htmlFor="emoney" className="label">e-Money</label>
@@ -53,7 +53,7 @@ export default function CheckoutPage(props) {
                                 <label htmlFor="cashdelivery" className="label">Cash on Delivery</label>
                             </div>
                         </div>
-                        <div className="botton-container">
+                        <div className="button-container">
                             <div className="input-container">
                                 <label htmlFor="emoneynumber" className="label">e-Money Number</label>
                                 <input type="text" className="input" id="emoneynumber" placeholder="238521993" required />
