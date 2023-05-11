@@ -15,7 +15,7 @@ export default function MobileDropdown(props) {
     return (
         <div className={cn}>
             <div className="wrapper">
-                <Link to="/categories/headphones" className="item headphones">
+                <Link to="/categories/headphones" className="item headphones" onClick={props.openMenuFunc}>
                     <img className="thumbnail" src={headphonesImage} alt="" />
                     <h3 className="title">Headphones</h3>
                     <p className="shop-cta">
@@ -24,7 +24,7 @@ export default function MobileDropdown(props) {
                     </p>
                     
                 </Link>
-                <Link to="/categories/speakers" className="item speaker">
+                <Link to="/categories/speakers" className="item speaker" onClick={props.openMenuFunc}>
                     <img className="thumbnail" src={speakerImg} alt="" />
                     <h3 className="title">speakers</h3>
                     <p className="shop-cta">
@@ -33,7 +33,7 @@ export default function MobileDropdown(props) {
                     </p>
                     
                 </Link>
-                <Link to="/categories/earphones" className="item earphones">
+                <Link to="/categories/earphones" className="item earphones" onClick={props.openMenuFunc}>
                     <img className="thumbnail" src={earphoneImg} alt="" />
                     <h3 className="title">Earphones</h3>
                     <p className="shop-cta">

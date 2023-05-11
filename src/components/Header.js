@@ -33,7 +33,7 @@ export default function Header(props) {
         <button className="menu-button" onClick={() => props.openMenuFunc()}>
           <img src={menuIcon} alt="" className="menu-icon" />
         </button>
-        <MobileDropdown isOpen={props.isMenuOpen} />
+        <MobileDropdown isOpen={props.isMenuOpen} openMenuFunc={props.openMenuFunc} />
         <Link to="/"><img src={logo} alt="" className="logo" /></Link>
         <MenuItems />
         {/* <img src={cart} alt="" className="cart-icon" /> */}
