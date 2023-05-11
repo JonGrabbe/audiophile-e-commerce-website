@@ -1,11 +1,13 @@
 import CartContainer from "./CartContainer";
 import CheckoutModal from "../checkout-modal/CheckoutModal";
 import { useState } from "react";
+import scrolTopPage from "../../functions/scrollTopPage";
 
 export default function CheckoutPage(props) {
     const [isModalOpen, setIsModalOpen] = useState(false)
     function modalClick() {
         setIsModalOpen(!isModalOpen)
+        scrolTopPage()
     }
     return (
         <>

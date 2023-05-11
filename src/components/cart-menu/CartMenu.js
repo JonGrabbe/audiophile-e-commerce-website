@@ -59,7 +59,7 @@ function ButtonContainer(props) {
                 <span className="total bold-text-6">${props.total}</span>
             </div>
             {/* <a href="/checkout" className="checkout-link">checkout</a> */}
-            <NavLink className="checkout-link" to="/checkout">
+            <NavLink className="checkout-link" to="/checkout" onClick={props.handleClick}> 
                 Checkout
             </NavLink>
         </div>
@@ -81,7 +81,7 @@ function ButtonContainer(props) {
 
 export default function CartMenu(props) {
     const [cartItems, setCartItems] = useState([])
-    const [style, setStyle] = useState()    
+    const [style, setStyle] = useState()
     useEffect(() => {
         if(props.isCartOpen) {
             setStyle({
@@ -168,7 +168,7 @@ export default function CartMenu(props) {
                         }
                     </div>
                     {
-                        hasProductsInCart() ? <ButtonContainer total={getTotal(props.cart.products)} /> : null
+                        hasProductsInCart() ? <ButtonContainer total={getTotal(props.cart.products)} handleClick={props.handleDisplayCart} /> : null
                     }
                 </div>
         </div>
