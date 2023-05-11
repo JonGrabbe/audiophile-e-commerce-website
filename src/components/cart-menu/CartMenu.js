@@ -150,7 +150,7 @@ export default function CartMenu(props) {
 
 
         // console.log(props.cart)
-
+    let removeElement = hasProductsInCart() ? <button onClick={() => props.removeAllFromCart()} className="remove-all-button">remove all</button> : null;
 
 
     return (
@@ -159,8 +159,12 @@ export default function CartMenu(props) {
             </div>
                 <div className="cart-menu-container" style={style}>
                     <div className="top-container">
-                        <h2 className="heading">Cart {props.amountMap && productsAmount(props.amountMap) !== 0 ? productsAmount(props.amountMap) : null}</h2>
-                        <button onClick={() => props.removeAllFromCart()} className="remove-all-button">remove all</button>
+                        <h2 className="heading">
+                            Cart {props.amountMap && productsAmount(props.amountMap) !== 0 ? productsAmount(props.amountMap) : null}
+                            {!hasProductsInCart() ? 'is empty' : null} 
+                        </h2>
+                        {/* <button onClick={() => props.removeAllFromCart()} className="remove-all-button">remove all</button> */}
+                        {removeElement}
                     </div>
                     <div className="cart-items-container">
                         {
