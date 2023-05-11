@@ -10,7 +10,7 @@
 }
 .cart-menu-container {
     display: none;
-    position: fixed;
+    position: absolute;
     z-index: 10000;
     top: 110px;
     right: 10px;
@@ -20,6 +20,7 @@
     background-color: white;
     border-radius: 8px;
     padding: 36px;
+    overflow: auto;
     .top-container {
         display: flex;
         justify-content: space-between;

@@ -25,8 +25,12 @@
     .cart-items-container {
        .cart-item-container {
             display: flex;
+            justify-content: space-between;
             margin-bottom: 24px;
             // flex-direction: column;d
+            .info-container {
+                margin-right: auto;
+            }
             .img {
                 width: 64px;
                 margin-right: 16px;

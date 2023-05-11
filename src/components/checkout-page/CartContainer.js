@@ -35,7 +35,7 @@ function CartItem(props) {
             <img src={getImage(props.slug)} alt="" className="img" />
             <div className="info-container">
                 <h3 className="name">{props.name}</h3>
-                <p className="price">{props.price}</p>
+                <p className="price">{priceStr(props.price)}</p>
             </div>
             <p className="amount">
                 x{props.amount}
