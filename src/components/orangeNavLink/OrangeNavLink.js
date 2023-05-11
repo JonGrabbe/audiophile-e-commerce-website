@@ -4,7 +4,7 @@ export default function OrangeNavLink(props) {
     let c = ' ';
     props.cn ? c += props.cn : c = ' ' 
     return (
-        <NavLink className={"main-button"+c} to={props.to} >
+        <NavLink className={"main-button"+c} to={props.to} onClick={props.func} >
             {props.text}
         </NavLink>
     )

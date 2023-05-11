@@ -100,7 +100,7 @@ export default function CheckoutModal(props) {
                         </div>
                     </div>
                     {/* <OrangeButton cn="button" text="BACK TO HOME" /> */}
-                    <OrangeNavLink cn="button" text="BACK TO HOME" to="/" />
+                    <OrangeNavLink cn="button" text="BACK TO HOME" to="/" func={props.handleClick} />
 
                 </div>
         </>
