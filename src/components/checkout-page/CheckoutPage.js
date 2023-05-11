@@ -11,7 +11,7 @@ export default function CheckoutPage(props) {
     }
     return (
         <>
-            {isModalOpen ? <CheckoutModal {...props} handleClick={modalClick} /> : null} 
+            {isModalOpen ? <CheckoutModal {...props} handleClick={modalClick} removeAllFromCart={props.removeAllFromCart} /> : null} 
             <div className="checkout-page-wrapper">
                 <div className="checkout-page-container">
                     <form action="" className="main-form">
@@ -83,7 +83,7 @@ export default function CheckoutPage(props) {
                     </form>
                 </div>
 
-                <CartContainer {...props} handleClick={modalClick} />
+                {props.cart.products.length ? <CartContainer {...props} handleClick={modalClick} /> : null}
             </div>
         </>
     )

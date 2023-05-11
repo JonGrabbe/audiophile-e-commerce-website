@@ -201,7 +201,7 @@ export default function Home(props) {
           <Route path="/product">
             <Route path="/product/:id" element={<Product handleAddToCart={addToCart} handleChangeAmount={changeProductAmount} amountMap={amountMap} cart={cart} handleRemoveItem={removeProductFromCart} />} />
           </Route>
-          <Route path="/checkout" element={<CheckoutPage cart={cart} />} />
+          <Route path="/checkout" element={<CheckoutPage cart={cart} removeAllFromCart={removeAllFromCart} />} />
         </Route>
       </Routes>
     </>

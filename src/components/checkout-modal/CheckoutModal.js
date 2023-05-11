@@ -76,6 +76,12 @@ export default function CheckoutModal(props) {
     } else if(props.cart.products) {
         productList = <ProductItem {...props.cart.products[0]} />
     }
+    let removeAllFromCart = props.removeAllFromCart;
+    let handleButtonClick = props.handleClick;
+    function navLinkClick() {
+        removeAllFromCart()
+        handleButtonClick()
+    }
     return (
         <>
             <div className="checkout-modal-wrapper" onClick={props.handleClick}>
@@ -100,7 +106,7 @@ export default function CheckoutModal(props) {
                         </div>
                     </div>
                     {/* <OrangeButton cn="button" text="BACK TO HOME" /> */}
-                    <OrangeNavLink cn="button" text="BACK TO HOME" to="/" func={props.handleClick} />
+                    <OrangeNavLink cn="button" text="BACK TO HOME" to="/" func={navLinkClick} />
 
                 </div>
         </>
